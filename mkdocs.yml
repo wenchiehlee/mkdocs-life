@@ -73,17 +73,18 @@ plugins:
       pagination_url_format: "page/{page}"
       authors_file: "{blog}/.authors.yml" #作者資訊
   - search #搜尋配置
-  - git-committers:
-      enabled: !ENV [CI, false]
-      repository: Wcowin/Mkdocs-Wcowin
-      branch: main
-      exclude:
-        - index.md
-        - tag.md
-        - waline.md
-        - blog/posts/update.md
-        - blog/posts/wkw.md
-        - about/link.md
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  # - git-committers:
+  #     enabled: !ENV [CI, false]
+  #     repository: Wcowin/Mkdocs-Wcowin
+  #     branch: main
+  #     exclude:
+  #       - index.md
+  #       - tag.md
+  #       - waline.md
+  #       - blog/posts/update.md
+  #       - blog/posts/wkw.md
+  #       - about/link.md
   - git-revision-date-localized:
       enabled: !ENV [CI, false]
       type: iso_date
