@@ -74,30 +74,29 @@ plugins:
       authors_file: "{blog}/.authors.yml" #作者資訊
   - search: #搜尋配置
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-
-  # - git-committers:
-  #     enabled: !ENV [CI, false]
-  #     repository: Wcowin/Mkdocs-Wcowin
-  #     branch: main
-  #     exclude:
-  #       - index.md
-  #       - tag.md
-  #       - waline.md
-  #       - blog/posts/update.md
-  #       - blog/posts/wkw.md
-  #       - about/link.md
-  - git-revision-date-localized:
+  - git-committers:
       enabled: !ENV [CI, false]
-      type: iso_date
-      enable_creation_date: false
+      repository: Wcowin/Mkdocs-Wcowin
+      branch: main
       exclude:
         - index.md
         - tag.md
-        - liuyanban.md
+        - waline.md
         - blog/posts/update.md
         - blog/posts/wkw.md
         - about/link.md
-        - websitebeauty/linktech.md
+  # - git-revision-date-localized:
+  #     enabled: !ENV [CI, false]
+  #     type: iso_date
+  #     enable_creation_date: false
+  #     exclude:
+  #       - index.md
+  #       - tag.md
+  #       - liuyanban.md
+  #       - blog/posts/update.md
+  #       - blog/posts/wkw.md
+  #       - about/link.md
+  #       - websitebeauty/linktech.md
   - tags:
       tags_file: tag.md #分類標簽
 
