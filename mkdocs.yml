@@ -72,8 +72,9 @@ plugins:
       #     case: lower
       pagination_url_format: "page/{page}"
       authors_file: "{blog}/.authors.yml" #作者資訊
-  - search #搜尋配置
+  - search: #搜尋配置
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
   # - git-committers:
   #     enabled: !ENV [CI, false]
   #     repository: Wcowin/Mkdocs-Wcowin
