@@ -223,11 +223,11 @@ extra_css:
   - https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css # font-awesome表情支援
   # - https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css  #分享支援
 
-  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css #字型
+  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css #字型
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css #字型
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css  #字型
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css  #字型
-
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.2.0/style.min.css
 # Page tree
 nav:
   # - 主頁: index.md
