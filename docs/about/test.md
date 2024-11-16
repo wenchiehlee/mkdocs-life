@@ -1,7 +1,7 @@
 !!!info
-    测试中的小组件，可看源代码自行取用
+    測試中的小元件，可看原始碼自行取用
 
-<center><font  color= #518FC1 size=6 class="ml3">“循此苦旅 以达星辰”</font></center>
+<center><font  color= #518FC1 size=6 class="ml3">“循此苦旅 以達星辰”</font></center>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
@@ -10,7 +10,7 @@
 <div class="grid" style="display: grid;grid-template-columns: 30% 69%" markdown>
 <div class="grid cards" markdown>
 
--   :material-tooltip-edit:{ .lg .middle } __关于__
+-   :material-tooltip-edit:{ .lg .middle } __關於__
 
     ---    
     - [效率][Software]
@@ -20,11 +20,11 @@
 
 <div class="grid cards" style="display: grid; grid-template-columns: 1fr;" markdown>
 
--   :material-star-shooting:{ .lg .middle } __推荐__
+-   :material-star-shooting:{ .lg .middle } __推薦__
 
     ---
 
-    :material-eye-check:{ .lg .middle } [Wcowin](https://github.com/Wcowin/Wcowin.github.io) - 技术博客
+    :material-eye-check:{ .lg .middle } [Wcowin](https://github.com/Wcowin/Wcowin.github.io) - 技術部落格
 
 <div class="grid cards" style="display:grid; grid-template-columns: 49% 49% !important;" markdown>
 
@@ -44,7 +44,7 @@
 
     更新中...
 
-    [→ 了解更多](https://github.com/Wcowin/Wcowin.github.io)
+    [→ 瞭解更多](https://github.com/Wcowin/Wcowin.github.io)
 
 </div>
 
@@ -52,7 +52,7 @@
 
 </div>
 
-<!-- <font  color= #518FC1 size=6 class="fontalicious">“循此苦旅，以达星辰”</font> -->
+<!-- <font  color= #518FC1 size=6 class="fontalicious">“循此苦旅，以達星辰”</font> -->
 
 <!-- <div class="spinner">
   <div class="rect1"></div>
@@ -68,7 +68,7 @@
   <figcaption>Image caption</figcaption>
 </figure>
 
-<font face="宋体"  size=80>:flag_cn:<b></font>  
+<font face="宋體"  size=80>:flag_cn:<b></font>  
 
 $\overset{wáng}{王}\overset{kē}{科}\overset{wén}{文}$
 
@@ -168,9 +168,9 @@ $\overset{wáng}{王}\overset{kē}{科}\overset{wén}{文}$
 
 </div>
 
-<p>这是测试<span class="mask">并且被掩盖的</span>文字！</p>
+<p>這是測試<span class="mask">並且被掩蓋的</span>文字！</p>
 
-<div id="ww_a25897805c222" v='1.3' loc='auto' a='{"t":"responsive","lang":"zh","sl_lpl":1,"ids":[],"font":"Times","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_tof":"5"}'><a href="https://weatherwidget.org/zh/" id="ww_a25897805c222_u" target="_blank">天气插件</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_a25897805c222"></script>
+<div id="ww_a25897805c222" v='1.3' loc='auto' a='{"t":"responsive","lang":"zh","sl_lpl":1,"ids":[],"font":"Times","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_tof":"5"}'><a href="https://weatherwidget.org/zh/" id="ww_a25897805c222_u" target="_blank">天氣外掛</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_a25897805c222"></script>
 
 ***
 
@@ -261,14 +261,14 @@ $$
 
 <!-- ![Madeira, Portugal](media/binggo.jpg){ data-title="Madeira, Portugal." data-description="Madeira, an autonomous region of Portugal, is an archipelago comprising 4 islands off the northwest coast of Africa. - Google" } -->
 
-左对齐，右对齐  
+左對齊，右對齊  
 ![img](https://s1.imagehub.cc/images/2024/02/02/91a767e93d1a344e44c69936464c583e.png){ align=left }
 
 
 
 <figure markdown>
   ![img](https://s1.imagehub.cc/images/2024/02/02/91a767e93d1a344e44c69936464c583e.png){ width="300" }
-  <figcaption>图片说明</figcaption>
+  <figcaption>圖片說明</figcaption>
 </figure>
 
 **明暗**
@@ -308,7 +308,7 @@ sequenceDiagram
 ++ctrl+alt+del++  
 
 
-:octicons-arrow-right-24: [点我回到顶部](#) 
+:octicons-arrow-right-24: [點我回到頂部](#) 
 
 [Hover me][example]
 
@@ -360,7 +360,7 @@ Wcowin
   </body>
 
 
-来看看两个重要极限  
+來看看兩個重要極限  
 
 $$\displaystyle\lim_{x \rightarrow 0}\frac{\sin x}{x} = 1$$
 
@@ -372,13 +372,13 @@ $$\displaystyle\lim_{x \rightarrow + \infty}(1 + \frac{1}{x})^x = e$$
 <script type="text/javascript" src="/ckplayer/js/ckplayer.js" charset="UTF-8"></script>
 <div class="video" style="width: 640px;height: 500px;">播放器容器</div>
 <script type="text/javascript">
-    //定义一个变量：videoObject，用来做为视频初始化配置
+    //定義一個變數：videoObject，用來做為影片初始化配置
     var videoObject = {
         container: '.video', //“#”代表容器的ID，“.”或“”代表容器的class
-        smallWindows:null,//是否启用小窗口模式
-        poster: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c6f46fb63c119d83d2b4b38505fffbcd.jpg?w=1226&h=450',//封面图片地址
-        webFull:true,//是否启用页面全屏按钮，默认不启用
-        video: 'https://cdn.cnbj1.fds.api.mi-img.com/staticsfile/pc/about/struggle.mp4'//视频地址
+        smallWindows:null,//是否啟用小視窗模式
+        poster: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c6f46fb63c119d83d2b4b38505fffbcd.jpg?w=1226&h=450',//封面圖片地址
+        webFull:true,//是否啟用頁面全屏按鈕，預設不啟用
+        video: 'https://cdn.cnbj1.fds.api.mi-img.com/staticsfile/pc/about/struggle.mp4'//影片地址
     };
     var player = new ckplayer(videoObject);//初始化播放器
 </script>   -->
@@ -387,26 +387,26 @@ $$\displaystyle\lim_{x \rightarrow + \infty}(1 + \frac{1}{x})^x = e$$
 
 <div id="grad1"></div>
 
-<button class="buttoncss">按钮</button>
+<button class="buttoncss">按鈕</button>
  <button class="buttonxuan buttonxuan1">Green</button>
 
- <div class="hide">我是会隐藏的元素。</div>  
+ <div class="hide">我是會隱藏的元素。</div>  
  
 ***  
 
  <div class="grid-container">
-  <div class="item1">头部</div>
-  <div class="item2">菜单</div>
-  <div class="item3">主要内容区域</div>  
-  <div class="item4">右侧</div>
+  <div class="item1">頭部</div>
+  <div class="item2">選單</div>
+  <div class="item3">主要內容區域</div>  
+  <div class="item4">右側</div>
   <div class="item5">底部</div>
 </div>
 
 
 <p>
-这是一个电子邮件链接：
+這是一個電子郵件連結：
 <a href="mailto:wangkewen821@gmail.com?Subject=Hello%20Wcowin" target="_top">
-发送邮件</a>
+傳送郵件</a>
 </p>
 
 <table border="1">

@@ -1,14 +1,14 @@
 ---
-title: 利用Mkdocs部署静态网页至GitHubpages
+title: 利用Mkdocs部署靜態網頁至GitHubpages
 tags:
   - Mkdocs
 ---
 
 !!! info
-    Material for MkDocs官方网站：[MkDocs](https://www.mkdocs.org/){target=“_blank”}
+    Material for MkDocs官方網站：[MkDocs](https://www.mkdocs.org/){target=“_blank”}
 
 ---
-推荐看下这个视频：  
+推薦看下這個影片：  
 :fontawesome-brands-youtube:{ style="color: #EE0F0F" }
 __[How to set up Material for MkDocs]__ by @james-willett – :octicons-clock-24:
 15m – Learn how to create and host a documentation site using Material for
@@ -18,24 +18,24 @@ MkDocs on GitHub Pages in a step-by-step guide.
 
 ---
 
-## 一、准备工作
+## 一、準備工作
 
-1.下载[Github Desktop](https://github.com/desktop/desktop){target=“_blank”}
+1.下載[Github Desktop](https://github.com/desktop/desktop){target=“_blank”}
 
- 2.有一个GitHub账号​​​​​​​(有手就行)
+ 2.有一個GitHub賬號​​​​​​​(有手就行)
 ***
 ## 二、Creating your site
 
-参考教程： 
+參考教程： 
 
-[利用mkdocs部署静态网页至GitHubpages（更新版）](https://blog.csdn.net/m0_63203517/article/details/129755527?spm=1001.2014.3001.5501){target=“_blank”}
+[利用mkdocs部署靜態網頁至GitHubpages（更新版）](https://blog.csdn.net/m0_63203517/article/details/129755527?spm=1001.2014.3001.5501){target=“_blank”}
 
-与其他教程不同，我首先建议先在Github创建一个名为你的名字+github.io的仓库
+與其他教程不同，我首先建議先在Github建立一個名為你的名字+github.io的倉庫
 ![img](https://s1.imagehub.cc/images/2024/02/02/5074a3e2b7284355e0f777fd9e621ee3.png)
 
 ![img](https://s1.imagehub.cc/images/2024/02/02/5c39f0c9754f067759497361524d2b95.png)  
 
-然后打开github Desktop 克隆到本地
+然後開啟github Desktop 克隆到本地
 ![img](https://s1.imagehub.cc/images/2024/02/02/5c06d33549ea0c4a1357697acc6f8f5d.png)
 
 ![img](https://s1.imagehub.cc/images/2024/02/02/f862b16316fa4ad0f727a0f656cc5cf1.png)
@@ -43,22 +43,22 @@ MkDocs on GitHub Pages in a step-by-step guide.
 ![img](https://s1.imagehub.cc/images/2024/02/02/6483c0b9ee144e0c1e035dccf3339991.png) 
 
 
-打开Wcowin.github.io目录进入终端依次运行:
+開啟Wcowin.github.io目錄進入終端依次執行:
 ```
 pip install mkdocs-material
 mkdocs new mkdocs-site
 ```
-出现下图的几个文件 
+出現下圖的幾個檔案 
 ![img](https://s1.imagehub.cc/images/2024/02/02/140869d445e8c6dfd026e71e3ff0fc09.png)
 
-docs文件下是以后网站的内容，mkdocs.yml是配置文件（配置主题，目录，插件等）
+docs檔案下是以後網站的內容，mkdocs.yml是配置檔案（配置主題，目錄，外掛等）
 
- 你在这个目录下写的任何东西都可以通过github Desktop 上传到github上
+ 你在這個目錄下寫的任何東西都可以透過github Desktop 上傳到github上
 
-执行下面的代码添加一个GitHub Workflow
+執行下面的程式碼新增一個GitHub Workflow
 ***  
-???note "过时的PublishMySite.yml"
-    (执行下面的代码添加一个GitHub Workflow(**已经过时但是仍然能用，最新方法见下方ci.yml**)
+???note "過時的PublishMySite.yml"
+    (執行下面的程式碼新增一個GitHub Workflow(**已經過時但是仍然能用，最新方法見下方ci.yml**)
 
     ``` 
     mkdir .github
@@ -68,26 +68,26 @@ docs文件下是以后网站的内容，mkdocs.yml是配置文件（配置主题
     vim PublishMySite.yml
     ```
 
-    在PublishMySite.yml里面输入以下内容
+    在PublishMySite.yml裡面輸入以下內容
 
     ```yaml
     name: publish site
-    on: # 在什么时候触发工作流
-      push: # 在从本地main分支被push到GitHub仓库时
+    on: # 在什麼時候觸發工作流
+      push: # 在從本地main分支被push到GitHub倉庫時
         branches:
           - main
-      pull_request: # 在main分支合并别人提的pr时
+      pull_request: # 在main分支合併別人提的pr時
         branches:
           - main
-    jobs: # 工作流的具体内容
+    jobs: # 工作流的具體內容
       deploy:
-        runs-on: ubuntu-latest # 创建一个新的云端虚拟机 使用最新Ubuntu系统
+        runs-on: ubuntu-latest # 建立一個新的雲端虛擬機器 使用最新Ubuntu系統
         steps:
           - uses: actions/checkout@v2 # 先checkout到main分支
-          - uses: actions/setup-python@v2 # 再安装Python3和相关环境
+          - uses: actions/setup-python@v2 # 再安裝Python3和相關環境
             with:
               python-version: 3.x
-          - run: pip install mkdocs-material # 使用pip包管理工具安装mkdocs-material
+          - run: pip install mkdocs-material # 使用pip包管理工具安裝mkdocs-material
           - run: mkdocs gh-deploy --force # 使用mkdocs-material部署gh-pages分支
 
     ```
@@ -102,7 +102,7 @@ cd workflows
 vim ci.yml
 ```  
 
-.github/workflows/ci.yml，然后复制并粘贴以下内容：  
+.github/workflows/ci.yml，然後複製並貼上以下內容：  
 ```yaml
 name: ci 
 on:
@@ -135,7 +135,7 @@ jobs:
       - run: mkdocs gh-deploy --force
 ```
 
-目录树状图:
+目錄樹狀圖:
 ```
 $ tree -a
 .
@@ -149,58 +149,58 @@ $ tree -a
 ```
 
 
-!!!重点来了
-仓库setings/Actions/General  勾选这两项
+!!!重點來了
+倉庫setings/Actions/General  勾選這兩項
 ![](https://s1.imagehub.cc/images/2024/02/02/02fd4e77eb52d4ce18c227f0e29b2c6d.png)
 
 ## 三、配置完善
-打开终端运行  
+開啟終端執行  
 
 `pip install mkdocs-material`
 
-打开**mkdocs.yml** 
+開啟**mkdocs.yml** 
 
- 把以下的内容输入进去（最简单最基础的配置）  
+ 把以下的內容輸入進去（最簡單最基礎的配置）  
 
 ```yaml
-site_name: 网站名字
-site_url: 网站链接
+site_name: 網站名字
+site_url: 網站連結
 site_author: 你的名字
 theme:
-  name: material #主题
+  name: material #主題
 ```  
 
 
-详细mkdocs.yml配置见[Changing the colors - Material for MkDocs](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/)
+詳細mkdocs.yml配置見[Changing the colors - Material for MkDocs](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/)
 
-[下次](https://blog.csdn.net/m0_63203517/article/details/127444446?spm=1001.2014.3001.5502)我会具体谈谈这个问题
+[下次](https://blog.csdn.net/m0_63203517/article/details/127444446?spm=1001.2014.3001.5502)我會具體談談這個問題
 ***
-在下方终端运行可以在浏览器看到实时网站
+在下方終端執行可以在瀏覽器看到實時網站
 ```
 mkdocs serve
 ```
 ![img](https://s1.imagehub.cc/images/2024/02/02/b4a5ac989f1f390573a85bad8c80f49b.png)
 ![img](https://s1.imagehub.cc/images/2024/02/02/38bbc1fad9016ebfa0d894f093b82e3d.png)
 
-这个网站就算是初步建好了
+這個網站就算是初步建好了
 
-最后去github Desktop上传到github
+最後去github Desktop上傳到github
 ![img](https://s1.imagehub.cc/images/2024/02/02/3a15b16d3947825f3f469b4eafedd5ef.png)
 
-**！！！重点**  
-**去仓库的setings/pages选择下图示意的路径**
+**！！！重點**  
+**去倉庫的setings/pages選擇下圖示意的路徑**
 ![](https://s1.imagehub.cc/images/2024/02/02/64a25964ef4e99e4b580084daec10662.png)  
 
-等待一会网址就出来了  
+等待一會網址就出來了  
 
-你的网站网址就是：​
+你的網站網址就是：​
 
 ```
 https://你github的名字.github.io/
-因为我绑定了域名所以网址是：https://wcowin.work/
+因為我繫結了域名所以網址是：https://wcowin.work/
 ```
 ![img](https://s1.imagehub.cc/images/2024/02/02/7f149d6da7ecc6364d86c9517b2c4624.png)
 
-下次谈谈网站的[mkdocs.yml具体配置](mkdocs2.md)[^注]
+下次談談網站的[mkdocs.yml具體配置](mkdocs2.md)[^注]
 
-[^注]:于2023.3.24重写此文
+[^注]:於2023.3.24重寫此文

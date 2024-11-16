@@ -1,141 +1,141 @@
 ---
-title: Mkdocs部署静态网页至GitHub pages配置说明(mkdocs.yml)
+title: Mkdocs部署靜態網頁至GitHub pages配置說明(mkdocs.yml)
 comments: false
 tags:
   - Mkdocs
 ---
 
-官方文件：[Changing the colors - Material for MkDocs](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/)
+官方檔案：[Changing the colors - Material for MkDocs](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/)
 
-**建议详细学习一下上面的官方网站↑↑↑**
+**建議詳細學習一下上面的官方網站↑↑↑**
 
-我把我目前的配置文件mkdocs.yml代码写在下面👇🏻
+我把我目前的配置檔案mkdocs.yml程式碼寫在下面👇🏻
 
-??? note "点击展开"
+??? note "點選展開"
     ```yaml
     #[Info]
-    site_name: Mkdocs-Wcowin中文主题 #your site name 显示在左上角
+    site_name: Mkdocs-Wcowin中文主題 #your site name 顯示在左上角
     site_url: http://wcowin.work/Mkdocs-Wcowin
     site_author: Wcowin # your name
     #[UI]
     theme:
       name: material
-      custom_dir: docs/overrides #覆写路径
-      # font: #谷歌字体，自行搜索
-      #   text: Bitter  #文本字体
-      #   code: Roboto Mono  #代码字体
-      # logo: assets/favicon.png #左上角logo，可插入图片链接
+      custom_dir: docs/overrides #覆寫路徑
+      # font: #谷歌字型，自行搜尋
+      #   text: Bitter  #文字字型
+      #   code: Roboto Mono  #程式碼字型
+      # logo: assets/favicon.png #左上角logo，可插入圖片連結
 
-      favicon: https://s2.loli.net/2024/04/26/PmRdM9iGnvOJHgu.png # 网页icon
+      favicon: https://s2.loli.net/2024/04/26/PmRdM9iGnvOJHgu.png # 網頁icon
 
       palette:
         - media: "(prefers-color-scheme)"
           toggle:
             icon: material/link
-            name: 关闭自动模式
+            name: 關閉自動模式
         #primary: blue grey
         - media: "(prefers-color-scheme: light)"
-          scheme: default # 日间模式
+          scheme: default # 日間模式
           primary: blue grey # 上方的
-          accent: blue # 链接等可交互元件的高亮色
+          accent: blue # 連結等可互動元件的高亮色
           # teal
           toggle:
-            icon: material/toggle-switch # 图标
-            name: 切换至夜间模式 # 鼠标悬浮提示
+            icon: material/toggle-switch # 圖示
+            name: 切換至夜間模式 # 滑鼠懸浮提示
         - media: "(prefers-color-scheme: dark)"
-          scheme: slate # 夜间模式
+          scheme: slate # 夜間模式
           primary: black
           accent: indigo
           # teal
           toggle:
             icon: material/toggle-switch-off-outline
-            name: 切换至日间模式
+            name: 切換至日間模式
 
       features:
-        - announce.dismiss #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
+        - announce.dismiss #呈現可標記為由使用者讀取的臨時公告，可以包含一個用於取消當前公告的按鈕
         # - navigation.instant
-        #- header.autohide  #自动隐藏
-        - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
-        - navigation.tabs #顶级部分将呈现在上面视口标题下方的菜单层中，但在移动设备上保持原样
-        # - navigation.tabs.sticky  #启用粘性选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见
-        - navigation.sections #启用部分后，顶级部分在边栏中呈现为1220px以上视口的组，但在移动设备上保持原样
-        - navigation.top # 返回顶部的按钮 在上滑时出现
-        - navigation.footer #页脚将呈现在边栏中，但在移动设备上保持原样
-        - search.suggest # 搜索输入一些字母时推荐补全整个单词
-        - search.highlight # 搜索出的文章关键词加入高亮
-        - search.share #搜索分享按钮
-        - navigation.expand # 打开Tab时左侧目录全部展开
-        - navigation.indexes #启用节索引页后，可以将文档直接附加到节
+        #- header.autohide  #自動隱藏
+        - navigation.tracking #位址列中的 URL 將自動更新為在目錄中突出顯示的活動錨點
+        - navigation.tabs #頂級部分將呈現在上面視口標題下方的選單層中，但在移動裝置上保持原樣
+        # - navigation.tabs.sticky  #啟用粘性選項卡後，導航選項卡將鎖定在標題下方，並在向下滾動時始終保持可見
+        - navigation.sections #啟用部分後，頂級部分在邊欄中呈現為1220px以上視口的組，但在移動裝置上保持原樣
+        - navigation.top # 返回頂部的按鈕 在上滑時出現
+        - navigation.footer #頁尾將呈現在邊欄中，但在移動裝置上保持原樣
+        - search.suggest # 搜尋輸入一些字母時推薦補全整個單詞
+        - search.highlight # 搜尋出的文章關鍵詞加入高亮
+        - search.share #搜尋分享按鈕
+        - navigation.expand # 開啟Tab時左側目錄全部展開
+        - navigation.indexes #啟用節索引頁後，可以將文件直接附加到節
         - content.tabs.link
         - content.tooltips
-        - content.code.copy #代码复制
+        - content.code.copy #程式碼複製
         - content.action.edit
         - content.action.view
         - content.code.annotate
-      language: zh # 一些提示性的文字会变成中文
+      language: zh # 一些提示性的文字會變成中文
 
       icon:
-        repo: fontawesome/brands/github #右上角图标
+        repo: fontawesome/brands/github #右上角圖示
         logo: logo
-    edit_uri: edit/main/docs # 编辑按钮跳转的链接
-    repo_url: https://github.com/Wcowin/Mkdocs-Wcowin # 右上角点击跳转的链接
+    edit_uri: edit/main/docs # 編輯按鈕跳轉的連結
+    repo_url: https://github.com/Wcowin/Mkdocs-Wcowin # 右上角點選跳轉的連結
     repo_name: Mkdocs-Wcowin # 右上角的名字
 
     # [Navigtion]
-    nav:   #目录
+    nav:   #目錄
 
-      - 标签: tag.md
+      - 標籤: tag.md
       - 留言板: liuyanban.md
       - Blogger:
           - index: blog/index.md
-      - 友链:
-          - 友链: about/link.md
-      - 关于:
-          - 作者个人简介: about/geren.md
-          - 功能测试: about/test.md
+      - 友鏈:
+          - 友鏈: about/link.md
+      - 關於:
+          - 作者個人簡介: about/geren.md
+          - 功能測試: about/test.md
 
-    copyright: Copyright &copy; 2022~2024 Wcowin/All Rights Reserved. # 左下角的版权声明
+    copyright: Copyright &copy; 2022~2024 Wcowin/All Rights Reserved. # 左下角的版權宣告
 
     extra:
-      generator: true #是否删除页脚显示“使用 MkDocs 材料制造”
+      generator: true #是否刪除頁尾顯示“使用 MkDocs 材料製造”
       social:
-        - icon: fontawesome/brands/x-twitter #联系方式图标 : https://fontawesome.com/ 去这里找图标
+        - icon: fontawesome/brands/x-twitter #聯絡方式圖示 : https://fontawesome.com/ 去這裡找圖示
           link: https://twitter.com/wcowin_
         - icon: fontawesome/brands/github
           link: https://github.com/Wcowin
 
-        - icon: fontawesome/regular/envelope #联系方式图标
-          link: mailto:<wangkewen821@gmail.com> #邮件联系方式
+        - icon: fontawesome/regular/envelope #聯絡方式圖示
+          link: mailto:<wangkewen821@gmail.com> #郵件聯絡方式
         - icon: fontawesome/brands/bilibili
           link: https://space.bilibili.com/1407028951?spm_id_from=333.1007.0.0
       analytics:
         provider: google #谷歌分析
         property:
 
-        # 网页底部反馈
+        # 網頁底部反饋
         feedback:
-          title: 此页面有帮助吗？
+          title: 此頁面有幫助嗎？
           ratings:
-            - icon: material/thumb-up-outline #图标可自定义
+            - icon: material/thumb-up-outline #圖示可自定義
               name: This page was helpful
               data: 1
               note: >-
-                谢谢你的反馈！
+                謝謝你的反饋！
             - icon: material/thumb-down-outline
               name: This page could be improved
               data: 0
               note: >-
                 Thanks for your feedback! Help us improve this page by
                 using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
-      # cookies设置（可选）
+      # cookies設定（可選）
       # consent:
       #   title: Cookie consent
       #   description: >-
-      #     我们也使用cookies来识别您的重复访问和偏好来衡量我们文档的有效性以及用户是否找到他们要找的东西。
-      #     如果你同意,你可以帮助我们让我们的网站更好
+      #     我們也使用cookies來識別您的重複訪問和偏好來衡量我們文件的有效性以及使用者是否找到他們要找的東西。
+      #     如果你同意,你可以幫助我們讓我們的網站更好
 
     plugins:
-      - search #搜索配置
+      - search #搜尋配置
       - git-committers:
           enabled: !ENV [CI, false]
           repository: Wcowin/Mkdocs-Wcowin
@@ -159,29 +159,29 @@ tags:
             - blog/posts/wkw.md
             - about/link.md
             - websitebeauty/linktech.md
-      - blog: #博客配置
-          post_date_format: full #时间
+      - blog: #部落格配置
+          post_date_format: full #時間
           draft: true
-          draft_if_future_date: true #自动将具有未来日期的帖子标记为草稿
+          draft_if_future_date: true #自動將具有未來日期的帖子標記為草稿
           post_readtime: true
-          post_readtime_words_per_minute: 265 #计算帖子的阅读时间时读者每分钟预计阅读的字数
+          post_readtime_words_per_minute: 265 #計算帖子的閱讀時間時讀者每分鐘預計閱讀的字數
           post_url_format: "{date}/{slug}"
           # categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
           #   kwds:
           #     case: lower
           pagination_url_format: "page/{page}"
-          authors_file: "{blog}/.authors.yml" #作者信息
+          authors_file: "{blog}/.authors.yml" #作者資訊
       - tags:
-          tags_file: tag.md #分类标签
+          tags_file: tag.md #分類標籤
 
-    markdown_extensions: #详见https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/ 和 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
+    markdown_extensions: #詳見https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/ 和 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
       - abbr
       - attr_list
       - admonition
       - def_list
       - footnotes
       - md_in_html
-      # - meta # 支持Markdown文件上方自定义标题标签等
+      # - meta # 支援Markdown檔案上方自定義標題標籤等
       - pymdownx.caret
       - pymdownx.betterem
       - pymdownx.critic
@@ -198,16 +198,16 @@ tags:
             - name: mermaid
               class: mermaid
               format:
-                !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
+                !!python/name:pymdownx.superfences.fence_code_format # 程式碼塊高亮外掛
 
-      - pymdownx.arithmatex: # latex支持
+      - pymdownx.arithmatex: # latex支援
           generic: true
       - toc:
-          permalink: true # 固定标题位置为当前位置
-      - pymdownx.highlight: # 代码块高亮
+          permalink: true # 固定標題位置為當前位置
+      - pymdownx.highlight: # 程式碼塊高亮
           anchor_linenums: true
-          linenums: true # 显示行号
-          # auto_title: true # 显示编程语言名称
+          linenums: true # 顯示行號
+          # auto_title: true # 顯示程式語言名稱
       - pymdownx.emoji:
           emoji_index: !!python/name:material.extensions.emoji.twemoji
           emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -220,55 +220,55 @@ tags:
       #     permalink: "\ue157"
 
     extra_javascript:
-      - javascripts/extra.js #自定义javascript
-      - javascripts/mathjax.js #Latex支持
-      - https://polyfill.io/v3/polyfill.min.js?features=es6 #Latex支持
-      - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js #Latex支持
+      - javascripts/extra.js #自定義javascript
+      - javascripts/mathjax.js #Latex支援
+      - https://polyfill.io/v3/polyfill.min.js?features=es6 #Latex支援
+      - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js #Latex支援
       # - ckplayer/js/ckplayer.js #播放器配置
-      # - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js  #gitalk支持
+      # - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js  #gitalk支援
       - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js #忘了
 
     extra_css:
-      - stylesheets/extra.css # 自定义CSS
-      - stylesheets/link.css #友链配置
-      - stylesheets/customize.css # 搜索圆角优化
+      - stylesheets/extra.css # 自定義CSS
+      - stylesheets/link.css #友鏈配置
+      - stylesheets/customize.css # 搜尋圓角最佳化
 
-      # - stylesheets/video.css #播放器可选配置
-      # - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.css #gitalk支持
+      # - stylesheets/video.css #播放器可選配置
+      # - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.css #gitalk支援
       # - ckplayer/css/ckplayer.css   #播放器配置
-      - https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css # font-awesome表情支持
-      # - https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css  #分享支持
+      - https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css # font-awesome表情支援
+      # - https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css  #分享支援
 
-      - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css #字体
-      # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css #字体
-      # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css  #字体
-      # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css  #字体
+      - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css #字型
+      # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css #字型
+      # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css  #字型
+      # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css  #字型
 
     ```
 ***
-从头开始分析 
+從頭開始分析 
 
-## 开头
+## 開頭
 ```yaml
-site_name: 网站名字
-site_url: 网站网址
+site_name: 網站名字
+site_url: 網站網址
 site_author: 作者名字
 ```
-**无须多言**
+**無須多言**
 
 ## theme部分  
 
-### 顶部颜色
+### 頂部顏色
 ```yaml
 theme:
   palette:
-    primary: yellow #顶部颜色
+    primary: yellow #頂部顏色
 ```
-primary后面是网站顶部栏目的颜色（也用于标题、边栏、文本链接和其他几个组件）  
-目前支持下面几个颜色：
+primary後面是網站頂部欄目的顏色（也用於標題、邊欄、文字連結和其他幾個元件）  
+目前支援下面幾個顏色：
 ![img](https://s1.imagehub.cc/images/2024/02/02/c7eb8b52d0b17c8e5321cbd21d9710a0.png)
 
-### 明暗主题按钮
+### 明暗主題按鈕
 ![img](https://s1.imagehub.cc/images/2024/02/02/9efed1213b8512fad00679bcab80f3e2.png)
 
 ```yaml
@@ -287,68 +287,68 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 ```
-此配置将在搜索栏旁边呈现调色板切换。请注意，您还可以为每个调色板的primary和accent定义单独的设置。
+此配置將在搜尋欄旁邊呈現調色盤切換。請注意，您還可以為每個調色盤的primary和accent定義單獨的設定。
 
-按钮图标可以改变（修改icon后面的代码）：
+按鈕圖示可以改變（修改icon後面的程式碼）：
 ![img](https://s1.imagehub.cc/images/2024/02/02/3fbb40519a69d5c5600c49ee83987802.png)
 
 ***
 ### features
 ```yaml
 features:
-    - navigation.instant   #- header.autohide  #自动隐藏
-    #- announce.dismiss   #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
-    - navigation.tracking   #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
-    - navigation.tabs   #顶级部分将呈现在上面视口标题下方的菜单层中，但在移动设备上保持原样
-    #- navigation.tabs.sticky    #启用粘性选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见
-    #- navigation.sections   #启用部分后，顶级部分在边栏中呈现为1220px以上视口的组，但在移动设备上保持原样
-    - navigation.top   # 返回顶部的按钮 在上滑时出现
-    - search.suggest   # 搜索输入一些字母时推荐补全整个单词
-    - search.highlight   # 搜索出的文章关键词加入高亮
-    - navigation.expand   # 打开Tab时左侧目录全部展开
-    #- navigation.indexes   #启用节索引页后，可以将文档直接附加到节
-    - search.share   #搜索分享按钮
+    - navigation.instant   #- header.autohide  #自動隱藏
+    #- announce.dismiss   #呈現可標記為由使用者讀取的臨時公告，可以包含一個用於取消當前公告的按鈕
+    - navigation.tracking   #位址列中的 URL 將自動更新為在目錄中突出顯示的活動錨點
+    - navigation.tabs   #頂級部分將呈現在上面視口標題下方的選單層中，但在移動裝置上保持原樣
+    #- navigation.tabs.sticky    #啟用粘性選項卡後，導航選項卡將鎖定在標題下方，並在向下滾動時始終保持可見
+    #- navigation.sections   #啟用部分後，頂級部分在邊欄中呈現為1220px以上視口的組，但在移動裝置上保持原樣
+    - navigation.top   # 返回頂部的按鈕 在上滑時出現
+    - search.suggest   # 搜尋輸入一些字母時推薦補全整個單詞
+    - search.highlight   # 搜尋出的文章關鍵詞加入高亮
+    - navigation.expand   # 開啟Tab時左側目錄全部展開
+    #- navigation.indexes   #啟用節索引頁後，可以將文件直接附加到節
+    - search.share   #搜尋分享按鈕
 ```
-看我所做的注释就很好理解，feature部分让网站拥有了目录，增加了搜索项目的功能，返回顶部等功能，注释里很简明介绍了
+看我所做的註釋就很好理解，feature部分讓網站擁有了目錄，增加了搜尋專案的功能，返回頂部等功能，註釋裡很簡明介紹了
 ![png](https://s1.imagehub.cc/images/2024/02/02/2f7149a07d26e17934e626b7915cc74a.png)
 ![png](https://s1.imagehub.cc/images/2024/02/02/0e5f75464543f1c9785f54a1b7271e47.png)
 ![img](https://s1.imagehub.cc/images/2024/02/02/95d1df12503d37cb74c967a6cb9a2f96.png)
 ![img](https://s1.imagehub.cc/images/2024/02/02/0d19f89ece3fca54db038ff7d9644d61.png)
 ## nav部分 
-这一部分就是目录
+這一部分就是目錄
 ![img](https://s1.imagehub.cc/images/2024/02/02/02da4022bd8af67b670e4da0dffbe95f.png)
 
 ```yaml
 nav: 
-  - 博客:
-    - 好用/好玩网站分享: blog/Webplay.md  #.md文件的相对路径
-  - 开发: 
+  - 部落格:
+    - 好用/好玩網站分享: blog/Webplay.md  #.md檔案的相對路徑
+  - 開發: 
     - Markdown: develop/markdown.md
 ```
-依照上面的模版为例，你可以在顶部栏目建立博客和开发两个大标签
+依照上面的模版為例，你可以在頂部欄目建立部落格和開發兩個大標籤
 ```
-- 内容标题: 文件路径
+- 內容標題: 檔案路徑
 ```
-内容标题效果：
+內容標題效果：
 ![img](https://s1.imagehub.cc/images/2024/02/02/ab0212029567b7a6cd3fb4089de888cf.png)
 
-.md文件路径(相对路径)：
+.md檔案路徑(相對路徑)：
 ![img](https://s1.imagehub.cc/images/2024/02/02/0361e9d863ccb15e83006feac1b12c0a.png)  
 
-可能看起比较复杂，总结一下就是：我想写一篇文章在docs/blog下写一篇名为`Wcowin最帅`的文章，首先在docs/blog下新建一个`xxx.md`文件，里面写写东西，再去mkdocs.yml里找到nav，这样写：
+可能看起比較複雜，總結一下就是：我想寫一篇文章在docs/blog下寫一篇名為`Wcowin最帥`的文章，首先在docs/blog下新建一個`xxx.md`檔案，裡面寫寫東西，再去mkdocs.yml裡找到nav，這樣寫：
 ```yaml
 nav: 
-  - 博客:
-    - Wcowin最帅: blog/xxx.md  #.md文件的相对路径
+  - 部落格:
+    - Wcowin最帥: blog/xxx.md  #.md檔案的相對路徑
 ```  
-nav才是最终决定这篇文章位置的配置，docs下的md文件只是存放功能  
+nav才是最終決定這篇文章位置的配置，docs下的md檔案只是存放功能  
 
 ***
-这里也注意：**所有文件都在docs文件下，文件类型除CSS，Javascript,yml等都是.md结尾的文件**
+這裡也注意：**所有檔案都在docs檔案下，檔案型別除CSS，Javascript,yml等都是.md結尾的檔案**
 
-所以强烈推荐您去学习Markdown、Html5、CSS3、Javascript等知识，这样您就可以自定义您的网站了。
+所以強烈推薦您去學習Markdown、Html5、CSS3、Javascript等知識，這樣您就可以自定義您的網站了。
 
-到这里先检查一下文件树状图(xx.md代表你的md文件)：
+到這裡先檢查一下檔案樹狀圖(xx.md代表你的md檔案)：
 
 ```
 $ tree -a
@@ -376,10 +376,10 @@ extra:
     - name: English
       link: https://wcowin-work.translate.goog/?_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=zh-CN&_x_tr_pto=wapp 
       lang: en
-    - name: 中国(台湾)
+    - name: 中國(臺灣)
       link: https://wcowin-work.translate.goog/?_x_tr_sl=zh-CN&_x_tr_tl=zh-TW&_x_tr_hl=zh-CN&_x_tr_pto=wapp
       lang: zh-TW
-  generator: false  #删除页脚显示“使用 MkDocs 材料制造”
+  generator: false  #刪除頁尾顯示“使用 MkDocs 材料製造”
   social:
     - icon: fontawesome/brands/twitter 
       link: https://twitter.com/wcowin_
@@ -388,23 +388,23 @@ extra:
     - icon: fontawesome/brands/bilibili
       link: https://space.bilibili.com/1407028951?spm_id_from=333.1007.0.0
     - icon: fontawesome/solid/paper-plane
-      link: mailto:<1135801806@qq.com> #联系方式
+      link: mailto:<1135801806@qq.com> #聯絡方式
 ```
 ### alternate
-可以设置网页翻译 
+可以設定網頁翻譯 
 ```yaml
   alternate:
     - name: English
       link: https://wcowin-work.translate.goog/?_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=zh-CN&_x_tr_pto=wapp 
       lang: en
-    - name: 中国(台湾)
+    - name: 中國(臺灣)
       link: https://wcowin-work.translate.goog/?_x_tr_sl=zh-CN&_x_tr_tl=zh-TW&_x_tr_hl=zh-CN&_x_tr_pto=wapp
       lang: zh-TW
 ```
 ### generator 
-设置为`generator: false`可以删除页脚显示“使用 MkDocs 材料制造”     
+設定為`generator: false`可以刪除頁尾顯示“使用 MkDocs 材料製造”     
 ### social  
-可设置网站右下角的社交链接（icon是小图标，link后填自己链接即可）： 
+可設定網站右下角的社交連結（icon是小圖示，link後填自己連結即可）： 
 ![img](https://s1.imagehub.cc/images/2024/02/02/73179baf6402e27c92afc51eb59645a6.png)
 
 
@@ -414,13 +414,13 @@ analytics:
     provider: google
     property: G-XXXXXXXXXX  #你的Google Analytics ID
     feedback:
-      title: 此页面有帮助吗？
+      title: 此頁面有幫助嗎？
       ratings:
         - icon: material/thumb-up-outline
           name: This page was helpful
           data: 1
           note: >-
-            谢谢你的反馈！
+            謝謝你的反饋！
         - icon: material/thumb-down-outline
           name: This page could be improved
           data: 0
@@ -431,14 +431,14 @@ analytics:
   consent:
     title: Cookie consent
     description: >- 
-      我们也使用cookies来识别您的重复访问和偏好来衡量我们文档的有效性以及用户是否找到他们要找的东西。
-      如果你同意,你可以帮助我们让我们的网站更好
+      我們也使用cookies來識別您的重複訪問和偏好來衡量我們文件的有效性以及使用者是否找到他們要找的東西。
+      如果你同意,你可以幫助我們讓我們的網站更好
 
 ```
 ![img](https://s1.imagehub.cc/images/2024/02/02/a303166e7a67a2bc7bddde77c3d1277a.png)  
 
 ![img](https://s1.imagehub.cc/images/2024/02/02/79d1f726b8105e0657cea3e2cef628ce.png)
-注意property: G-XXXXXXXXXX  #你的Google Analytics ID，这里的G-XXXXXXXXXX是你的Google Analytics ID，你可以在Google Analytics中找到，如果你不想使用Google Analytics，可以删除这一部分。
+注意property: G-XXXXXXXXXX  #你的Google Analytics ID，這裡的G-XXXXXXXXXX是你的Google Analytics ID，你可以在Google Analytics中找到，如果你不想使用Google Analytics，可以刪除這一部分。
 
 ## Plugins部分
 ```yaml
@@ -460,11 +460,11 @@ plugins:
   #     exclude:
   #       - index.md
   - blog:
-      post_date_format: full #时间
+      post_date_format: full #時間
       draft: true
-      draft_if_future_date: true #自动将具有未来日期的帖子标记为草稿
+      draft_if_future_date: true #自動將具有未來日期的帖子標記為草稿
       post_readtime: true
-      post_readtime_words_per_minute: 265  #计算帖子的阅读时间时读者每分钟预计阅读的字数
+      post_readtime_words_per_minute: 265  #計算帖子的閱讀時間時讀者每分鐘預計閱讀的字數
       post_url_format: "{date}/{slug}"
       # categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
       #   kwds:
@@ -472,49 +472,49 @@ plugins:
       # categories_toc: true
       # pagination_per_page: 5
       pagination_url_format: "page/{page}"
-      authors_file: "{blog}/.authors.yml"  #作者信息
+      authors_file: "{blog}/.authors.yml"  #作者資訊
   - tags:
-      tags_file: tag.md  #分类标签
+      tags_file: tag.md  #分類標籤
 ```
 
-`- search`开启搜索功能
+`- search`開啟搜尋功能
 ![img](https://s1.imagehub.cc/images/2024/02/02/0e5f75464543f1c9785f54a1b7271e47.png)  
 
-`-blog` 即博客，可以在docs/blog/posts里直接写md文件（不需要在nav里写路径）,然后在上述nav里写
+`-blog` 即部落格，可以在docs/blog/posts裡直接寫md檔案（不需要在nav裡寫路徑）,然後在上述nav裡寫
 ```
 nav:
   - Blog:
     - blog/index.md
 ```   
-博客效果：   
+部落格效果：   
 ![](https://s1.imagehub.cc/images/2024/02/02/cee8d935a920668b738593850c7eb7f8.png)  
-详细配置可以去看[添加Mkdocs博客](mkdocsblog.md)
+詳細配置可以去看[新增Mkdocs部落格](mkdocsblog.md)
 
-`- tags`就是标签
+`- tags`就是標籤
 ```yaml
 plugins:
   - tags:
-      tags_file: tag.md  #分类标签
+      tags_file: tag.md  #分類標籤
 ```
 ![img](https://s1.imagehub.cc/images/2024/02/02/d20f0562838a8396724f18bfd09e19e8.png)
 
-docs文件夹下新建tags.md文件，会自动在tags.md文件中生成标签列表  
+docs資料夾下新建tags.md檔案，會自動在tags.md檔案中生成標籤列表  
 ![](https://s1.imagehub.cc/images/2024/02/02/d9fa43225a6dd3932c36038c605954a4.png)
 
-但是每个.md文件(你写的markdown文件)最开始的地方(称为meta)都需要添加标签，否则不会显示在tags.md文件中
+但是每個.md檔案(你寫的markdown檔案)最開始的地方(稱為meta)都需要新增標籤，否則不會顯示在tags.md檔案中
 ![img](https://s1.imagehub.cc/images/2024/02/02/2732b6ccefefb44d93b34f5108b3d050.png)
 
 meta格式：
 
 ```yaml
 ---
-title: #文章标题
+title: #文章標題
 tags:
-  - 你的标签名字
+  - 你的標籤名字
 hide:
-  #- navigation # 显示右侧导航
-  #- toc #显示左侧导航
-comments: false  #评论，默认不开启
+  #- navigation # 顯示右側導航
+  #- toc #顯示左側導航
+comments: false  #評論，預設不開啟
 ---
 
 ```
@@ -529,7 +529,7 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
-  - meta # 支持Markdown文件上方自定义标题标签等
+  - meta # 支援Markdown檔案上方自定義標題標籤等
   - pymdownx.caret
   - pymdownx.betterem
   - pymdownx.critic
@@ -544,15 +544,15 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
-  - pymdownx.arithmatex:  # latex支持
+          format: !!python/name:pymdownx.superfences.fence_code_format # 程式碼塊高亮外掛
+  - pymdownx.arithmatex:  # latex支援
       generic: true
   - toc:
-      permalink: true # 固定标题位置为当前位置
-  - pymdownx.highlight: # 代码块高亮
+      permalink: true # 固定標題位置為當前位置
+  - pymdownx.highlight: # 程式碼塊高亮
       anchor_linenums: true
-      linenums: true # 显示行号
-      # auto_title: true # 显示编程语言名称
+      linenums: true # 顯示行號
+      # auto_title: true # 顯示程式語言名稱
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -564,46 +564,46 @@ markdown_extensions:
       slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
       permalink: "\ue157"
 ```
-这部分是对markdown语法的扩展，注释里也有简述 ，**建议直接复制粘贴**
+這部分是對markdown語法的擴充套件，註釋裡也有簡述 ，**建議直接複製貼上**
 
 ***
 ## extra_javascript 和extra_css
 ```yaml
 extra_javascript:
-  - javascripts/extra.js  #自定义javascript
-  - javascripts/mathjax.js  #Latex支持
-  - https://polyfill.io/v3/polyfill.min.js?features=es6   #Latex支持
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js   #Latex支持
+  - javascripts/extra.js  #自定義javascript
+  - javascripts/mathjax.js  #Latex支援
+  - https://polyfill.io/v3/polyfill.min.js?features=es6   #Latex支援
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js   #Latex支援
   - ckplayer/js/ckplayer.js #播放器配置
-  - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js  #gitalk支持
+  - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js  #gitalk支援
   - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js #忘了
 
 extra_css:
-  - stylesheets/extra.css # 自定义CSS
-  - stylesheets/link.css  #友链配置
-  # - stylesheets/video.css #播放器可选配置
-  - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.css #gitalk支持
+  - stylesheets/extra.css # 自定義CSS
+  - stylesheets/link.css  #友鏈配置
+  # - stylesheets/video.css #播放器可選配置
+  - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.css #gitalk支援
   - ckplayer/css/ckplayer.css   #播放器配置
-  - https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css  # font-awesome表情支持
-  # - https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css  #分享支持
+  - https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css  # font-awesome表情支援
+  # - https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css  #分享支援
 
-  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css  #字体
-  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css #字体
-  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css  #字体
-  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css  #字体
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css  #字型
+  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css #字型
+  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css  #字型
+  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css  #字型
 ```
-javascripts/mathjax.js里有对数学公式的扩展，extra_css里是CSS的知识了，及自定义网站格式颜色等  
+javascripts/mathjax.js裡有對數學公式的擴充套件，extra_css裡是CSS的知識了，及自定義網站格式顏色等  
 
-如果你想自定义网站的样式，可以看这几篇文章：  
+如果你想自定義網站的樣式，可以看這幾篇文章：  
 
-[JS实现鼠标样式](../websitebeauty/shubiao.md)   
+[JS實現滑鼠樣式](../websitebeauty/shubiao.md)   
 
 [背景特效](../websitebeauty/backgroud.md)  
 
-[自定义网站字体](../websitebeauty/mkdocsfont.md)  
+[自定義網站字型](../websitebeauty/mkdocsfont.md)  
 
-[添加友链](../websitebeauty/linktech.md)
+[新增友鏈](../websitebeauty/linktech.md)
 
-[添加评论系统](../websitebeauty/mkcomments.md)  
+[新增評論系統](../websitebeauty/mkcomments.md)  
 
-[为MKdocs添加文章修订时间戳](../websitebeauty/time.md)
+[為MKdocs新增文章修訂時間戳](../websitebeauty/time.md)

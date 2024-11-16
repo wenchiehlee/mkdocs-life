@@ -1,36 +1,36 @@
 ---
-title: 为网站添加评论系统
+title: 為網站新增評論系統
 comments: true
 tags:
   - Mkdocs
 ---
-官方文档：[Adding a comment system](https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/)  
+官方文件：[Adding a comment system](https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/)  
 
-这里我同样推荐[giscus](https://giscus.app/zh-CN)
+這裡我同樣推薦[giscus](https://giscus.app/zh-CN)
 
 
-利用 GitHub Discussions 实现的评论系统，让访客借助 GitHub 在你的网站上留下评论和反应吧！本项目深受 utterances 的启发。
+利用 GitHub Discussions 實現的評論系統，讓訪客藉助 GitHub 在你的網站上留下評論和反應吧！本專案深受 utterances 的啟發。
 
-* 开源。🌏
-* 无跟踪，无广告，永久免费。📡 🚫
-* 无需数据库。所有数据均储存在 GitHub Discussions 中。:octocat:
-* 支持自定义主题！🌗
-* 支持多种语言。🌐
+* 開源。🌏
+* 無跟蹤，無廣告，永久免費。📡 🚫
+* 無需資料庫。所有資料均儲存在 GitHub Discussions 中。:octocat:
+* 支援自定義主題！🌗
+* 支援多種語言。🌐
 * 高可配置性。🔧
-* 自动从 GitHub 拉取新评论与编辑。🔃
-* 可自建服务！🤳
+* 自動從 GitHub 拉取新評論與編輯。🔃
+* 可自建服務！🤳
 
-言归正传
+言歸正傳
 
 ## 第一步
-mkdocs.yml中添加
+mkdocs.yml中新增
 ```
 theme:
   name: material
-  custom_dir: docs/overrides  #主要是这一行
+  custom_dir: docs/overrides  #主要是這一行
 ```
-参考下图新建overrides文件，在此文件下参考下图新建覆盖html文件  
-树状结构如下:  
+參考下圖新建overrides檔案，在此檔案下參考下圖新建覆蓋html檔案  
+樹狀結構如下:  
 ```
 $ tree -a
 .
@@ -58,7 +58,7 @@ $ tree -a
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
   <!-- Insert generated snippet here -->
   <script src="https://giscus.app/client.js"
-  data-repo="你的仓库名称（如Wcowin/hexo-site-comments）"
+  data-repo="你的倉庫名稱（如Wcowin/hexo-site-comments）"
   data-repo-id=" "
   data-category=" "
   data-category-id=" "
@@ -110,17 +110,17 @@ $ tree -a
 {% endif %}
 ```
 ## 第二步
-打开<https://giscus.app/zh-CN>  走完这个页面的流程就会得到(这会在你的Github创建新的仓库，建议自己先去新建个 Discussions)
+開啟<https://giscus.app/zh-CN>  走完這個頁面的流程就會得到(這會在你的Github建立新的倉庫，建議自己先去新建個 Discussions)
 ![](https://s1.imagehub.cc/images/2024/02/02/b0fabd6a0c967d5a846c087adea5b680.png)  
 
 ![](https://s1.imagehub.cc/images/2024/02/02/d0c7b4e08a714b5c2b60421f58159c62.png)  
 
 ```html
 <script src="https://giscus.app/client.js"
-        data-repo="[在此输入仓库]"
-        data-repo-id="[在此输入仓库 ID]"
-        data-category="[在此输入分类名]"
-        data-category-id="[在此输入分类 ID]"
+        data-repo="[在此輸入倉庫]"
+        data-repo-id="[在此輸入倉庫 ID]"
+        data-category="[在此輸入分類名]"
+        data-category-id="[在此輸入分類 ID]"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
@@ -133,38 +133,38 @@ $ tree -a
 </script>
 ```
 
-复制将此代码，替换最上面👆🏻comments.html中高亮的代码
+複製將此程式碼，替換最上面👆🏻comments.html中高亮的程式碼
 
-终端里`mkdocs server`一下
+終端裡`mkdocs server`一下
 
-## 最后
-在你想插入评论的地方的元数据：`comments: true `
+## 最後
+在你想插入評論的地方的後設資料：`comments: true `
 
 ```
 ---
 title: 留言板
 hide:
-  #  - navigation # 显示右
-  #  - toc #显示左
+  #  - navigation # 顯示右
+  #  - toc #顯示左
   #  - footer
   #  - feedback  
-comments: true  #默认不开启评论
+comments: true  #預設不開啟評論
 ---
 ```
 ## 效果  
 
-完美!快速相应  
+完美!快速相應  
 
 <figure markdown >
   ![](https://s1.imagehub.cc/images/2024/02/02/0619f922f930e7649fb40405c7e49339.png)
-  <figcaption>这是图片↑↑↑</figcaption>
+  <figcaption>這是圖片↑↑↑</figcaption>
 </figure>
 
-## 其他评论系统
+## 其他評論系統
 
-把想要内嵌的评论代码放在相应页面即可
+把想要內嵌的評論程式碼放在相應頁面即可
 比如[twikoo](https://twikoo.js.org/)
-去看它的官方配置文档很简单就配置好了
+去看它的官方配置文件很簡單就配置好了
 
 ```html
 <head> 
@@ -178,13 +178,13 @@ comments: true  #默认不开启评论
   <script src="https://cdn.staticfile.org/twikoo/1.6.21/twikoo.all.min.js"></script> 
   <script>
 twikoo.init({
-  envId: 'https://superb-salamander-e730b6.netlify.app/.netlify/functions/twikoo', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+  envId: 'https://superb-salamander-e730b6.netlify.app/.netlify/functions/twikoo', // 騰訊雲環境填 envId；Vercel 環境填地址（https://xxx.vercel.app）
   el: '#tcomment', // 容器元素
-   //region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
-  // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
-   //lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+   //region: 'ap-guangzhou', // 環境地域，預設為 ap-shanghai，騰訊雲環境填 ap-shanghai 或 ap-guangzhou；Vercel 環境不填
+  // path: location.pathname, // 用於區分不同文章的自定義 js 路徑，如果您的文章路徑不是 location.pathname，需傳此引數
+   //lang: 'zh-CN', // 用於手動設定評論區語言，支援的語言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
    onCommentLoaded: function () {
-    console.log('评论加载完成');
+    console.log('評論載入完成');
   }
 })
 </script> 
@@ -201,15 +201,15 @@ twikoo.init({
   <script src="https://cdn.staticfile.org/twikoo/1.6.21/twikoo.all.min.js"></script> 
   <script>
 twikoo.init({
-  envId: 'https://superb-salamander-e730b6.netlify.app/.netlify/functions/twikoo', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+  envId: 'https://superb-salamander-e730b6.netlify.app/.netlify/functions/twikoo', // 騰訊雲環境填 envId；Vercel 環境填地址（https://xxx.vercel.app）
   el: '#tcomment', // 容器元素
-   //region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
-  // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
-   //lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+   //region: 'ap-guangzhou', // 環境地域，預設為 ap-shanghai，騰訊雲環境填 ap-shanghai 或 ap-guangzhou；Vercel 環境不填
+  // path: location.pathname, // 用於區分不同文章的自定義 js 路徑，如果您的文章路徑不是 location.pathname，需傳此引數
+   //lang: 'zh-CN', // 用於手動設定評論區語言，支援的語言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
    onCommentLoaded: function () {
-    console.log('评论加载完成');
+    console.log('評論載入完成');
   }
 })
 </script> 
 
-我感觉twikoo也好看！
+我感覺twikoo也好看！

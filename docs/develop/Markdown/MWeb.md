@@ -1,110 +1,110 @@
 ---
-title: Markdown写作应用推荐
+title: Markdown寫作應用推薦
 tags:
   - Markdown
 ---  
 
-<b>MWeb Pro </b>是一款适用于macOS的专业Markdown写作、笔记本应用软件。喜欢写博客的朋友，那你一定会需要 MWeb Pro 这款软件。为您提供最佳的写作体验。
+<b>MWeb Pro </b>是一款適用於macOS的專業Markdown寫作、筆記本應用軟體。喜歡寫部落格的朋友，那你一定會需要 MWeb Pro 這款軟體。為您提供最佳的寫作體驗。
 
-Markdown 语法支持：
+Markdown 語法支援：
 
-使用 Github Flavored Markdown 语法，简称 GFM 语法。支持表格、TOC、LaTeX、代码块、任务列表、脚注等。画图库支持 mermaid, viz, echarts, plantuml, sequence, flow。
+使用 Github Flavored Markdown 語法，簡稱 GFM 語法。支援表格、TOC、LaTeX、程式碼塊、任務列表、腳註等。畫相簿支援 mermaid, viz, echarts, plantuml, sequence, flow。
 
-辅助功能
+輔助功能
 
-支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。在兼容 Markdown 语法的情况下支持设置图片宽度。好用的表格插入和 LaTeX 书写辅助。
+支援截圖並貼上、複製並貼上、拖拽等方式插入圖片並直接顯示在編輯器內。在相容 Markdown 語法的情況下支援設定圖片寬度。好用的表格插入和 LaTeX 書寫輔助。
 
-输出功能
+輸出功能
 
-支持导出为图片、HTML、Epub、PDF、RTF、Docx。支持发布到 Wordpress、印象笔记、Blogger、Medium、Tumblr等。支持七牛云、又拍云等以及自定义的图床服务。
+支援匯出為圖片、HTML、Epub、PDF、RTF、Docx。支援釋出到 Wordpress、印象筆記、Blogger、Medium、Tumblr等。支援七牛雲、又拍雲等以及自定義的圖床服務。
 
-强大的笔记功能
+強大的筆記功能
 
-强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。 快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。快速搜索：目前已支持全局快捷键调出搜索。
+強大的檔案庫支援分類樹和標籤管理檔案，檔案可歸類於多個分類，可以把分類整個匯出為 Epub、PDF 和生成靜態網站。非常合適用於筆記、個人知識收集、管理和輸出。 快速筆記：隨意增加筆記及圖片等素材，支援以天為單位把增加的素材組合在一個檔案內，方便整理及記錄歷史收集情況。快速搜尋：目前已支援全域性快捷鍵調出搜尋。
 
 ***
-以下摘自MWeb关于Markdown的介绍
+以下摘自MWeb關於Markdown的介紹
 
-## 欢迎使用 MWeb
+## 歡迎使用 MWeb
 
-MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：
+MWeb 是專業的 Markdown 寫作、記筆記、靜態部落格生成軟體，目前已支援 Mac，iPad 和 iPhone。MWeb 有以下特色：
 
-## 软件本身：
+## 軟體本身：
 
-* 使用原生的 macOS 技术打造，追求与系统的完美结合。
-* 原则上，首先是追求界面简洁和高性能，然后才是强大易用，功能全面。
+* 使用原生的 macOS 技術打造，追求與系統的完美結合。
+* 原則上，首先是追求介面簡潔和高效能，然後才是強大易用，功能全面。
 
-## Markdown 语法：
+## Markdown 語法：
 
-* 使用 GitHub Flavored Markdown 语法，简称 GFM 语法。
-* 支持表格、TOC、LaTeX、代码块、任务列表、脚注等。
-* 画图库支持 mermaid, viz, ECharts, PlantUML, Sequence, Flow。
+* 使用 GitHub Flavored Markdown 語法，簡稱 GFM 語法。
+* 支援表格、TOC、LaTeX、程式碼塊、任務列表、腳註等。
+* 畫相簿支援 mermaid, viz, ECharts, PlantUML, Sequence, Flow。
 
-## Markdown 辅助：
+## Markdown 輔助：
 
-* 支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。
-* 在兼容 Markdown 语法的情况下支持设置图片宽度。
-* 好用的表格插入和 LaTeX 书写辅助。
+* 支援截圖並貼上、複製並貼上、拖拽等方式插入圖片並直接顯示在編輯器內。
+* 在相容 Markdown 語法的情況下支援設定圖片寬度。
+* 好用的表格插入和 LaTeX 書寫輔助。
 
-## Markdown 输出：
+## Markdown 輸出：
 
-* 支持导出为图片、HTML、Epub、PDF、RTF、Docx。
-* 支持发布到 WordPress、支持 Metaweblog API 协议的服务、Wordpress.com、印象笔记（Evernote）、Blogger、Medium、Tumblr、语雀、Ghost、少数派 Matrix。
-* 图片上传服务（图床）支持 Imgur、七牛云、又拍云、腾讯云 COS、阿里云 OSS、SM.MS和自定义的图床服务。
+* 支援匯出為圖片、HTML、Epub、PDF、RTF、Docx。
+* 支援釋出到 WordPress、支援 Metaweblog API 協議的服務、Wordpress.com、印象筆記（Evernote）、Blogger、Medium、Tumblr、語雀、Ghost、少數派 Matrix。
+* 圖片上傳服務（圖床）支援 Imgur、七牛雲、又拍雲、騰訊雲 COS、阿里雲 OSS、SM.MS和自定義的圖床服務。
 
-## Markdown 笔记：
+## Markdown 筆記：
 
-* 强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。
-* 快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。
-* 快速搜索：目前已支持全局快捷键调出搜索。
+* 強大的檔案庫支援分類樹和標籤管理檔案，檔案可歸類於多個分類，可以把分類整個匯出為 Epub、PDF 和生成靜態網站。非常合適用於筆記、個人知識收集、管理和輸出。
+* 快速筆記：隨意增加筆記及圖片等素材，支援以天為單位把增加的素材組合在一個檔案內，方便整理及記錄歷史收集情況。
+* 快速搜尋：目前已支援全域性快捷鍵調出搜尋。
 
-## 外部 Markdown 文档：
+## 外部 Markdown 檔案：
 
-* 外部 Markdown 文档使用外部模式管理。外部模式使用目录树的方式编辑和管理你的 Markdown 文档，还能很好的支持 GitBook、Jekyll、Hexo 等等编辑和图片插入。
+* 外部 Markdown 檔案使用外部模式管理。外部模式使用目錄樹的方式編輯和管理你的 Markdown 檔案，還能很好的支援 GitBook、Jekyll、Hexo 等等編輯和圖片插入。
 
-## MWeb 文档：
+## MWeb 檔案：
 
-如果要更详细了解 MWeb，建议你一定要去看一下官网的帮助文档，网址为：<https://zh.mweb.im/help.html>。我们建议在使用文档库之前，一定要阅读一下 [MWeb 文档库详细介绍](https://zh.mweb.im/mweb-library.html) 这篇文章，以便更好的使用文档库。
+如果要更詳細瞭解 MWeb，建議你一定要去看一下官網的幫助檔案，網址為：<https://zh.mweb.im/help.html>。我們建議在使用檔案庫之前，一定要閱讀一下 [MWeb 檔案庫詳細介紹](https://zh.mweb.im/mweb-library.html) 這篇文章，以便更好的使用檔案庫。
 
-## 帮助我们改进 MWeb
+## 幫助我們改進 MWeb
 
-如果你喜欢 MWeb，想让它变得更好，你可以：
+如果你喜歡 MWeb，想讓它變得更好，你可以：
 
-1. 推荐 MWeb，让更多的人知道。
-2. 给我们发反馈和建议：<coderforart+2333@gmail.com>
-3. 在 Mac App Store 上评价 （如果是在 MAS 上购买的话）。
+1. 推薦 MWeb，讓更多的人知道。
+2. 給我們發反饋和建議：<coderforart+2333@gmail.com>
+3. 在 Mac App Store 上評價 （如果是在 MAS 上購買的話）。
 
 
 
-## GFM 语法简介和 MWeb 所支持的扩展语法
+## GFM 語法簡介和 MWeb 所支援的擴充套件語法
 
-### 回车转为换行
+### 回車轉為換行
 
-官方的语法规定结尾加 2 个以上空格加换行才会转成换行，也就是 `<br />` 标签。MWeb 中有个选项可以直接把换行转成 `<br />`，不用加上 2 个以上空格，这个选项默认是开启的。如果要关闭，请在设置页面关闭。
+官方的語法規定結尾加 2 個以上空格加換行才會轉成換行，也就是 `<br />` 標籤。MWeb 中有個選項可以直接把換行轉成 `<br />`，不用加上 2 個以上空格，這個選項預設是開啟的。如果要關閉，請在設定頁面關閉。
 
-### 任务列表（Task lists）
+### 任務列表（Task lists）
 
-Markdown 语法：
+Markdown 語法：
 
 ```
-- [ ] 任务一 未做任务 `- + 空格 + [ ]`
-- [x] 任务二 已做任务 `- + 空格 + [x]`
+- [ ] 任務一 未做任務 `- + 空格 + [ ]`
+- [x] 任務二 已做任務 `- + 空格 + [x]`
 ```
 
 效果如下：
 
-- [ ] 任务一 未做任务 `- + 空格 + [ ]`
-- [x] 任务二 已做任务 `- + 空格 + [x]`
+- [ ] 任務一 未做任務 `- + 空格 + [ ]`
+- [x] 任務二 已做任務 `- + 空格 + [x]`
 
-### 图片大小及对齐
+### 圖片大小及對齊
 
-官方和 GFM 都不支持图片大小设置，MWeb 引入的特别的语法来设置图片宽度。如：`![图片说明-w450](pic.jpg)` 这样表示设置图片宽度为 450。其中 -w450 为设置语法，生成 HTML 时会自动移除。w 表示设置宽度。 可以看出，MWeb 引入的语法的特点是兼容原来的语法和仅支持设置宽度。
+官方和 GFM 都不支援圖片大小設定，MWeb 引入的特別的語法來設定圖片寬度。如：`![圖片說明-w450](pic.jpg)` 這樣表示設定圖片寬度為 450。其中 -w450 為設定語法，生成 HTML 時會自動移除。w 表示設定寬度。 可以看出，MWeb 引入的語法的特點是相容原來的語法和僅支援設定寬度。
 
-![图片描述-w140](https://zh.mweb.im/asset/img/set-up-git.gif)
+![圖片描述-w140](https://zh.mweb.im/asset/img/set-up-git.gif)
 
-### 多行或者一段代码
+### 多行或者一段程式碼
 
-Markdown 语法：
+Markdown 語法：
 
 	```js
 	function fancyAlert(arg) {
@@ -126,69 +126,69 @@ function fancyAlert(arg) {
 }
 ```
 
-这个语法目前在 MWeb 中使用，必须前后空一行，才会正确解析。我觉得，在写 Markdown 文档过程中，运用空行很有必要，基本上，块级元素（标题、列表、引用、代码块、表格、段落等），都建议前后空一行。
+這個語法目前在 MWeb 中使用，必須前後空一行，才會正確解析。我覺得，在寫 Markdown 檔案過程中，運用空行很有必要，基本上，塊級元素（標題、列表、引用、程式碼塊、表格、段落等），都建議前後空一行。
 
 ### 表格
 
-Markdown 语法：
+Markdown 語法：
 
 ```
-第一格表头 | 第二格表头
+第一格表頭 | 第二格表頭
 --------- | -------------
-内容单元格 第一列第一格 | 内容单元格第二列第一格
-内容单元格 第一列第二格 多加文字 | 内容单元格第二列第二格
+內容單元格 第一列第一格 | 內容單元格第二列第一格
+內容單元格 第一列第二格 多加文字 | 內容單元格第二列第二格
 ```
 
 效果如下：
 
-第一格表头 | 第二格表头
+第一格表頭 | 第二格表頭
 --------- | -------------
-内容单元格 第一列第一格 | 内容单元格第二列第一格
-内容单元格 第一列第二格 多加文字 | 内容单元格第二列第二格
+內容單元格 第一列第一格 | 內容單元格第二列第一格
+內容單元格 第一列第二格 多加文字 | 內容單元格第二列第二格
 
 
-### 删除线
+### 刪除線
 
-Markdown 语法：
+Markdown 語法：
 
-	加删除线像这样用： ~~删除这些~~
+	加刪除線像這樣用： ~~刪除這些~~
 
 效果如下：
 
-加删除线像这样用： ~~删除这些~~
+加刪除線像這樣用： ~~刪除這些~~
 
 ### LaTeX
 
-Markdown 语法：
+Markdown 語法：
 
-	块级公式：
+	塊級公式：
 	```math
 	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 	```
 
-	行内公式： ``\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N``
+	行內公式： ``\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N``
 
 
-效果如下（在设置页面中启用 LaTeX 才会看到效果）：
+效果如下（在設定頁面中啟用 LaTeX 才會看到效果）：
 
-块级公式：
+塊級公式：
 
 ```math
 x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 ```
 
-行内公式： ``\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N``
+行內公式： ``\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N``
 
-<!-- 注意：为了兼容 MWeb 3，也支持 $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ 
-和块级语法
+<!-- 注意：為了相容 MWeb 3，也支援 $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ 
+和塊級語法
 $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
-但是建议用新的语法。 -->
+但是建議用新的語法。 -->
 
-## MWeb 画图
+## MWeb 畫圖
 
 ### mermaid
 
-mermaid 是比较流行的画图库，它支持流程图、顺序图和甘特图，它的官网为：<https://mermaidjs.github.io/> ，在 MWeb 中使用 mermaid 的语法就是声明代码块的语言为 mermaid，代码块中再写上 mermaid 的画图语法即可，你可以把下面的语法复制到 MWeb 中查看效果。
+mermaid 是比較流行的畫相簿，它支援流程圖、順序圖和甘特圖，它的官網為：<https://mermaidjs.github.io/> ，在 MWeb 中使用 mermaid 的語法就是宣告程式碼塊的語言為 mermaid，程式碼塊中再寫上 mermaid 的畫圖語法即可，你可以把下面的語法複製到 MWeb 中檢視效果。
 
     ```mermaid
     sequenceDiagram
@@ -221,7 +221,7 @@ sequenceDiagram
 ```
 ### echarts
 
-echarts 是百度出品的 js 画图库，它的网址为：<https://echarts.apache.org/zh/index.html>，功能非常强大，MWeb 支持 echarts 的一些基本的用法，太高级的不支持。你可以将以下语法复制到 MWeb 中进行尝试。你也可以去 <https://echarts.apache.org/examples/zh/index.html> 这个网址查看一些例子，要注意的是 MWeb 只能解析 `option = {}` 这种简单的，不过应该是足够使用了。
+echarts 是百度出品的 js 畫相簿，它的網址為：<https://echarts.apache.org/zh/index.html>，功能非常強大，MWeb 支援 echarts 的一些基本的用法，太高階的不支援。你可以將以下語法複製到 MWeb 中進行嘗試。你也可以去 <https://echarts.apache.org/examples/zh/index.html> 這個網址檢視一些例子，要注意的是 MWeb 只能解析 `option = {}` 這種簡單的，不過應該是足夠使用了。
 
     ```echarts
     option = {
@@ -258,27 +258,27 @@ option = {
 ```
 
 
-### 脚注（Footnote）
+### 腳註（Footnote）
 
-Markdown 语法：
+Markdown 語法：
 
 ```
-这是一个脚注：[^1]
+這是一個腳註：[^1]
 ```
 
 效果如下：
 
-这是一个脚注：[^1]
+這是一個腳註：[^1]
 
-[^1]: 这里是脚注信息
+[^1]: 這裡是腳註資訊
 
 
-### 注释和阅读更多
+### 註釋和閱讀更多
 
 <!-- comment -->
 <!-- more -->
 
-**注** 阅读更多的功能只用在文档库生成静态网站或发布到 Wordpress 博客时，插入时注意要后空一行。
+**注** 閱讀更多的功能只用在檔案庫生成靜態網站或釋出到 Wordpress 部落格時，插入時注意要後空一行。
 
 
 

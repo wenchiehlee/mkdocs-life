@@ -1,14 +1,14 @@
 ---
-title: Git 实用技巧
+title: Git 實用技巧
 tags:
-  - 技术分享
+  - 技術分享
 ---
 !!! info
-    原文地址:[Git 实用技巧](https://www.iszy.cc/posts/git/#more){target="_blank"}
+    原文地址:[Git 實用技巧](https://www.iszy.cc/posts/git/#more){target="_blank"}
 
-# Git 实用技巧
+# Git 實用技巧
 ## 一、基本操作
-### 1. 新建 git 仓库
+### 1. 新建 git 倉庫
 ```git
 git init
 ```
@@ -24,7 +24,7 @@ git branch -m main
 ```
 
 
-### 2. 克隆远程仓库
+### 2. 克隆遠端倉庫
 ```git
 git clone http://git.example.com/someone/test.git
 
@@ -33,7 +33,7 @@ git clone http://git.example.com/someone/test.git test
 git clone http://git.example.com/someone/test.git --depth=1 -b main
 ```
 
-### 3. 提交代码
+### 3. 提交程式碼
 ```
 git add -a
 
@@ -49,7 +49,7 @@ git commit -am "first commit"
 ```
 
 
-### 4. 查看仓库状态
+### 4. 檢視倉庫狀態
  
 ```git
 git status
@@ -64,7 +64,7 @@ git status -s
 ![](https://img.iszy.xyz/1669185789446.png)  
 
 
-### 5. 查看提交历史
+### 5. 檢視提交歷史
 
 <https://git-scm.com/docs/git-log>{target="_blank"}
 
@@ -85,7 +85,7 @@ git checkout -b test
 
 ![Alt text](https://img.iszy.xyz/1669185814401.png)
 
-### 7. 合并分支
+### 7. 合併分支
 ```git
 git checkout main
 
@@ -94,26 +94,26 @@ git merge test
 
 ![Alt text](https://img.iszy.xyz/1669185829746.png)
 
-### 8. 删除分支
+### 8. 刪除分支
 ```git
 git branch -d test-not-need
 ```
 
 ![Alt text](https://img.iszy.xyz/1669185836945.png)  
 
-### 9. 合并冲突
+### 9. 合併衝突
 
 ![Alt text](https://img.iszy.xyz/1669185846981.png)  
 
-当两个分支都对同一行进行了修改，git 便会产生冲突，并标记为未合并
+當兩個分支都對同一行進行了修改，git 便會產生衝突，並標記為未合併
 
 ![Alt text](https://img.iszy.xyz/1669185854676.png)  
 
-此时将每个文件进行修改，确认最后的内容，使用 git add 方法标记为冲突已解决
+此時將每個檔案進行修改，確認最後的內容，使用 git add 方法標記為衝突已解決
 ```git
 git add .\A.txt
 ```
-在所有文件的冲突均已解决后，使用 commit 提交此次修改。
+在所有檔案的衝突均已解決後，使用 commit 提交此次修改。
 
 ![Alt text](https://img.iszy.xyz/1669185864622.png)
 
@@ -121,13 +121,13 @@ git add .\A.txt
 git merge --abort
 ```
 
-### 10. 远程仓库
+### 10. 遠端倉庫
 
 ```git
 git remote
 ```
 
-默认应该为空
+預設應該為空
 
 ```git
 git remote add origin http://git.example.com/someone/test.git
@@ -154,9 +154,9 @@ git pull
 git pull origin main
 ```
 
-## 二、常见技巧  
+## 二、常見技巧  
 
-### 1. 临时保存成果
+### 1. 臨時儲存成果
 
 ```
 git stash
@@ -171,7 +171,7 @@ git stash pop
 
 ![Alt text](https://img.iszy.xyz/1669186045214.png)
 
-### 2. 合并分支灵活选择 rebase/merge
+### 2. 合併分支靈活選擇 rebase/merge
 
 ```git
 git merge test
@@ -183,7 +183,7 @@ git rebase test
 ![Alt text](https://img.iszy.xyz/1669186058175.png)
 
 ### 3. cherry-pick
-适合 hotfix
+適合 hotfix
 
 ```git
 git cherry-pick 12d654f1d701cbf7cd9abb98ce84eeef460a24a7
@@ -198,9 +198,9 @@ git cherry-pick 12d654f1d701cbf7cd9abb98ce84eeef460a24a7
 git commit --amend
 ```
 
-会同时提交暂存的文件
+會同時提交暫存的檔案
 
-### 5. 取消文件修改
+### 5. 取消檔案修改
 ```git
 git checkout .\C.txt
 ```
@@ -208,17 +208,17 @@ git checkout .\C.txt
 
 ![Alt text](https://img.iszy.xyz/1669186116701.png)
 
-### 6. 弃用提交
+### 6. 棄用提交
 
 ```
-保留文件
+保留檔案
 git reset --soft 12d654f1d701cbf7cd9abb98ce84eeef460a24a7
 
-丢弃修改
+丟棄修改
 git reset --hard 12d654f1d701cbf7cd9abb98ce84eeef460a24a7
 ```
 
-### 7. 补丁文件
+### 7. 補丁檔案
 ```git
 git
 git diff [file] > a.patch

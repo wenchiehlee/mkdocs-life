@@ -5,16 +5,16 @@ tags:
 ---
 !!! Note
 
-    以下代码均在`docs/javascripts/extra.js`下复制粘贴
+    以下程式碼均在`docs/javascripts/extra.js`下複製貼上
 
 <div id="snowflakes-container"></div>
 <script>
-  // 在LocalStorage中设置不显示雪花效果的标志
+  // 在LocalStorage中設定不顯示雪花效果的標誌
   localStorage.setItem('showSnowflakes', 'true');
 </script>
 
 <script>
-  // 判断LocalStorage中是否设置了显示雪花效果的标志
+  // 判斷LocalStorage中是否設定了顯示雪花效果的標誌
   if (localStorage.getItem('showSnowflakes') === 'true') {
     var script = document.createElement('script');
     script.src = 'https://www.lanjie100.com/js/snow.user.js';
@@ -179,10 +179,10 @@ requestFrame();
 ```
 
 ***
-## 樱花🌸
+## 櫻花🌸
 
 ```js
-//樱花
+//櫻花
 Sakura.prototype.draw = function (cxt) {
     cxt.save(); var xc = 40 * this.s / 4; cxt.translate(this.x, this.y); cxt.rotate(this.r); cxt.drawImage(img, 0, 0, 40 * this.s, 40 * this.s)
     cxt.restore();
@@ -207,10 +207,10 @@ function startSakura() {
 }
 window.onresize = function () { var canvasSnow = document.getElementById('canvas_snow'); }
 img.onload = function () { startSakura(); }
-//樱花
+//櫻花
 ```
 
-## 线条
+## 線條
 
 ```js
 !function() {
@@ -314,30 +314,30 @@ img.onload = function () { startSakura(); }
 ```js
 /*背景*/
 window.onload = function () {
-    //定义body的margin由默认值8px->0px
+    //定義body的margin由預設值8px->0px
     document.body.style.margin = "0";
     document.body.style.background = "255,255,255";
-    //创建canvas画布
+    //建立canvas畫布
     document.body.appendChild(document.createElement('canvas'));
     var canvas = document.querySelector('canvas'),
-        ctx = canvas.getContext('2d') //ctx返回一个在canvas上画图的api/dom
+        ctx = canvas.getContext('2d') //ctx返回一個在canvas上畫圖的api/dom
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     canvas.style.position = 'fixed';
     ctx.lineWidth = .3;
     ctx.strokeStyle = (new Color(150)).style;
-    //定义鼠标覆盖范围
+    //定義滑鼠覆蓋範圍
     var mousePosition = {
         x: 30 * canvas.width / 100,
         y: 30 * canvas.height / 100
     };
     var dots = {
-        nb: 1000,//Dot的总数
+        nb: 1000,//Dot的總數
         distance: 50,
         d_radius: 100,
         array: []
     };
-    //创建颜色类，Color类返回字符串型rgba（*,*,*,.8）
+    //建立顏色類，Color類返回字串型rgba（*,*,*,.8）
     function mixComponents(comp1, weight1, comp2, weight2) {
         return (comp1 * weight1 + comp2 * weight2) / (weight1 + weight2);
     }
@@ -363,7 +363,7 @@ window.onload = function () {
         this.b = colorValue(min);
         this.style = createColorStyle(this.r, this.g, this.b);
     }
-    //创建Dot类以及一系列方法
+    //建立Dot類以及一系列方法
     function Dot() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -384,7 +384,7 @@ window.onload = function () {
             ctx.fill();
         }
     };
-    function moveDots() {//Dot对象的移动
+    function moveDots() {//Dot物件的移動
         for (i = 0; i < dots.nb; i++) {
 
             var dot = dots.array[i];
@@ -401,7 +401,7 @@ window.onload = function () {
             dot.y += dot.vy;
         }
     }
-    function connectDots() {//DOt对象的连接
+    function connectDots() {//DOt物件的連線
         for (i = 0; i < dots.nb; i++) {
             for (j = i; j < dots.nb; j++) {
                 i_dot = dots.array[i];
@@ -413,40 +413,40 @@ window.onload = function () {
                         ctx.strokeStyle = averageColorStyles(i_dot, j_dot);
                         ctx.moveTo(i_dot.x, i_dot.y);
                         ctx.lineTo(j_dot.x, j_dot.y);
-                        ctx.stroke();//绘制定义的路线
-                        ctx.closePath();//创建从当前点回到起始点的路径
+                        ctx.stroke();//繪製定義的路線
+                        ctx.closePath();//建立從當前點回到起始點的路徑
                     }
                 }
             }
         }
     }
-    function createDots() {//创建nb个Dot对象
+    function createDots() {//建立nb個Dot物件
         for (i = 0; i < dots.nb; i++) {
             dots.array.push(new Dot());
         }
     }
-    function drawDots() {//引用Dot原型链，使用draw方法，在canvas上画出Dot对象
+    function drawDots() {//引用Dot原型鏈，使用draw方法，在canvas上畫出Dot物件
         for (i = 0; i < dots.nb; i++) {
             var dot = dots.array[i];
             dot.draw();
         }
     }
     function animateDots() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);//清除画布，否则线条会连在一起
+        ctx.clearRect(0, 0, canvas.width, canvas.height);//清除畫布，否則線條會連在一起
         moveDots();
         connectDots();
         drawDots();
         requestAnimationFrame(animateDots);
     }
-    createDots();//使用创建Dot类函数
-    requestAnimationFrame(animateDots);//使用canvas独有的60Hz刷新屏幕画布的方法
+    createDots();//使用建立Dot類函式
+    requestAnimationFrame(animateDots);//使用canvas獨有的60Hz重新整理螢幕畫布的方法
 
     document.querySelector('canvas').addEventListener('mousemove', function (e) {
         mousePosition.x = e.pageX;
         mousePosition.y = e.pageY;
     })
 
-    document.querySelector('canvas').addEventListener('mouseleave', function (e) {//鼠标离开时，连接自动返回到画布中心
+    document.querySelector('canvas').addEventListener('mouseleave', function (e) {//滑鼠離開時，連線自動返回到畫布中心
         mousePosition.x = canvas.width / 2;
         mousePosition.y = canvas.height / 2;
     })

@@ -1,10 +1,10 @@
 ---
-title: JS实现鼠标样式
+title: JS實現滑鼠樣式
 tags:
   - Mkdocs
 ---
 
-不建议更改，因为默认就是最简洁
+不建議更改，因為預設就是最簡潔
 
 <head>
 <link rel="stylesheet" type="text/css" href="/stylesheets/shubiao.css">
@@ -12,7 +12,7 @@ tags:
 </head>
 
 ![](https://s1.vika.cn/space/2022/11/25/7b84e20eee214a5b956f2c96bcc115f4)  
-在`docs/javascripts/extra.js`下复制粘贴：
+在`docs/javascripts/extra.js`下複製貼上：
 ```java
 var CURSOR;
 
@@ -55,7 +55,7 @@ class Cursor {
                 this.pt.push(el[i].outerHTML);
 
         document.body.appendChild((this.scr = document.createElement("style")));
-        // 这里改变鼠标指针的颜色 由svg生成
+        // 這裡改變滑鼠指標的顏色 由svg生成
         this.scr.innerHTML = `* {cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='8px' height='8px'><circle cx='4' cy='4' r='4' opacity='.5'/></svg>") 4 4, auto}`;
     }
 
@@ -95,23 +95,23 @@ class Cursor {
 
 (() => {
     CURSOR = new Cursor();
-    // 需要重新获取列表时，使用 CURSOR.refresh()
+    // 需要重新獲取列表時，使用 CURSOR.refresh()
 })();
 ```
-其中比较重要的参数就是鼠标的尺寸和颜色，已经在上图中标出，目前发现颜色只支持RGB写法和固有名称写法（例如red这种），其他参数也可以自行摸索：  
+其中比較重要的引數就是滑鼠的尺寸和顏色，已經在上圖中標出，目前發現顏色只支援RGB寫法和固有名稱寫法（例如red這種），其他引數也可以自行摸索：  
 
 ```java
 * {cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='8px' height='8px'><circle cx='4' cy='4' r='4' opacity='1.0' fill='rgb(57, 197, 187)'/></svg>") 4 4, auto}`
 ```
 
-在docs/stylesheets/extra.css添加如下代码：
+在docs/stylesheets/extra.css新增如下程式碼：
 ```css
-/* 鼠标样式 */
+/* 滑鼠樣式 */
 #cursor {
   position: fixed;
   width: 16px;
   height: 16px;
-  /* 这里改变跟随的底色 */
+  /* 這裡改變跟隨的底色 */
   background: var(--theme-color);
   border-radius: 8px;
   opacity: 0.25;
@@ -143,10 +143,10 @@ class Cursor {
   -o-transform: scale(0.5);
 }
 ```
-这里比较重要的参数就是鼠标跟随的圆形颜色，可以根据自己的喜好进行更改：
+這裡比較重要的引數就是滑鼠跟隨的圓形顏色，可以根據自己的喜好進行更改：
 ```css
 #cursor {
-  /* 这里改变跟随的底色 */
+  /* 這裡改變跟隨的底色 */
   background: rgb(57, 197, 187);
 }
 ```

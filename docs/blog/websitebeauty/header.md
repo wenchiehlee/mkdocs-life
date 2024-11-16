@@ -1,19 +1,19 @@
 ---
-title: 添加顶部公告栏
-# 隐藏的模块
+title: 新增頂部公告欄
+# 隱藏的模組
 hide:
-  #  - navigation # 隐藏左边导航
-  #  - toc #隐藏右边导航
-  #  - footer #隐藏翻页
-  #  - feedback  #隐藏反馈
+  #  - navigation # 隱藏左邊導航
+  #  - toc #隱藏右邊導航
+  #  - footer #隱藏翻頁
+  #  - feedback  #隱藏反饋
 tags:
   - Mkdocs
-comments: false  #评论，默认不开启
+comments: false  #評論，預設不開啟
 ---
 ![image.png](https://s2.loli.net/2024/02/02/mvCEgeP4lANuXI8.png)
 
-docs/overrides下新建main.html ，针对main.html文件    
-树状结构如下:  
+docs/overrides下新建main.html ，針對main.html檔案    
+樹狀結構如下:  
 ```
 $ tree -a
 .

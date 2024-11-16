@@ -1,12 +1,12 @@
 ---
-title: 解决 mkdocs部署 Github Pages 自定义域名失效的问题
+title: 解決 mkdocs部署 Github Pages 自定義域名失效的問題
 tags:
   - Mkdocs
 ---
 
-在/docs目录下创建一个 CNAME 的 无后缀 文件，然后在里面填入你的域名  
+在/docs目錄下建立一個 CNAME 的 無字尾 檔案，然後在裡面填入你的域名  
 ![](https://s1.imagehub.cc/images/2024/02/02/d23082e5d3ebb839dba8b589a1cb5b7c.png)
 
-因为每次在 Custom domain 添加后都会给我们生成一个 CNAME 的文件，但是因为项目我们没有 pull 到本地，所以造成了，每次 push 之后 CNAME 信息被 clear 了
+因為每次在 Custom domain 新增後都會給我們生成一個 CNAME 的檔案，但是因為專案我們沒有 pull 到本地，所以造成了，每次 push 之後 CNAME 資訊被 clear 了
 
 

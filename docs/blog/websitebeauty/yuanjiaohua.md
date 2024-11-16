@@ -1,8 +1,8 @@
 ---
-title: 网页圆角化设计
+title: 網頁圓角化設計
 hide:
-  #  - navigation # 显示右
-  #  - toc #显示左
+  #  - navigation # 顯示右
+  #  - toc #顯示左
   #  - footer
   #  - feedback  
 tags:
@@ -14,8 +14,8 @@ comments: false
 ![iShot_2024-04-26_12.17.20.png](https://s2.loli.net/2024/04/26/gvu7ASWfU8eKVOd.png)  
 ![image.png](https://s2.loli.net/2024/04/26/Czi9uAQhmbBlkfG.png)
 
-## 如何设计
-新建css文件，在mkdocs.yml引入css  
+## 如何設計
+新建css檔案，在mkdocs.yml引入css  
 
 ```css
 :root {
@@ -141,7 +141,7 @@ comments: false
 
   display: flex;
 
-  /* 过渡动画 1s */
+  /* 過渡動畫 1s */
   transition: all 1s;
 }
 
@@ -192,12 +192,12 @@ comments: false
   -webkit-mask-image: var(--md-tabbed-icon--next);
 }
 
-/* hover 外层 */
+/* hover 外層 */
 .carousel-hover:hover button {
   opacity: 0.5;
   transition: opacity 0.3s;
 }
-/* hover 内层 */
+/* hover 內層 */
 .carousel-hover button:hover {
   opacity: 0.8;
   transition: opacity 0.3s;
@@ -220,7 +220,7 @@ comments: false
 
 .carousel-bottom {
   position: absolute;
-  /* 宽度等同于内容宽度 */
+  /* 寬度等同於內容寬度 */
   width: 100%;
   padding: 20px;
 
@@ -228,7 +228,7 @@ comments: false
 
   display: flex;
   justify-content: center;
-  /* 指示器间距 */
+  /* 指示器間距 */
   gap: 10px;
 
   opacity: 0;
@@ -270,7 +270,7 @@ comments: false
 
 
 
-## 利用内置的grid cards
+## 利用內建的grid cards
 
 ```markdown
 <div class="grid cards" markdown>
@@ -279,10 +279,10 @@ comments: false
 
     ---
 
-    - [利用Mkdocs部署静态网页至GitHub pages](blog/Mkdocs/mkdocs1.md)
-    - [Mkdocs部署配置说明(mkdocs.yml)](blog/Mkdocs/mkdocs2.md)
-    - [如何给MKdocs添加友链](blog/websitebeauty/linktech.md)
-    - [网站添加Mkdocs博客](blog/Mkdocs/mkdocsblog.md)
+    - [利用Mkdocs部署靜態網頁至GitHub pages](blog/Mkdocs/mkdocs1.md)
+    - [Mkdocs部署配置說明(mkdocs.yml)](blog/Mkdocs/mkdocs2.md)
+    - [如何給MKdocs新增友鏈](blog/websitebeauty/linktech.md)
+    - [網站新增Mkdocs部落格](blog/Mkdocs/mkdocsblog.md)
     - [Blogger](blog/index.md)
 </div>
 
@@ -300,7 +300,7 @@ comments: false
 </div>
 
 
-## 按钮
+## 按鈕
 
 ```
 [Send Email :fontawesome-solid-paper-plane:](mailto:<wangkewen821@gmail.com>){.md-button}

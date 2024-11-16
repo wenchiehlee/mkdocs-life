@@ -1,29 +1,29 @@
 ---
 title: Home
 hide:
-  # - navigation # 显示右
-  # - toc #显示左
+  # - navigation # 顯示右
+  # - toc #顯示左
   - footer
   - feedback
 comments: false
 ---
 # Home
 
-<!-- <center><font  color= #518FC1 size=6>“循此苦旅，以达星辰”</font></center> -->
+<!-- <center><font  color= #518FC1 size=6>“循此苦旅，以達星辰”</font></center> -->
 <center><font  color= #518FC1 size=6 class="ml3">"Follow this arduous journey to reach the stars"</font></center>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
 <!-- <center>
 <font  color= #608DBD size=3>
-<span id="jinrishici-sentence">正在加载今日诗词....</span>
+<span id="jinrishici-sentence">正在載入今日詩詞....</span>
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 </font>
 </center> -->
 
 <!-- <center>
 <font  color= #608DBD size=3>
-<span id="hitokoto-sentence">正在加载一言....</span>
+<span id="hitokoto-sentence">正在載入一言....</span>
 <script src="https://v1.hitokoto.cn"></script>
 </font>
 </center> -->
@@ -214,10 +214,10 @@ t.parentNode.insertBefore(e,t)}})();
           let m =  Math.floor(difference / (1000))
           let mm = m % 60  // 秒
           let f = Math.floor(m / 60)
-          let ff = f % 60 // 分钟
-          let s = Math.floor(f/ 60) // 小时
+          let ff = f % 60 // 分鐘
+          let s = Math.floor(f/ 60) // 小時
           let ss = s % 24
-          let day = Math.floor(s  / 24 ) // 天数
+          let day = Math.floor(s  / 24 ) // 天數
           return day + "day" + ss + "hour" + ff + "minute" + mm +'second'
         }
         setInterval(()=>{

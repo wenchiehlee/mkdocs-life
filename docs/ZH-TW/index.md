@@ -1,29 +1,29 @@
 ---
 title: Home
 hide:
-  # - navigation # 显示右
-  # - toc #显示左
+  # - navigation # 顯示右
+  # - toc #顯示左
   - footer
   - feedback
 comments: false
 ---
 # 首頁
 
-<!-- <center><font  color= #518FC1 size=6>“循此苦旅，以达星辰”</font></center> -->
+<!-- <center><font  color= #518FC1 size=6>“循此苦旅，以達星辰”</font></center> -->
 <center><font  color= #518FC1 size=6 class="ml3">“循此苦旅 以達星辰”</font></center>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
 <!-- <center>
 <font  color= #608DBD size=3>
-<span id="jinrishici-sentence">正在加载今日诗词....</span>
+<span id="jinrishici-sentence">正在載入今日詩詞....</span>
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 </font>
 </center> -->
 
 <!-- <center>
 <font  color= #608DBD size=3>
-<span id="hitokoto-sentence">正在加载一言....</span>
+<span id="hitokoto-sentence">正在載入一言....</span>
 <script src="https://v1.hitokoto.cn"></script>
 </font>
 </center> -->
@@ -139,17 +139,17 @@ comments: false
 
     - [利用Mkdocs部署靜態網頁至GitHub pages](../blog/Mkdocs/mkdocs1.md)
     - [Mkdocs部署配置說明(mkdocs.yml)](../blog/Mkdocs/mkdocs2.md)
-    - [如何給MKdocs添加友鏈](../blog/websitebeauty/linktech.md)
-    - [網站添加Mkdocs博客](../blog/Mkdocs/mkdocsblog.md)
+    - [如何給MKdocs新增友鏈](../blog/websitebeauty/linktech.md)
+    - [網站新增Mkdocs部落格](../blog/Mkdocs/mkdocsblog.md)
     - [Blogger](../blog/index.md)
 
 -   :simple-aboutdotme:{ .lg .middle } __關於__
 
     ---
-    - [Mkdocs-Wcowin博客主題社區](https://support.qq.com/products/646913/){target=“_blank”}
+    - [Mkdocs-Wcowin部落格主題社羣](https://support.qq.com/products/646913/){target=“_blank”}
     - [留言板](../liuyanban.md)[^Knowing-that-loving-you-has-no-ending] 
     - [Blogger](../blog/index.md)   
-    [:octicons-arrow-right-24: 了解我](../about/geren.md)[^see-how-much-I-love-you]
+    [:octicons-arrow-right-24: 瞭解我](../about/geren.md)[^see-how-much-I-love-you]
 
 </div>
   
@@ -213,10 +213,10 @@ t.parentNode.insertBefore(e,t)}})();
           let m =  Math.floor(difference / (1000))
           let mm = m % 60  // 秒
           let f = Math.floor(m / 60)
-          let ff = f % 60 // 分钟
-          let s = Math.floor(f/ 60) // 小时
+          let ff = f % 60 // 分鐘
+          let s = Math.floor(f/ 60) // 小時
           let ss = s % 24
-          let day = Math.floor(s  / 24 ) // 天数
+          let day = Math.floor(s  / 24 ) // 天數
           return day + "天" + ss + "時" + ff + "分" + mm +'秒'
         }
         setInterval(()=>{

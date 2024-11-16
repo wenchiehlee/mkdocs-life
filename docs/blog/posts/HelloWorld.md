@@ -1,5 +1,5 @@
 ---
-title: 博客文章测试
+title: 部落格文章測試
 authors: [Wcowin]
 date: 2021-12-18
 description: >

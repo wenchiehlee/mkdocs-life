@@ -1,8 +1,8 @@
 ---
-title: 添加在线聊天
+title: 新增線上聊天
 hide:
-  #  - navigation # 显示右
-  #  - toc #显示左
+  #  - navigation # 顯示右
+  #  - toc #顯示左
   #  - footer
   #  - feedback  
 tags:
@@ -10,21 +10,21 @@ tags:
 comments: false
 ---
 
-以[Tidio](https://www.tidio.com/)为例,Tidio免费版已经完全够用且无需梯子
+以[Tidio](https://www.tidio.com/)為例,Tidio免費版已經完全夠用且無需梯子
 
-## 访问Tidio官网
+## 訪問Tidio官網
 
-要在您的网站上使用 javascript 代码方法安装 Tidio，您需要创建一个 Tidio 帐户。要创建 Tidio 帐户，请访问我们的网站<tidio.com>，然后单击 “开始” 按钮创建新的 Tidio 帐户。您还可以使用 “登录” 选项来使用您现有的帐户。   
+要在您的網站上使用 javascript 程式碼方法安裝 Tidio，您需要建立一個 Tidio 帳戶。要建立 Tidio 帳戶，請訪問我們的網站<tidio.com>，然後單擊 “開始” 按鈕建立新的 Tidio 帳戶。您還可以使用 “登入” 選項來使用您現有的帳戶。   
 
-安装过程很简单，因为它只需要您将一行代码粘贴到网站代码的适当位置。  
+安裝過程很簡單，因為它只需要您將一行程式碼貼上到網站程式碼的適當位置。  
 
-## 找到安装代码
+## 找到安裝程式碼
 
-可以前往“设置”>“频道”>“实时聊天”>  “安装” 部分找到您独特的 Tidio javascript 代码。还将在帐户创建之旅的最后阶段看到代码。
+可以前往“設定”>“頻道”>“實時聊天”>  “安裝” 部分找到您獨特的 Tidio javascript 程式碼。還將在帳戶建立之旅的最後階段看到程式碼。
 ![](https://help.tidio.com/hc/article_attachments/9168067328284)
 比如：
 ```javascript
 <script src="//code.tidio.co/6jmawe9m5wy4ahvlhub2riyrnujz7xxi.js" async></script>
 ```
-## 放到主页index.md即可
+## 放到主頁index.md即可
 ![](https://help.tidio.com/hc/article_attachments/5378990613404)

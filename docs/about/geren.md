@@ -10,7 +10,7 @@ status: new
 </center>  
 
 
-# <span id="jinrishici-sentence">今日诗词</span>
+# <span id="jinrishici-sentence">今日詩詞</span>
 
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <link
@@ -29,7 +29,7 @@ status: new
 
 
 <!-- <div id="rcorners3" >
-  <img class="img1" src="https://s1.imagehub.cc/images/2024/02/02/79cb7379982d1c7bb0ae7163985609c4.jpeg"  width="170" height="200" alt="个人头像" align="left" style="margin-right: 20px; "/>
+  <img class="img1" src="https://s1.imagehub.cc/images/2024/02/02/79cb7379982d1c7bb0ae7163985609c4.jpeg"  width="170" height="200" alt="個人頭像" align="left" style="margin-right: 20px; "/>
   <div>
     <p style="font-size: 40px">Wcowin</p>
     <p style="font-size: 18px">A college student in CQ</p>
@@ -39,13 +39,13 @@ status: new
 
 !!! pied-piper1 "About me"
     - [x] Hey, I'm [Wcowin](https://bento.me/wcowin){target=“_blank”}!
-    - [x] 清醒，知趣，明得失，知进退
-    - [x] 咖啡重度爱好者 
-    - [x] 热爱(xiā)折腾技术/Math
-    - [x] 读书明志可识春秋;诗词爱好者,喜欢村上春树，擅长羽毛球
+    - [x] 清醒，知趣，明得失，知進退
+    - [x] 咖啡重度愛好者 
+    - [x] 熱愛(xiā)折騰技術/Math
+    - [x] 讀書明志可識春秋;詩詞愛好者,喜歡村上春樹，擅長羽毛球
 <img class="img1" src="https://s2.loli.net/2024/02/01/AgiGpYk38C6ctJV.jpg">
 
-## 联系我
+## 聯絡我
 
 <a href="https://muselink.cc/Wcowin" target="_blank">
   <img class="img1" src="https://s1.imagehub.cc/images/2024/02/02/3d5a68d9ca0da9137d927bda1a0b41e7.jpeg"  >
@@ -58,18 +58,18 @@ status: new
 
 <figure markdown >
   ![Image title](https://s1.imagehub.cc/images/2024/02/02/43c746351261969a02bda7d743199604.jpeg){.img1}
-  <figcaption>公众号</figcaption>
+  <figcaption>公眾號</figcaption>
 </figure>
 
-## 个人简历
-[个人简历(在线)](https://cv.devtool.tech/preview/76751620-faad-4537-bffd-73ced6ee9671)
+## 個人簡歷
+[個人簡歷(線上)](https://cv.devtool.tech/preview/76751620-faad-4537-bffd-73ced6ee9671)
 
-## 个人技能
-本人擅长 Ai、Fw、Fl、Br、Ae、Pr、Id、Ps 等软件的安装与卸载。  
-精通 CSS、JavaScript、PHP、ASP、C、C++、C#、Java、Ruby、Perl、Lisp、Python、Objective-C、ActionScript、Pascal 等单词的拼写。  
-熟悉 Windows、Linux、OS X、Android、iOS、WP8 、harmony、hyper等系统的开关机。
+## 個人技能
+本人擅長 Ai、Fw、Fl、Br、Ae、Pr、Id、Ps 等軟體的安裝與解除安裝。  
+精通 CSS、JavaScript、PHP、ASP、C、C++、C#、Java、Ruby、Perl、Lisp、Python、Objective-C、ActionScript、Pascal 等單詞的拼寫。  
+熟悉 Windows、Linux、OS X、Android、iOS、WP8 、harmony、hyper等系統的開關機。
 
-## 个人荣誉
+## 個人榮譽
 ![IMG_9007.jpeg](https://s2.loli.net/2024/02/03/RH5jOlZqdITAcw8.jpg){loading=lazy  class="img1"  }  
 
 
@@ -91,8 +91,8 @@ t.parentNode.insertBefore(e,t)}})();
 
 </head>
 
-## 须知
-如果你在浏览博客的过程中发现了任何问题，欢迎前往 GitHub 的[代码仓库](https://github.com/Wcowin/Wcowin.github.io)提交 Issues 或直接修改相关文件后提交 Pull Requests。如果你有其他事情想要咨询，可以通过下方按钮使用邮件联系我,请不要滥用博客的评论功能发表与主题无关言论。
+## 須知
+如果你在瀏覽部落格的過程中發現了任何問題，歡迎前往 GitHub 的[程式碼倉庫](https://github.com/Wcowin/Wcowin.github.io)提交 Issues 或直接修改相關檔案後提交 Pull Requests。如果你有其他事情想要諮詢，可以透過下方按鈕使用郵件聯絡我,請不要濫用部落格的評論功能發表與主題無關言論。
 
 [Send Email :fontawesome-solid-paper-plane:](mailto:<wangkewen821@gmail.com>){.md-button}
 <!-- <a target="_blank"  href="mailto:wangkewen821@gmail.com""><button class="buttonxuan2" style="vertical-align:middle" ><span>Send Email:fontawesome-solid-paper-plane: </span></button></a> -->

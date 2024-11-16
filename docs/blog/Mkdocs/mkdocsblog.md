@@ -1,39 +1,39 @@
 ---
-title: 网站添加Mkdocs博客
+title: 網站新增Mkdocs部落格
 tags:
   - Mkdocs
 ---
 
-官方文档：[Built-in blog plugin](https://squidfunk.github.io/mkdocs-material/plugins/blog/)
+官方文件：[Built-in blog plugin](https://squidfunk.github.io/mkdocs-material/plugins/blog/)
 
-与所有内置插件一样，博客插件的入门非常简单。只需将以下行添加到mkdocs.yml
+與所有內建外掛一樣，部落格外掛的入門非常簡單。只需將以下行新增到mkdocs.yml
 
 ```
 plugins:
   - blog
 ```
 
-**然后在/docs/blog/posts下写md文件即可**（无需再mkdocs.yml配置，如没有post文件，新建一个即可）
-但是bolg文件夹下要有index.md文件(没有这个文件新建即可)！
+**然後在/docs/blog/posts下寫md檔案即可**（無需再mkdocs.yml配置，如沒有post檔案，新建一個即可）
+但是bolg資料夾下要有index.md檔案(沒有這個檔案新建即可)！
 
-在mkdocs.yml中这样写
+在mkdocs.yml中這樣寫
 ```
   - Blogger:
     - index: blog/index.md
 ```
 
-元标签参考：
+元標籤參考：
 ```
 ---
 title: 
 authors: [Wcowin]  #作者
-date: 2023-10-04   #时间
-draft: true   # 是否为草稿
-categories:  #分类
+date: 2023-10-04   #時間
+draft: true   # 是否為草稿
+categories:  #分類
   - Hello
 ---
 ```
-作者信息在docs/blog/.authors.yml里配置（没有.authors.yml新建即可）  
+作者資訊在docs/blog/.authors.yml裡配置（沒有.authors.yml新建即可）  
 
 
 ```yml
@@ -46,4 +46,4 @@ authors:
 ```
 
 ```
-结束
+結束

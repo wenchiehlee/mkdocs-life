@@ -1,18 +1,18 @@
 ---
-title: 如何给MKdocs添加友链
+title: 如何給MKdocs新增友鏈
 tags:
   - Mkdocs
 hide:
   - feedback
 ---
 
-复制后在需要添加友链的.md文件页面粘贴即可
+複製後在需要新增友鏈的.md檔案頁面貼上即可
 
 ```html
 <div class="post-body">
    <div id="links">
       <style>
-/* 用于大屏幕和小屏幕的通用样式 */
+/* 用於大螢幕和小螢幕的通用樣式 */
 .card {
     width: 45%;
     font-size: 1rem;
@@ -65,11 +65,11 @@ hide:
     overflow: hidden;
     white-space: nowrap;
  }
- /* 媒体查询：小屏幕 */
+ /* 媒體查詢：小螢幕 */
  @media (max-width: 768px) {
     .card {
-       width: 100%; /* 在小屏幕上显示为单列 */
-       float: none; /* 清除浮动 */
+       width: 100%; /* 在小螢幕上顯示為單列 */
+       float: none; /* 清除浮動 */
     }
  }
       </style>
@@ -81,7 +81,7 @@ hide:
                   <div>
                      <a href="https://wcowin.work/ " target=“_blank”>Wcowin’s blog</a>
                   </div>
-                  <div class="info">这是一个分享技术的小站。</div>
+                  <div class="info">這是一個分享技術的小站。</div>
                </div>
             </div>
             <div class="card">
@@ -90,7 +90,7 @@ hide:
                   <div>
                      <a href="https://twitter.com/" target=“_blank”>Twitter</a>
                   </div>
-                  <div class="info">社交分享平台</div>
+                  <div class="info">社交分享平臺</div>
                </div>
             </div>
             <div class="card">
@@ -99,7 +99,7 @@ hide:
                   <div>
                      <a href="https://macapp.org.cn/" target=“_blank”>Macapp</a>
                   </div>
-                  <div class="info">一个专注于分享Mac资源的频道</div>
+                  <div class="info">一個專注於分享Mac資源的頻道</div>
                </div>
             </div>
          </div>
@@ -108,7 +108,7 @@ hide:
 </div>
 ```
 
-## 如何加入友链
+## 如何加入友鏈
 
 ```html
 <div class="card"> 
@@ -133,7 +133,7 @@ hide:
    <a href="https://wcowin.work/ " target=“_blank”>Wcowin’s blog</a> 
    </div> 
    <div class="info">
-   这是一个分享技术的小站。
+   這是一個分享技術的小站。
    </div> 
 </div> 
 </div> 
@@ -149,7 +149,7 @@ hide:
        <a href="https://wcowin.work/ " target=“_blank”>Wcowin’s blog</a> 
       </div> 
       <div class="info">
-       这是一个分享技术的小站。
+       這是一個分享技術的小站。
       </div> 
      </div> 
     </div> 
