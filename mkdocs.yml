@@ -13,9 +13,9 @@ theme:
   name: 'material'
   custom_dir: docs/overrides #覆寫路徑
   favicon: assets/images/w.png # 網頁icon
-  # font: #谷歌字型，自行搜尋
-  #   text: Bitter  #文字字型
-  #   code: Roboto Mono  #程式碼字型
+  font: #谷歌字型，自行搜尋
+    text: Noto Serif TC  # LXGW WenKai TC #文字字型
+    code: Roboto Mono  #程式碼字型
   # logo: assets/favicon.png #左上角logo，可插入圖片連結
   icon:
     repo: fontawesome/brands/github #右上角圖示
@@ -227,7 +227,7 @@ extra_css:
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css #字型
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css  #字型
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css  #字型
-  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.2.0/style.min.css
+  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.2.0/style.min.css
 # Page tree
 nav:
   # - 主頁: index.md
@@ -268,4 +268,4 @@ nav:
   - 關於:
       - 作者個人簡介: about/geren.md
       - 功能測試: about/test.md
-  - 使用本主題: https://github.com/new?template_name=Mkdocs-Wcowin&template_owner=Wcowin
+  - 使用本主題: https://github.com/new?template_name=Mkdocs-Wcowin&templa

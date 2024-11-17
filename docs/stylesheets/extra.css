@@ -4,21 +4,21 @@
   --md-primary-fg-color--dark:  #518FC1;
     
 } */
-/* 给所有元素加上边框 */
+/* 給所有元素加上邊框 */
 /* * {
   outline: 1px solid #518FC1;
 }  */
 
 button.md-top {
-  font-family: LXGW WenKai TC; /* 修改字体 */
-  font-size: 16px; /* 修改字体大小 */
-  font-weight: lighter;/* 修改字体粗细 */
-  color: #518FC1; /* 修改字体颜色 */
+  font-family: LXGW WenKai TC; /* 修改字型 */
+  font-size: 16px; /* 修改字型大小 */
+  font-weight: lighter;/* 修改字型粗細 */
+  color: #518FC1; /* 修改字型顏色 */
 }
 
 :root {
 --md-text-font: "LXGW WenKai TC"; 
-} /* 字体 */
+} /* 字型 */
 
 
 .ml3 {
@@ -126,7 +126,7 @@ img.twitter {
   height: 100%;
 } */
 
-/* 鼠标 */
+/* 滑鼠 */
 /* body {
     cursor: url(https://cos.cdn.azpay.cn/uploads/2021/11/28/default.cur),
         default;
@@ -138,10 +138,10 @@ img {
 }  */
 
 
-/* 鼠标end */
+/* 滑鼠end */
 
 .git-revision-date-localized-plugin { color: #608DBD; }
-/* 滚动条 */
+/* 捲軸 */
 
 
 ::-webkit-scrollbar {
@@ -184,7 +184,7 @@ height: 7px;
 }
 
 /*bilbili*/
-/*哔哩哔哩视频适配*/
+/*嗶哩嗶哩影片適配*/
 .aspect-ratio {
 position: relative;
 width: 90%;
@@ -212,10 +212,10 @@ min-width: 100%;
 min-height: 100%;  
 height: auto;  
 width: auto;  
-/*加滤镜*/
-/*filter: blur(15px); //背景模糊设置 */
+/*加濾鏡*/
+/*filter: blur(15px); //背景模糊設定 */
 /*-webkit-filter: grayscale(100%);*/  
-/*filter:grayscale(100%); //背景灰度设置*/  
+/*filter:grayscale(100%); //背景灰度設定*/  
 z-index:-11
 
 }
@@ -237,7 +237,7 @@ width: auto;
 }
 }
 
-/*圆角*/
+/*圓角*/
 #rcorners1 {
 border-radius: 25px;
 background: linear-gradient(to right, rgba(189,224,245),rgba(218,232,241), rgba(238,237,238));
@@ -276,30 +276,30 @@ height: 100%;
 }
 @media only screen and (max-width: 600px) {
   #rcorners4 {
-    border: none; /* 在手机上移除外框 */
-    width: 100%; /* 将宽度调整为100% */
+    border: none; /* 在手機上移除外框 */
+    width: 100%; /* 將寬度調整為100% */
   }
 }
 
 .image-container {
-  text-align: center; /* 居中对齐容器中的内容 */
+  text-align: center; /* 居中對齊容器中的內容 */
 }
 
 .image-container img {
-  display: inline-block; /* 将图片水平排列在一行 */
-  margin: 10px; /* 可以根据需要添加图片之间的间距 */
+  display: inline-block; /* 將圖片水平排列在一行 */
+  margin: 10px; /* 可以根據需要新增圖片之間的間距 */
 }
 
 
 
-/* 渐变 */
+/* 漸變 */
 #grad1 {
 height: 200px;
-background-color: red; /* 不支持线性的时候显示 */
+background-color: red; /* 不支援線性的時候顯示 */
 background-image: linear-gradient(to bottom right, red , yellow);
 }
 
-/* 按钮 */
+/* 按鈕 */
 .buttoncss {
 background-color: #4CAF50;
 border-radius: 12px;
@@ -435,7 +435,7 @@ right: 0;
 
 
 
-/* 蕴藏 */
+/* 蘊藏 */
 div.hide {
 background-color: yellow;
 padding: 20px;
@@ -447,7 +447,7 @@ div.hide {
 }
 }
 
-/* 布局 */
+/* 佈局 */
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
 .item3 { grid-area: main; }
@@ -472,7 +472,7 @@ padding: 20px 0;
 font-size: 30px;
 }
 
-/* 添加过渡效果 */
+/* 新增過渡效果 */
 
 /* * {
     transition-property: color, background-color;
@@ -488,16 +488,16 @@ font-size: 30px;
     }
 } */
 
-/*上面是过渡效果*/
+/*上面是過渡效果*/
 
 
 
-/* 变灰代码 */
+/* 變灰程式碼 */
 /* html {
 filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
 -webkit-filter: grayscale(100%);} */
 
-/* 诗词留言板 */
+/* 詩詞留言板 */
 
 @media (max-width: 991px) {
   .followme .social-list .social-item {
@@ -583,7 +583,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
     margin-top: 60px;
     margin-bottom: 20px;
     border-top: 2px solid #797979;
-    border-radius: 10px; /* 添加圆角 */
+    border-radius: 10px; /* 新增圓角 */
   }
 
   .poem-wrap h1 {
