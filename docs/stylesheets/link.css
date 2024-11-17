@@ -1,4 +1,4 @@
-/* 用于大屏幕和小屏幕的通用样式 */
+/* 用於大螢幕和小螢幕的通用樣式 */
 .card {
    width: 50%;
    height: auto;
@@ -18,7 +18,7 @@
    float: right;
 }
 
-/* 在大屏幕上保留悬停效果 */
+/* 在大螢幕上保留懸停效果 */
 .card:hover {
    transform: scale(1.1);
    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
@@ -49,7 +49,7 @@
    text-decoration: none;
 }
 
-/* 在大屏幕上保留链接悬停颜色 */
+/* 在大螢幕上保留連結懸停顏色 */
 .card .card-header a:hover {
    color: #d480aa;
    text-decoration: none;
@@ -64,11 +64,11 @@
    white-space: normal;
 }
 
-/* 媒体查询：小屏幕 */
+/* 媒體查詢：小螢幕 */
 @media (max-width: 768px) {
    .card {
-       width: 100%; /* 在小屏幕上显示为单列 */
-       float: none; /* 清除浮动 */
+       width: 100%; /* 在小螢幕上顯示為單列 */
+       float: none; /* 清除浮動 */
    }
 }
 .markdown-content {
@@ -76,7 +76,7 @@
 }
 
 .markdown-content h2 {
-   /* 可以自定义样式 */
+   /* 可以自定義樣式 */
    font-size: 1.5rem;
    color: #333;
 }

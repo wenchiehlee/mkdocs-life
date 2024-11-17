@@ -1,9 +1,9 @@
-/* 鼠标样式 */
+/* 滑鼠樣式 */
 #cursor {
     position: fixed;
     width: 16px;
     height: 16px;
-    /* 这里改变跟随的底色 */
+    /* 這裡改變跟隨的底色 */
     background:  rgb(57, 197, 187);
     border-radius: 8px;
     opacity: 0.25;
@@ -35,6 +35,6 @@
     -o-transform: scale(0.5);
   }
   #cursor {
-    /* 这里改变跟随的底色 */
+    /* 這裡改變跟隨的底色 */
     background: rgb(57, 197, 187);
   }

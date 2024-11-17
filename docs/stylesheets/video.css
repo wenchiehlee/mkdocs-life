@@ -1,11 +1,11 @@
-/* 播放器显示暂停图标start */
+/* 播放器顯示暫停圖示start */
 .vjs-paused .vjs-big-play-button,
 .vjs-paused.vjs-has-started .vjs-big-play-button {
     display: block;
 }
-/* 播放器显示暂停图标end */
+/* 播放器顯示暫停圖示end */
 
-/* 暂停图标显示为圆形start */
+/* 暫停圖示顯示為圓形start */
 .video-js .vjs-big-play-button{
     font-size: 2.5em;
     line-height: 2.3em;
@@ -20,11 +20,11 @@
     margin-top: -1.25em;
     margin-left: -1.75em;
 }
-/* 中间的播放箭头 */
+/* 中間的播放箭頭 */
 .vjs-big-play-button .vjs-icon-placeholder {
     font-size: 1.63em;
 }
-/* 加载圆圈 */
+/* 載入圓圈 */
 .vjs-loading-spinner {
     font-size: 2.5em;
     width: 2em;
@@ -33,8 +33,8 @@
     margin-top: -1em;
     margin-left: -1.5em;
 }
-/* 暂停图标显示为圆形end */
+/* 暫停圖示顯示為圓形end */
 
-/* 设置播放时间 */
+/* 設定播放時間 */
 .video-js .vjs-time-control{display:block;}
 .video-js .vjs-remaining-time{display: none;}
