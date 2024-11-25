@@ -42,17 +42,17 @@ ____    __    ____  ______   ______   ____    __    ____  __  .__   __.
 -->
                                    
 
-<center><font  color= #518FC1 size=6 class="ml3">Mkdocs-Wcowin部落格主題</font></center>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<!-- <center><font  color= #518FC1 size=6 class="ml3">Mkdocs-Wcowin部落格主題</font></center>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
 
 
 
-<center>
+<!-- <center>
 <font  color= #608DBD size=3>
 <span id="jinrishici-sentence">正在載入今日詩詞....</span>
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 </font>
-</center>
+</center> -->
 
 
 <!-- 可選一言 -->
@@ -213,7 +213,7 @@ ____    __    ____  ______   ______   ____    __    ____  __  .__   __.
       <div id="box1"></div>
       <script>
         function timingTime(){
-          let start = '2023-10-14 00:00:00'
+          let start = '2024-11-01 00:00:00'
           let startTime = new Date(start).getTime()
           let currentTime = new Date().getTime()
           let difference = currentTime - startTime
