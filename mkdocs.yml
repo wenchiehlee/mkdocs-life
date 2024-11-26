@@ -4,8 +4,8 @@ site_author: 'Wen-Chieh Lee'
 site_description: 'Wen-Chieh Lee life site'
 
 
-repo_name: Mkdocs-Wcowin # 右上角的名字
-repo_url: https://github.com/wenchiehlee/mkdocs-Wcowin # 右上角點選跳轉的連結
+repo_name: Mkdocs-life # 右上角的名字
+repo_url: https://github.com/wenchiehlee/mkdocs-life # 右上角點選跳轉的連結
 edit_uri: edit/main/docs # 編輯按鈕跳轉的連結
 copyright: Copyright &copy; 2016 - 2024 Wen-Chieh Lee # 左下角的版權宣告
 
