@@ -3,12 +3,14 @@ site_url: https://wenchiehlee-life.github.io
 site_author: 'Wen-Chieh Lee'
 site_description: 'Wen-Chieh Lee life site'
 
+docs_dir: docs/
 
 repo_name: Mkdocs-life # 右上角的名字
 repo_url: https://github.com/wenchiehlee/mkdocs-life # 右上角點選跳轉的連結
 edit_uri: edit/main/docs # 編輯按鈕跳轉的連結
-copyright: Copyright &copy; 2016 - 2024 Wen-Chieh Lee # 左下角的版權宣告
-
+# Copyright
+copyright: Copyright &copy; 2016 - 2024 Wen-Chieh Lee
+# Configuration
 theme:
   name: 'material'
   custom_dir: docs/overrides #覆寫路徑
@@ -16,10 +18,19 @@ theme:
   font: #谷歌字型，自行搜尋
     text: LXGW WenKai TC # Noto Serif TC #文字字型
     code: Roboto Mono  #程式碼字型
-  # logo: assets/favicon.png #左上角logo，可插入圖片連結
+  #logo: assets/favicon.png #左上角logo，可插入圖片連結
   icon:
     repo: fontawesome/brands/github #右上角圖示
-    logo: logo
+    logo:       material/library
+    previous:   fontawesome/solid/angle-left
+    next:       fontawesome/solid/angle-right
+    tag:
+      featured: material/pin
+      3D:       material/video-3d
+      AI:       material/head-snowflake-outline
+      Data:     material/database
+      DevOps:   material/dev-to
+      IOT:      material/devices
   palette:
     - scheme: default
       primary:  lime
@@ -62,44 +73,64 @@ theme:
 plugins:  
   - blog: #部落格配置
       post_date_format: full #時間
+      blog_dir: blog
+      blog_toc: true
+
+      authors: true
+      authors_file: "{blog}/.authors.yml"       
       draft: true
       draft_if_future_date: true #自動將具有未來日期的帖子標記為草稿
       post_readtime: true
       post_readtime_words_per_minute: 265 #計算帖子的閱讀時間時讀者每分鐘預計閱讀的字數
       post_url_format: "{date}/{slug}"
+      post_url_date_format: yyyy/MM
+      post_date_format: medium
       # categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
       #   kwds:
       #     case: lower
       pagination_url_format: "page/{page}"
+      #categories_pagination_per_page: 5
       authors_file: "{blog}/.authors.yml" #作者資訊
+      archive: true
+      archive_name: Archive
+      archive_date_format: 'yyyy/MM'
+      archive_url_format: "{date}"
+      archive_url_date_format: yyyy/MM
+      #archive_pagination: true
+      #archive_pagination_per_page: 5
+      archive_toc: true
   - search: #搜尋配置
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
   - git-committers:
       enabled: !ENV [CI, false]
-      repository: Wcowin/Mkdocs-Wcowin
+      repository: wenchiehlee/mkdocs-life
       branch: main
       exclude:
         - index.md
         - tag.md
-        - waline.md
-        - blog/posts/update.md
-        - blog/posts/wkw.md
-        - about/link.md
-  # - git-revision-date-localized:
-  #     enabled: !ENV [CI, false]
-  #     type: iso_date
-  #     enable_creation_date: false
-  #     exclude:
-  #       - index.md
-  #       - tag.md
-  #       - liuyanban.md
-  #       - blog/posts/update.md
-  #       - blog/posts/wkw.md
-  #       - about/link.md
-  #       - websitebeauty/linktech.md
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+      type: timeago
+      custom_format: "%d. %B %Y"
+      timezone: Asia/Taipei
+      locale: en
+      fallback_to_build_date: false
+      enable_creation_date: true
+#      exclude:
+#          - index.md
+      enabled: true
+      strict: true
+#  - minify:
+#      minify_html: true
+  - rss:
+      match_path: "blog/posts/.*"
+      date_from_meta:
+          as_creation: date
+          as_update: git
   - tags:
       tags_file: tag.md #分類標簽
-
+# Customization
 
 extra:
   # alternate:
@@ -115,11 +146,12 @@ extra:
   #   #   link: /Mkdocs-Wcowin/ZH-TW/
   #   #   # https://wcowin-work.translate.goog/?_x_tr_sl=zh-CN&_x_tr_tl=zh-TW&_x_tr_hl=zh-CN&_x_tr_pto=wapp
   #   #   lang: zh-TW
+  annotate:
+    json: [.s2] 
   generator: true #是否刪除頁尾顯示“使用 MkDocs 材料製造”
   analytics:
     provider: google #谷歌分析
-    property:
-
+    property: G-913Z6DSVD2
     # 網頁底部反饋
     feedback:
       title: 此頁面有幫助嗎？
@@ -148,14 +180,14 @@ extra:
     #  link: https://huggingface.co/wenchiehlee
     - icon: fontawesome/regular/envelope #聯系方式圖示
       link: mailto:<wenchiehlee1020@gmail.com> #郵件聯系方式
-  # cookies設定（可選）
-  # consent:
-  #   title: Cookie consent
-  #   description: >-
-  #     我們也使用cookies來識別您的重覆訪問和偏好來衡量我們文件的有效性以及使用者是否找到他們要找的東西。
-  #     如果你同意,你可以幫助我們讓我們的網站更好
+# cookies設定（可選）
+# consent:
+#   title: Cookie consent
+#   description: >-
+#     我們也使用cookies來識別您的重覆訪問和偏好來衡量我們文件的有效性以及使用者是否找到他們要找的東西。
+#     如果你同意,你可以幫助我們讓我們的網站更好
 
-
+# Extensions
 markdown_extensions: #詳見https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/ 和 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
   - abbr
   - admonition
@@ -164,18 +196,40 @@ markdown_extensions: #詳見https://squidfunk.github.io/mkdocs-material/setup/ex
   - footnotes
   - md_in_html
   # - meta # 支援Markdown檔案上方自定義標題標簽等
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.caret
-  - pymdownx.betterem
+  - pymdownx.betterem:
+      smart_enable: all
   - pymdownx.critic
   - pymdownx.details
+  #- pymdownx.emoji:
+  #    emoji_generator: !!python/name:materialx.emoji.to_svg
+  #    emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
   - pymdownx.mark
 
   - pymdownx.smartsymbols
   - pymdownx.snippets:
       auto_append:
         - includes/mkdocs.md
+  #- pymdownx.superfences:
+  #    custom_fences:
+  #      - name: mermaid
+  #        class: mermaid
+  #        format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tilde
   - pymdownx.superfences:
       custom_fences:
@@ -196,8 +250,13 @@ markdown_extensions: #詳見https://squidfunk.github.io/mkdocs-material/setup/ex
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true
+      combine_header_slug: true
+      #slugify: !!python/object/apply:pymdownx.slugs.slugify
+      #  kwds:
+      #    case: lower
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tilde
   # - markdown.extensions.toc:
   #     slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
   #     permalink: "\ue157"
