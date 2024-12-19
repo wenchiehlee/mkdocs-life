@@ -18,7 +18,7 @@ theme:
   font: #谷歌字型，自行搜尋
     text: LXGW WenKai TC # Noto Serif TC #文字字型
     code: Roboto Mono  #程式碼字型
-  #logo: assets/favicon.png #左上角logo，可插入圖片連結
+  logo: assets/images/w.png #左上角logo，可插入圖片連結
   icon:
     repo: fontawesome/brands/github #右上角圖示
     logo:       material/library
@@ -33,13 +33,13 @@ theme:
       IOT:      material/devices
   palette:
     - scheme: default
-      primary:  lime
+      primary: black
       accent:  lime
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: light green
+      primary: black
       accent: light green
       toggle:
         icon: material/brightness-4
@@ -68,6 +68,7 @@ theme:
     - search.suggest # 搜尋輸入一些字母時推薦補全整個單詞
     - search.highlight # 搜尋出的文章關鍵詞加入高亮
     - search.share #搜尋分享按鈕    
+    - tabs: true
     - toc.follow
     # - toc.integrate
 plugins:  
@@ -151,7 +152,7 @@ extra:
   generator: true #是否刪除頁尾顯示“使用 MkDocs 材料製造”
   analytics:
     provider: google #谷歌分析
-    property: G-913Z6DSVD2
+    property: !ENV GOOGLE_ANALYTICS_KEY
     # 網頁底部反饋
     feedback:
       title: 此頁面有幫助嗎？
@@ -195,7 +196,7 @@ markdown_extensions: #詳見https://squidfunk.github.io/mkdocs-material/setup/ex
   - def_list
   - footnotes
   - md_in_html
-  # - meta # 支援Markdown檔案上方自定義標題標簽等
+  - meta # 支援Markdown檔案上方自定義標題標簽等
   - toc:
       permalink: true
   - pymdownx.arithmatex:
@@ -205,9 +206,9 @@ markdown_extensions: #詳見https://squidfunk.github.io/mkdocs-material/setup/ex
       smart_enable: all
   - pymdownx.critic
   - pymdownx.details
-  #- pymdownx.emoji:
-  #    emoji_generator: !!python/name:materialx.emoji.to_svg
-  #    emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -225,11 +226,6 @@ markdown_extensions: #詳見https://squidfunk.github.io/mkdocs-material/setup/ex
   - pymdownx.snippets:
       auto_append:
         - includes/mkdocs.md
-  #- pymdownx.superfences:
-  #    custom_fences:
-  #      - name: mermaid
-  #        class: mermaid
-  #        format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tilde
   - pymdownx.superfences:
       custom_fences:
