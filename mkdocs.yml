@@ -193,10 +193,16 @@ markdown_extensions: #詳見https://squidfunk.github.io/mkdocs-material/setup/ex
   - abbr
   - admonition
   - attr_list
+  # - codehilite
+  #     guess_lang=false
   - def_list
   - footnotes
+  - markdown_include.include:
+      base_path: docs
   - md_in_html
   - meta # 支援Markdown檔案上方自定義標題標簽等
+  - neoteroi.cards
+  - neoteroi.timeline
   - toc:
       permalink: true
   - pymdownx.arithmatex:
@@ -268,6 +274,8 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js #忘了
 
 extra_css:
+  - stylesheets/timeline.css
+  - stylesheets/cards.css
   - stylesheets/extra.css # 自定義CSS
   - stylesheets/link.css #友鏈配置
   - stylesheets/customize.css # 搜尋圓角最佳化
