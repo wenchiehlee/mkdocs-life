@@ -1,0 +1,13 @@
+#.github/sync.yml
+group:
+  repos: |
+    wenchiehlee/mkdocs
+    wenchiehlee/mkdocs-life
+    wenchiehlee/mkdocs-investment
+  files:
+    - source: .gitignore
+      dest:   .gitignore
+    - source: .github/workflows/sync-up.yml
+      dest:   .github/workflows/sync-up.yml
+    - source: .github/sync.yml
+      dest:   .github/sync.yml
