@@ -2,3 +2,6 @@ mkdocs-git-committers-plugin-2
 mkdocs-git-revision-date-localized-plugin
 mkdocs-rss-plugin
 mkdocs-git-authors-plugin
+markdown-include
+mkdocs-macros-plugin
+neoteroi-mkdocs
