@@ -1,17 +1,13 @@
 #.github/workflows/sync-up.yml
 name: Sync Common Code
 on:
-  pull_request:
-    branches:
-      - main
-    types: [closed]
   push:
     branches:
       - main
 jobs:
   sync-backup-workflow:
     runs-on: ubuntu-latest
-    #if: github.event.pull_request.merged == true
+    # if: github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v2
 
@@ -23,4 +19,4 @@ jobs:
           COMMIT_EACH_FILE: false
           PR_LABELS: "automated-sync"
           # Uncomment to skip Pull Request and push directly
-          # SKIP_PR: true
+          SKIP_PR: true
