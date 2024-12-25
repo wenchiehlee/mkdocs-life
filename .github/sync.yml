@@ -4,6 +4,10 @@ group:
     wenchiehlee/mkdocs
     wenchiehlee/mkdocs-life
     wenchiehlee/mkdocs-investment
+    wenchiehlee/GoogleSearch
+    wenchiehlee/FindMind
+    wenchiehlee/Python.TWSE-PER
+    wenchiehlee/Selenium-Action.TPEX-company
   files:
     - source: .gitignore
       dest:   .gitignore
