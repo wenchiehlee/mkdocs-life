@@ -183,8 +183,7 @@ ____    __    ____  ______   ______   ____    __    ____  __  .__   __.
 
 
 
-[^Knowing-that-loving-you-has-no-ending]:太陽總是能溫暖向日葵  
-[^see-how-much-I-love-you]:All-problems-in-computer-science-can-be-solved-by-another-level-of-indirection
+
 
    <body>
         <font color="#B9B9B9">
