@@ -16,11 +16,44 @@ date: 2025-11-30
 *   **養殖 (Breeding):** 養殖動物的記錄與趣事。
 *   **釀酒 (Winemaking):** 家庭釀酒的嘗試與分享。
 
+--------------------
 
+# ABOUT THE TEAMS
+
+::cards:: cols=3
+
+- title: Wen-Chieh Lee
+  content: Senior Software Architect
+  image: https://github.com/wenchiehlee.png
+  url: https://github.com/wenchiehlee
+
+- title: Andy Lee
+  content: AI Developer
+  image: https://github.com/andylee-me.png
+  url: https://github.com/andylee-me
+
+- title: Kohsin Lee
+  content: Software/AI Developer
+  image: https://github.com/kohsin520.png
+  url: https://github.com/kohsin520
+
+::/cards::
 
 --------------------
 
-# Credits
+# TIMELINE
+
+::timeline::
+
+- title: 2025-11
+  content: Site Launch
+  sub_title: 開幕
+
+::/timeline::
+
+--------------------
+
+# CREDITS
 
 This web built based on the helps below.
 
