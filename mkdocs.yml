@@ -300,7 +300,5 @@ nav:
   - 標簽: tag.md
   - Blogger:
       - index: blog/index.md
-  - 友鏈:
-      - 友鏈: about/link.md
-  - 關於:
-      - 作者個人簡介: about/geren.md
+  - 友鏈: about/link.md
+  - 關於: about/index.md
