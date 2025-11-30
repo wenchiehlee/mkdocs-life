@@ -141,17 +141,7 @@ ____    __    ____  ______   ______   ____    __    ____  __  .__   __.
     </body>
     <!-- <b><span id="time"></span></b> -->
   </div>
-  <ul>
-    <li>透過主題和目錄以開啟文章</li>
-    <ul>
-      <li>基於Material for MkDocs美化</li>
-      <li>簡潔美觀，功能多元化</li>
-    </ul>
-    <li>簡單易上手，小白配置</li>
-    <li>
-      如遇到網頁卡頓的情況，請使用<strong><a href="https://www.yuque.com/wcowin/mkdocs-wcowin?# 《Mkdocs-Wcowin中文教程》" target="_blank">Mkdocs-Wcowin中文教程(語雀)</a></strong>
-    </li>
-  </ul>
+
 </div> 
 
 <!-- - 基於Material for MkDocs美化
