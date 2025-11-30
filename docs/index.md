@@ -163,11 +163,11 @@ ____    __    ____  ______   ______   ____    __    ____  __  .__   __.
 
 <div class="grid cards" markdown>
 
+-   :simple-aboutdotme:{ .lg .middle } __關於__
 
+    ---
 
-
-
-
+    [:octicons-arrow-right-24: 瞭解我](about/index.md)
 
 </div>
 
