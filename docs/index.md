@@ -5,15 +5,7 @@ hide:
 comments: false
 ---
 
-<div class="grid cards" markdown>
 
--   :simple-aboutdotme:{ .lg .middle } __關於__
-
-    ---
-
-    [:octicons-arrow-right-24: 瞭解我](about/index.md)
-
-</div>
 
 ## 最新生活日誌
 
