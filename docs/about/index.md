@@ -6,7 +6,6 @@ hide:
   - navigation
   - toc
 date: 2025-11-30
-date: 2025-11-30
 ---
 # 關於本站
 
