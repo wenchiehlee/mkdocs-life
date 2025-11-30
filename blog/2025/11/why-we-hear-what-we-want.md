@@ -1,6 +1,7 @@
 ---
 title: 為什麼我們只聽想聽的話？
 date: 2025-11-30
+draft: false
 categories:
   - 生活
   - 心理學
