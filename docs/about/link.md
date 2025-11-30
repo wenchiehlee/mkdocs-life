@@ -19,7 +19,7 @@ title: 友鏈
   url: https://wenchiehlee.github.io/mkdocs/
 
 - title: Wen-Chieh Lee的生活
-  content: 種植, 養殖, 釀
+  content: 生活, 種植, 養殖, 釀酒
   image: https://wenchiehlee.github.io/mkdocs-life/assets/images/w.png
   url: https://wenchiehlee.github.io/mkdocs-life/
 
@@ -33,44 +33,5 @@ title: 友鏈
   image: https://wenchiehlee.synology.me/assets/images/w-red.png
   url: https://wenchiehlee.synology.me/
 
-
-::/cards::
-
-# Useful Links
-
-::cards:: cols=4 class_name="bigger"
-
-- title: Zeus
-  content: Lorem ipsum dolor sit amet.
-  image: https://www.neoteroi.dev/mkdocs-plugins/img/icons/001-zeus.png
-  url: https://en.wikipedia.org/wiki/Zeus
-
-- title: Athena
-  content: Lorem ipsum dolor sit amet.
-  image: https://www.neoteroi.dev/mkdocs-plugins/img/icons/003-athena.png
-
-- title: Poseidon
-  content: Lorem ipsum dolor sit amet.
-  image: https://www.neoteroi.dev/mkdocs-plugins/img/icons/007-poseidon.png
-
-- title: Artemis
-  content: Lorem ipsum dolor sit amet.
-  image: https://www.neoteroi.dev/mkdocs-plugins/img/icons/021-artemis.png
-
-- title: Ares
-  content: Lorem ipsum dolor sit amet.
-  image: https://www.neoteroi.dev/mkdocs-plugins/img/icons/006-ares.png
-
-- title: Nike
-  content: Lorem ipsum dolor sit amet.
-  image: https://www.neoteroi.dev/mkdocs-plugins/img/icons/027-nike.png
-
-- title: 60fps
-  content: Lorem ipsum dolor sit amet.
-  image: https://github.com/google/material-design-icons/blob/master/png/device/60fps/materialiconstwotone/48dp/2x/twotone_60fps_black_48dp.png?raw=true
-
-- title: 4G
-  content: Lorem ipsum dolor sit amet.
-  image: https://github.com/google/material-design-icons/blob/master/png/device/4g_mobiledata/materialiconssharp/48dp/2x/sharp_4g_mobiledata_black_48dp.png?raw=true
 
 ::/cards::
