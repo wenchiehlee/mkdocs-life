@@ -7,6 +7,6 @@ comments: false
 
 
 
-## 最新生活日誌
+## 底層邏輯
 
--   [:newspaper: 為什麼我們只聽想聽的話？](blog/posts/2025/11/why-we-hear-what-we-want.md)
+-   [:question: 為什麼"每個人都只聽他想聽的"？](blog/posts/2025/11/why-we-hear-what-we-want.md)
