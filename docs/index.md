@@ -168,15 +168,7 @@ ____    __    ____  ______   ______   ____    __    ____  __  .__   __.
 
 <div class="grid cards" markdown>
 
--   :simple-materialformkdocs:{ .lg .middle } __Mkdocs教程__
 
-    ---
-
-    - [利用Mkdocs部署靜態網頁至GitHub pages](blog/Mkdocs/mkdocs1.md)
-    - [Mkdocs部署配置說明(mkdocs.yml)](blog/Mkdocs/mkdocs2.md)
-    - [如何給MKdocs新增友鏈](blog/websitebeauty/linktech.md)
-    - [網站新增Mkdocs部落格](blog/Mkdocs/mkdocsblog.md)
-    - [Blogger](blog/index.md)
 
 
 -   :simple-aboutdotme:{ .lg .middle } __關於__
