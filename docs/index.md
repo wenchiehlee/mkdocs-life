@@ -167,9 +167,11 @@ ____    __    ____  ______   ______   ____    __    ____  __  .__   __.
 
     ---
 
-    [:octicons-arrow-right-24: 瞭解我](about/index.md)
-
 </div>
+
+## 最新生活日誌
+
+-   [:octicons-feed-16: 為什麼我們只聽想聽的話？](blog/posts/2025/11/why-we-hear-what-we-want.md)
 
 
 
