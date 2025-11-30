@@ -15,18 +15,7 @@ hide:
 *   **養殖 (Breeding):** 養殖動物的記錄與趣事。
 *   **釀酒 (Winemaking):** 家庭釀酒的嘗試與分享。
 
---------------------
 
-# 關於作者
-
-::cards:: cols=1
-
-- title: Wen-Chieh Lee
-  content: Senior Software Architect, and a person who loves life.
-  image: https://github.com/wenchiehlee.png
-  url: https://github.com/wenchiehlee
-
-::/cards::
 
 --------------------
 
