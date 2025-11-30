@@ -169,10 +169,7 @@ ____    __    ____  ______   ______   ____    __    ____  __  .__   __.
 -   :simple-aboutdotme:{ .lg .middle } __關於__
 
     ---
-    - [Mkdocs-Wcowin部落格主題社群](https://support.qq.com/products/646913/){target=“_blank”}
-    - [留言板](liuyanban.md)[^Knowing-that-loving-you-has-no-ending] 
-    - [Blogger](blog/index.md)   
-    [:octicons-arrow-right-24: 瞭解我](about/geren.md)[^see-how-much-I-love-you]
+
 
 </div>
 
