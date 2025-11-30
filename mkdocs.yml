@@ -293,42 +293,14 @@ extra_css:
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.2.0/style.min.css
 # Page tree
 nav:
-  # - 主頁: index.md
-  - MKdocs中文教程:
-      - MKdocs教程(三部曲):
-          - 1. 利用mkdocs部署靜態網頁至GitHub pages: blog/Mkdocs/mkdocs1.md
-          - 2. Mkdocs部署靜態網頁至GitHub pages配置說明(mkdocs.yml): blog/Mkdocs/mkdocs2.md
-          - 3. 解決 mkdocs部署 Github Pages 自定義域名失效的問題: blog/Mkdocs/mkdocs3.md
-      - Mkdocs美化:
-          - 新增Mkdocs部落格: blog/Mkdocs/mkdocsblog.md
-          - 網頁圓角化設計: blog/websitebeauty/yuanjiaohua.md
-          - 新增評論系統(giscus為例): blog/websitebeauty/mkcomments.md
-          - 新增線上聊天: blog/websitebeauty/webtalknow.md
-          - 新增友鏈: blog/websitebeauty/linktech.md
-          - 新增頂部公告欄: blog/websitebeauty/header.md
-          - 修改網站字型: blog/websitebeauty/mkdocsfont.md
-          - JS實現滑鼠樣式: blog/websitebeauty/shubiao.md
-          - 背景特效: blog/websitebeauty/backgroud.md
-          - 新增404頁面: blog/websitebeauty/404.md
-          - 為MKdocs新增文章修訂時間戳: blog/websitebeauty/time.md
-  - 建設MKdocs技能指北:
-      - Markdown:
-          - Markdown指南: develop/Markdown/markdown.md
-          - MWeb Pro: develop/Markdown/MWeb.md
-      - Git 實用技巧: develop/git.md
-      - 利用Lighthouse測試網站效能: develop/lighthouse.md
-      - 如何將 github pages 遷移到 vercel 上託管: develop/vercel.md
-      - 設計美學:
-          - 唐·諾曼—情感設計的三個層次: develop/designbeauty/db1.md
-          - 我對設計的一些觀點: develop/designbeauty/my-to-desihn.md
-
+  - 生活: index.md
+  - 種植: planting.md
+  - 養殖: breeding.md
+  - 釀酒: winemaking.md
   - 標簽: tag.md
-  - 留言板: liuyanban.md
   - Blogger:
       - index: blog/index.md
   - 友鏈:
       - 友鏈: about/link.md
   - 關於:
       - 作者個人簡介: about/geren.md
-      - 功能測試: about/test.md
-  - 使用本主題: https://github.com/new?template_name=Mkdocs-Wcowin&template
