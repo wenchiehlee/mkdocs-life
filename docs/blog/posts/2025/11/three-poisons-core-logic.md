@@ -1,6 +1,6 @@
 ---
 title: 貪嗔痴的底層邏輯：我對事、我對人、我對我
-date: 2025-11-30
+date: 2025-12-10
 draft: false
 categories:
   - 生活
