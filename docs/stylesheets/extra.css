@@ -595,6 +595,112 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
   }
 }
 
+.image-compare-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  background: #0d2235;
+  aspect-ratio: 3 / 2;
+  --pos: 50%;
+}
+
+.image-compare-slider__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-compare-slider__image--after {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(0 0, var(--pos) 0, var(--pos) 100%, 0 100%);
+}
+
+.image-compare-slider__range {
+  position: absolute;
+  inset: auto 12px 12px 12px;
+  width: calc(100% - 24px);
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: ew-resize;
+}
+
+.image-compare-slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #67b3ff;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-compare-slider__range::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #67b3ff;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-compare-slider__divider {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.7);
+  transform: translateX(calc(var(--pos) - 1px));
+  pointer-events: none;
+}
+
+.image-compare-slider__handle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(calc(var(--pos) - 50%), -50%);
+  color: #0d2235;
+  background: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.image-compare-slider__label {
+  position: absolute;
+  top: 10px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0d2235;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.image-compare-slider__label--before {
+  left: 10px;
+}
+
+.image-compare-slider__label--after {
+  right: 10px;
+}
+
+@media (max-width: 800px) {
+  .image-compare-slider {
+    aspect-ratio: 4 / 5;
+  }
+}
+
 .image-compare {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
@@ -621,4 +727,3 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
     grid-template-columns: 1fr;
   }
 }
-

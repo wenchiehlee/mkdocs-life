@@ -17,15 +17,14 @@ tags:
 
 ## A 組：富士山的光線與倒影（從紀實到海報感）
 
-<div class="image-compare">
-  <figure>
-    <img src="../../../../assets/images/2356bce5-db70-4184-a3ad-7a4edf40d1b7.jpg" alt="原圖 A：富士山與湖面倒影，冷藍晨景">
-    <figcaption>原圖：富士山與湖面倒影，冷藍晨景</figcaption>
-  </figure>
-  <figure>
-    <img src="../../../../assets/images/2356bce5-db70-4184-a3ad-7a4edf40d1b7_gemini.png" alt="濾鏡轉換版 A：厚塗印象派，光影更戲劇">
-    <figcaption>濾鏡轉換：厚塗印象派，光影更戲劇</figcaption>
-  </figure>
+<div class="image-compare-slider">
+  <img src="../../../../assets/images/2356bce5-db70-4184-a3ad-7a4edf40d1b7.jpg" alt="原圖 A：富士山與湖面倒影，冷藍晨景" class="image-compare-slider__image image-compare-slider__image--before">
+  <img src="../../../../assets/images/2356bce5-db70-4184-a3ad-7a4edf40d1b7_gemini.png" alt="濾鏡轉換版 A：厚塗印象派，光影更戲劇" class="image-compare-slider__image image-compare-slider__image--after">
+  <input type="range" min="0" max="100" value="50" class="image-compare-slider__range" aria-label="拖曳比較原圖與濾鏡轉換">
+  <span class="image-compare-slider__divider" aria-hidden="true"></span>
+  <span class="image-compare-slider__handle" aria-hidden="true">⇆</span>
+  <span class="image-compare-slider__label image-compare-slider__label--before">原圖</span>
+  <span class="image-compare-slider__label image-compare-slider__label--after">濾鏡轉換</span>
 </div>
 
 - 原圖重點：富士山與湖面的對稱倒影，靠冷藍天空＋平靜水面形成三分構圖，靈魂在「光線落在山體、鏡面相互呼應」的留白感。
@@ -36,15 +35,14 @@ tags:
 
 ## B 組：灰階草稿的風格化（從素描到氛圍插畫）
 
-<div class="image-compare">
-  <figure>
-    <img src="../../../../assets/images/a5aefdaa-ba38-443d-adae-ee642940e26a.jpg" alt="原圖 B：灰階形體草稿">
-    <figcaption>原圖：灰階形體草稿</figcaption>
-  </figure>
-  <figure>
-    <img src="../../../../assets/images/a5aefdaa-ba38-443d-adae-ee642940e26a_gemini.png" alt="濾鏡轉換版 B：冷灰藍封面風">
-    <figcaption>濾鏡轉換：冷灰藍封面風</figcaption>
-  </figure>
+<div class="image-compare-slider">
+  <img src="../../../../assets/images/a5aefdaa-ba38-443d-adae-ee642940e26a.jpg" alt="原圖 B：灰階形體草稿" class="image-compare-slider__image image-compare-slider__image--before">
+  <img src="../../../../assets/images/a5aefdaa-ba38-443d-adae-ee642940e26a_gemini.png" alt="濾鏡轉換版 B：冷灰藍封面風" class="image-compare-slider__image image-compare-slider__image--after">
+  <input type="range" min="0" max="100" value="50" class="image-compare-slider__range" aria-label="拖曳比較原圖與濾鏡轉換">
+  <span class="image-compare-slider__divider" aria-hidden="true"></span>
+  <span class="image-compare-slider__handle" aria-hidden="true">⇆</span>
+  <span class="image-compare-slider__label image-compare-slider__label--before">原圖</span>
+  <span class="image-compare-slider__label image-compare-slider__label--after">濾鏡轉換</span>
 </div>
 
 - 原圖重點：灰階、低對比，像設計課的形體素描，主角是比例與塊面關係，情緒很克制。
