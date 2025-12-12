@@ -595,5 +595,30 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
   }
 }
 
+.image-compare {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  margin: 12px 0 20px;
+}
 
+.image-compare img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.image-compare figcaption {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color--lighter, #6a6a6a);
+}
+
+@media (max-width: 800px) {
+  .image-compare {
+    grid-template-columns: 1fr;
+  }
+}
 

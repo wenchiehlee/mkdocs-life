@@ -1,7 +1,7 @@
 ---
 title: 第一次繪畫練習｜原圖與轉譯對照筆記
 date: 2025-12-12
-draft: true
+draft: false
 comments: true
 categories:
   - 繪畫
@@ -13,11 +13,20 @@ tags:
 ---
 第一次把日常照片做數位風格化，對照「原圖 vs 轉譯版」，專注在：轉譯後是否更吸睛、抽象了哪些意象、色彩與筆觸如何幫忙講故事。每組都抓「原圖的核心元素」再看轉譯如何加戲，讓照片變成帶風格的視覺概念稿。
 
+👉 想看更多練習，這裡有一頁整理：[繪畫主頁](/painting/)。
+
 ## A 組：富士山的光線與倒影（從紀實到海報感）
 
-| 原圖 | 轉譯版 |
-| --- | --- |
-| ![原圖 A：富士山與湖面倒影，冷藍晨景](../../../../assets/images/2356bce5-db70-4184-a3ad-7a4edf40d1b7.jpg) | ![濾鏡轉換版 A：厚塗印象派，光影更戲劇](../../../../assets/images/2356bce5-db70-4184-a3ad-7a4edf40d1b7_gemini.png) |
+<div class="image-compare">
+  <figure>
+    <img src="../../../../assets/images/2356bce5-db70-4184-a3ad-7a4edf40d1b7.jpg" alt="原圖 A：富士山與湖面倒影，冷藍晨景">
+    <figcaption>原圖：富士山與湖面倒影，冷藍晨景</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../../assets/images/2356bce5-db70-4184-a3ad-7a4edf40d1b7_gemini.png" alt="濾鏡轉換版 A：厚塗印象派，光影更戲劇">
+    <figcaption>濾鏡轉換：厚塗印象派，光影更戲劇</figcaption>
+  </figure>
+</div>
 
 - 原圖重點：富士山與湖面的對稱倒影，靠冷藍天空＋平靜水面形成三分構圖，靈魂在「光線落在山體、鏡面相互呼應」的留白感。
 - 轉譯（數位厚塗印象派）：把光暈推亮、陰影壓厚，筆觸可見，山體邊緣更立，像油畫刀掃過；倒影區域更有亮暗對比，鏡面感被強化。
@@ -27,9 +36,16 @@ tags:
 
 ## B 組：灰階草稿的風格化（從素描到氛圍插畫）
 
-| 原圖 | 轉譯版 |
-| --- | --- |
-| ![原圖 B：灰階形體草稿](../../../../assets/images/a5aefdaa-ba38-443d-adae-ee642940e26a.jpg) | ![濾鏡轉換版 B：冷灰藍封面風](../../../../assets/images/a5aefdaa-ba38-443d-adae-ee642940e26a_gemini.png) |
+<div class="image-compare">
+  <figure>
+    <img src="../../../../assets/images/a5aefdaa-ba38-443d-adae-ee642940e26a.jpg" alt="原圖 B：灰階形體草稿">
+    <figcaption>原圖：灰階形體草稿</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../../assets/images/a5aefdaa-ba38-443d-adae-ee642940e26a_gemini.png" alt="濾鏡轉換版 B：冷灰藍封面風">
+    <figcaption>濾鏡轉換：冷灰藍封面風</figcaption>
+  </figure>
+</div>
 
 - 原圖重點：灰階、低對比，像設計課的形體素描，主角是比例與塊面關係，情緒很克制。
 - 轉譯（冷灰藍寫實封面風）：冷灰藍色溫灌入高光，暗部被雕出更深的面，線條刻到像石膏或金屬，質感直接跳到接近出版封面的成熟度。
@@ -39,5 +55,5 @@ tags:
 
 ## 後續計畫
 
-- 先維持 `draft: true`，等審閱後再公開。
+- 先維持公開分享，等更多練習後再補充細節。
 - 下一步會挑其中一張做更細的筆觸調整，測試「保留冷色、減少硬邊」的版本。
