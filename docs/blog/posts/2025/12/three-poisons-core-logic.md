@@ -2,6 +2,7 @@
 title: 貪嗔痴的底層邏輯：我對事、我對人、我對我
 date: 2025-12-10
 draft: false
+comments: true
 categories:
   - 生活
   - 底層邏輯

@@ -2,6 +2,7 @@
 title: 快樂的來源：意義感、連結感與一致感
 date: 2025-12-11
 draft: false
+comments: true
 categories:
   - 生活
   - 底層邏輯

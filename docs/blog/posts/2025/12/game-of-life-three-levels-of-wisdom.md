@@ -2,6 +2,7 @@
 title: 人生遊戲的三層智慧：博奕、定力與選擇
 date: 2025-12-11
 draft: false
+comments: true
 categories:
   - 生活
   - 底層邏輯

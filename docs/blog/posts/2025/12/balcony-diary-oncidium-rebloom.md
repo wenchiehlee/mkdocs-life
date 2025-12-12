@@ -2,6 +2,7 @@
 title: 【陽台日記】不用每天澆水也能復花！我的文心蘭「1/10 懶人儲水法」
 date: 2025-12-12
 draft: false
+comments: true
 categories:
   - 生活
   - 陽台園藝

@@ -2,6 +2,7 @@
 title: 為什麼"每個人都只聽他想聽的"？
 date: 2025-11-30
 draft: false
+comments: true
 categories:
   - 生活
   - 心理學
