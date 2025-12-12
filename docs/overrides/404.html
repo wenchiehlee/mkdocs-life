@@ -1,36 +1,85 @@
-<html>
- <head> 
-  <meta charset="UTF-8" /> 
-  <meta name="description" content="公益404页面是由腾讯公司员工志愿者自主发起的互联网公益活动。" /> 
-  <link rel="icon" href="data:image/gif;base64,R0lGODdhIAAgANUAAAAAAAgFBgYICAwMDBAPDxAQDxQTFBUYFxcaGRwcHCQkJCQoJykqKTQ0ND09PUJCQktMTFZWVltcXF1hYGNjY2doaGpqanNzc3d5eHp6eoODg4uLi5eXl5mamqOjo62tra+wr7S0tLe5uLu7u7/AwMPEw83NzdbX1tfa2dra2uTk5Ovr6+/w7/T09Pj39/f4+P///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAADEALAAAAAAgACAAAAb/QJhwOGyZOpIGQ6FgNCQcU4tIrcJaIwlgy+1uJaOplZqydBOSzGaTkSS6lNN4ONoOAJRQajV0rVAgFF0jcyEAbw9hc1cjD4cAIVZ1DAAXKotEKxkAlIREJ48bYphFGwAKAHJCLWaVo6RFF1sWYnUDDpewVSoOd4QtWgCeMCmXLaqfUyopdF9GWxRiKQAVKh3CRHUdKhQEzFeCAEdbH6uOh28A3ypbCQhbEGIfWx2CCd8wJhB2CpFDIQvuAIBgYkiKN0kASOAzRJYjBwyFrGgAwNGFTFqUAMjwYogpA1woMFwRDgDIDUQ2LQGAcoiGLRr2QRgp8yUADURMMWFJRYMH3BglJOQSwq0EDA84c56ilOGVLisqKUaISKVFihIjRJRI4XTIiggAGggygKxICAoguSDI0/UEyAnXAJTLJMtLlwxUYcwD0MEEtIgtBKGi0OHDh3qn8IwKvEVKuGHXGAwI8apFCAOUOvxzBqNOAVzgthi1UgKasl7YrtS9MMXI6DEjpKieNWoaSA1dF7V4+QafkNKoLOlSIQsVCUkmATgYwWIRCxEOAByANKc0AAEAJnzYI6bFihQfBAUQjSlF3S0GIqjZgCFC2i0XfM/BUtJuSEVPjdRTwsQJYdljBAEAOw==" /> 
-  <title>404 您访问的页面搞丢了</title> 
-  <script src="https%3A//volunteer.cdn-go.cn/404/latest/404.js" rendertarget="404DlV"></script>
- </head> 
- <body style="overflow-x: hidden; max-width: 100vw;">
-  <div style="margin:0px;padding:0px;background-color:rbga(0,0,0,0);">
-   <div style="position:relative;left:50%;margin-left:-800px;width:1600px;height:1000px;">
-    <img alt="404！您要访问的页面走丢了！" src="https://volunteer.cdn-go.cn/404/latest/img/dream4school.jpg" style="left:50%;width:1600px;margin-left:calc(50% - 800px);filter: brightness(75%);" />
-    <div style="position:relative;margin-top:-1200px;width:100%;text-align:center;color:white;font-size:28px;">
-     <div style="display:inline-block;width:98vw;max-width:1600px;height:calc(100vh - 250px);max-height:750px;">
-      <div style="font-size:128px;font-weight: 800;">
-       404
-      </div>您访问的页面走丢在寻找梦想的路上了
-      <br />不过您还可以和腾讯志愿者一起
-      <br />
-      <i><b style="font-size:1.2em">为孩子们点亮一个梦想</b></i>
-     </div>
-     <div style="display:inline-block;width:98vw;max-width:1600px;text-align:left;margin:0px 10px;font-size:0.75em">
-      <a href="https://volunteer.cdn-go.cn/404/latest/img/dream4schoolQR.png"><img src="https://volunteer.cdn-go.cn/404/latest/img/dream4schoolQR.png" alt="点击进入支持页面" style="width:160px;" /></a>
-      <br />扫码点亮一个梦想
-      <div style="float:right;text-align:right;margin-right:1em;margin-top:-4.5em">
-       <br>照片拍摄于湖南省岳阳市平江县三市镇新村完小
-       <br>拍摄时间：二零二三年七月十一日
-       <br/>（感恩基金会供稿）
-       <br><a href="https://support.qq.com/products/378306" style="color:lightgray;font-size:0.8em;">我要反馈</a> 
+{% extends "main.html" %}
+
+{% block content %}
+  <style>
+    .not-found {
+      margin: 2.5rem auto 4rem;
+      padding: 2.75rem 3rem;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 20% 15%, rgba(255, 188, 66, 0.22), transparent 32%),
+        radial-gradient(circle at 80% 0%, rgba(103, 163, 255, 0.16), transparent 28%),
+        linear-gradient(135deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.05));
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 28px 70px -40px rgba(0, 0, 0, 0.35);
+      max-width: 860px;
+    }
+
+    .not-found__code {
+      font-size: 4.5rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--md-primary-fg-color);
+      margin: 0 0 0.25rem;
+    }
+
+    .not-found__title {
+      font-size: 1.6rem;
+      margin: 0 0 0.5rem;
+    }
+
+    .not-found__text {
+      margin: 0 0 1.5rem;
+      color: var(--md-default-fg-color--lighter, rgba(0, 0, 0, 0.62));
+      line-height: 1.7;
+    }
+
+    .not-found__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .not-found__links {
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.95rem;
+      color: var(--md-default-fg-color--lighter, rgba(0, 0, 0, 0.7));
+      line-height: 1.6;
+    }
+
+    @media screen and (max-width: 720px) {
+      .not-found {
+        margin: 1.5rem auto 3rem;
+        padding: 2.25rem 1.75rem;
+      }
+
+      .not-found__code {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+  <main class="md-grid md-typeset">
+    <section class="not-found">
+      <div class="not-found__code">404</div>
+      <p class="not-found__title">頁面暫時失聯</p>
+      <p class="not-found__text">
+        這個連結可能被移動、重新命名，或還沒有準備好公開。
+        試試以下路徑繼續探索，也可以直接呼叫搜尋。
+      </p>
+      <div class="not-found__actions">
+        <a class="md-button md-button--primary" href="{{ nav.homepage.url | url }}">回到首頁</a>
+        <a class="md-button" href="{{ 'tag.md' | url }}">看看標簽</a>
+        <a class="md-button" href="{{ 'blog/index.md' | url }}">最新文章</a>
+        <button class="md-button" type="button" data-md-toggle="search">站內搜尋</button>
       </div>
-     </div>
-    </div>
-   </div>
-  </div>
- </body>
-</html>
+      <div class="not-found__links">
+        <span>· 檢查網址是否拼寫正確</span>
+        <span>· 從分類頁重新導航：{{ config.site_name }} 的內容都在左側導覽欄</span>
+        <span>· 如果問題持續，請回到 <a href="{{ 'about/index.md' | url }}">關於</a> 告訴我</span>
+      </div>
+    </section>
+  </main>
+{% endblock %}
