@@ -1,4 +1,14 @@
-{% if page.meta.comments %}
+{% set comments_cfg = config.extra.comments | default({}) %}
+{% set disqus_cfg = config.extra.disqus | default({}) %}
+{% set disqus_shortname = (
+  comments_cfg.disqus.shortname
+  if comments_cfg and comments_cfg.disqus
+  else disqus_cfg.shortname
+  if disqus_cfg is mapping
+  else disqus_cfg
+) %}
+
+{% if page.meta.comments and disqus_shortname %}
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
   <div id="disqus_thread"></div>
   <script>
@@ -8,11 +18,7 @@
     }
 
     (function() {
-      var shortname = "{{ config.extra.disqus.shortname | default('') }}"
-      if (!shortname) {
-        console.warn("Disqus shortname is missing: set extra.disqus.shortname in mkdocs.yml")
-        return
-      }
+      var shortname = "{{ disqus_shortname }}"
 
       if (window.DISQUS) {
         window.DISQUS.reset({

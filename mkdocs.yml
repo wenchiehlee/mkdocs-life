@@ -130,13 +130,16 @@ plugins:
           as_creation: date
           as_update: git
   - tags:
-      tags_file: tag.md #分類標簽
 # Customization
 
 extra:
   annotate:
     json: [.s2] 
   generator: true #是否刪除頁尾顯示“使用 MkDocs 材料製造”
+  comments:
+    provider: disqus
+    disqus:
+      shortname: wen-chieh-lee-life
   disqus:
     shortname: wen-chieh-lee-life
   analytics:
