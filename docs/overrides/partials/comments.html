@@ -20,7 +20,7 @@
       this.page = this.page || {}
       this.page.url = "{{ page.canonical_url | d(config.site_url ~ page.url, true) }}"
       this.page.identifier = "{{ page.url }}"
-    }
+    };
 
     (function() {
       var shortname = "{{ disqus_shortname }}"
