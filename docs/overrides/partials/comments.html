@@ -1,54 +1,31 @@
 {% if page.meta.comments %}
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
-  <!-- Insert generated snippet here -->
-       <script src="https://giscus.app/client.js"
-        data-repo="wenchiehlee/mkdocs-life"
-        data-repo-id="R_kgDONPUkxQ"
-        data-category="General"
-        data-category-id="DIC_kwDONPUkxc4Ckps-"
-        data-mapping="title"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-TW"
-        crossorigin="anonymous"
-        async>
-</script>
-  <!-- Synchronize Giscus theme with palette -->
+  <div id="disqus_thread"></div>
   <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate"
-        ? "transparent_dark"
-        : "light"
-
-      // Instruct Giscus to set theme
-      giscus.setAttribute("data-theme", theme) 
+    var disqus_config = function () {
+      this.page.url = "{{ page.canonical_url | d(config.site_url ~ page.url, true) }}"
+      this.page.identifier = "{{ page.url }}"
     }
 
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
+    (function() {
+      var shortname = "{{ config.extra.disqus.shortname | default('') }}"
+      if (!shortname) {
+        console.warn("Disqus shortname is missing: set extra.disqus.shortname in mkdocs.yml")
+        return
+      }
 
-          // Instruct Giscus to change theme
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
+      if (window.DISQUS) {
+        window.DISQUS.reset({
+          reload: true,
+          config: disqus_config
+        })
+        return
+      }
+
+      var d = document, s = d.createElement("script")
+      s.src = "https://" + shortname + ".disqus.com/embed.js"
+      s.setAttribute("data-timestamp", +new Date())
+      ;(d.head || d.body).appendChild(s)
+    })()
   </script>
 {% endif %}
