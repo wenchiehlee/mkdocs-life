@@ -258,12 +258,11 @@ markdown_extensions: #詳見https://squidfunk.github.io/mkdocs-material/setup/ex
 extra_javascript:
   # - javascripts/extra.js #自定義javascript
   - javascripts/mathjax.js #Latex支援
-  - https://polyfill.io/v3/polyfill.min.js?features=es6 #Latex支援
+  - https://polyfill-fastly.io/v3/polyfill.min.js?features=es6 #Latex支援；替換 polyfill.io 避免 DNS 解析失敗
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js #Latex支援
   - javascripts/compare-slider.js
   # - ckplayer/js/ckplayer.js #播放器配置
   # - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js  #gitalk支援
-  - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js #忘了
 
 extra_css:
   - stylesheets/timeline.css

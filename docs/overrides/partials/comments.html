@@ -16,6 +16,8 @@
   </p>
   <script>
     var disqus_config = function () {
+      // Disqus expects a page object; guard to avoid undefined errors on load
+      this.page = this.page || {}
       this.page.url = "{{ page.canonical_url | d(config.site_url ~ page.url, true) }}"
       this.page.identifier = "{{ page.url }}"
     }
