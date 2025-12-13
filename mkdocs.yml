@@ -138,7 +138,7 @@ extra:
     json: [.s2] 
   generator: true #是否刪除頁尾顯示“使用 MkDocs 材料製造”
   disqus:
-    shortname: mkdocs-life
+    shortname: wen-chieh-lee-life
   analytics:
     provider: google #谷歌分析
     property: !ENV GOOGLE_ANALYTICS_KEY
