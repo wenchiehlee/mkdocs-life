@@ -11,3 +11,6 @@ __pycache__
 /data/reports/validation_summary_2*.csv
 /logs
 /cache
+node_modules/
+package-lock.json
+package.json
