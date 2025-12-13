@@ -38,6 +38,13 @@
 
 // for small devices
 
+@media only screen and (max-width: 640px) {
+    // keep two columns on small phones instead of squeezing four
+    .nt-cards.nt-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
 @media only screen and (max-width: 400px) {
 
     // force one card per line
