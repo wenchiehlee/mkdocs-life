@@ -19,8 +19,8 @@ tags:
 ## A 組：2024/08/23-08/29 東京銀座－富士山－上野
 
 <div class="image-compare-slider">
-  <img src="../../../../assets/images/2356bce5-db70-4184-a3ad-7a4edf40d1b7.jpg" alt="A 組原始照片：富士山晨景與湖面倒影，藍灰清晨" class="image-compare-slider__image image-compare-slider__image--before">
-  <img src="../../../../assets/images/2356bce5-db70-4184-a3ad-7a4edf40d1b7_gemini.png" alt="A 組後製照片：提升亮暗對比、保留晨霧感" class="image-compare-slider__image image-compare-slider__image--after">
+  <img src="/mkdocs-life/assets/images/2356bce5-db70-4184-a3ad-7a4edf40d1b7.jpg" alt="A 組原始照片：富士山晨景與湖面倒影，藍灰清晨" class="image-compare-slider__image image-compare-slider__image--before">
+  <img src="/mkdocs-life/assets/images/2356bce5-db70-4184-a3ad-7a4edf40d1b7_gemini.png" alt="A 組後製照片：提升亮暗對比、保留晨霧感" class="image-compare-slider__image image-compare-slider__image--after">
   <input type="range" min="0" max="100" value="50" class="image-compare-slider__range" aria-label="拖曳比較原始照片與後製照片">
   <span class="image-compare-slider__divider" aria-hidden="true"></span>
   <span class="image-compare-slider__handle" aria-hidden="true">⇆</span>
@@ -37,8 +37,8 @@ tags:
 ## B 組：2023/08/20 頭城港口釣遊
 
 <div class="image-compare-slider">
-  <img src="../../../../assets/images/a5aefdaa-ba38-443d-adae-ee642940e26a.jpg" alt="B 組原始照片：頭城港口晨色、釣具與船隻" class="image-compare-slider__image image-compare-slider__image--before">
-  <img src="../../../../assets/images/a5aefdaa-ba38-443d-adae-ee642940e26a_gemini.png" alt="B 組後製照片：冷灰藍調、突出金屬與潮濕質感" class="image-compare-slider__image image-compare-slider__image--after">
+  <img src="/mkdocs-life/assets/images/a5aefdaa-ba38-443d-adae-ee642940e26a.jpg" alt="B 組原始照片：頭城港口晨色、釣具與船隻" class="image-compare-slider__image image-compare-slider__image--before">
+  <img src="/mkdocs-life/assets/images/a5aefdaa-ba38-443d-adae-ee642940e26a_gemini.png" alt="B 組後製照片：冷灰藍調、突出金屬與潮濕質感" class="image-compare-slider__image image-compare-slider__image--after">
   <input type="range" min="0" max="100" value="50" class="image-compare-slider__range" aria-label="拖曳比較原始照片與後製照片">
   <span class="image-compare-slider__divider" aria-hidden="true"></span>
   <span class="image-compare-slider__handle" aria-hidden="true">⇆</span>

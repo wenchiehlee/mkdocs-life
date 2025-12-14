@@ -615,7 +615,8 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
 .image-compare-slider__image--after {
   position: absolute;
   inset: 0;
-  clip-path: polygon(0 0, var(--pos) 0, var(--pos) 100%, 0 100%);
+  /* Reveal the edited (after) image on the right side of the divider */
+  clip-path: polygon(var(--pos) 0, 100% 0, 100% 100%, var(--pos) 100%);
 }
 
 .image-compare-slider__range {
