@@ -79,7 +79,7 @@ plugins:
 
       authors: true
       authors_file: "{blog}/.authors.yml"       
-      draft: true
+      draft: false
       draft_if_future_date: true #自動將具有未來日期的帖子標記為草稿
       post_readtime: true
       post_readtime_words_per_minute: 265 #計算帖子的閱讀時間時讀者每分鐘預計閱讀的字數
