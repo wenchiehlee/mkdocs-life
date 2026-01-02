@@ -1,0 +1,56 @@
+{% set comments_cfg = config.extra.comments | default({}) %}
+{% set disqus_cfg = config.extra.disqus | default({}) %}
+{% set disqus_shortname = (
+  comments_cfg.disqus.shortname
+  if comments_cfg and comments_cfg.disqus
+  else disqus_cfg.shortname
+  if disqus_cfg is mapping
+  else disqus_cfg
+) %}
+
+{% if page.meta.comments and disqus_shortname %}
+  <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
+  <div id="disqus_thread"></div>
+  <p id="disqus_error" class="md-typeset" style="display:none">
+    無法載入留言系統，請確認瀏覽器允許連線至 Disqus（disqus.com、disquscdn.com），或暫時停用封鎖追蹤/廣告的外掛後重新整理。
+  </p>
+  <script>
+    var disqus_config = function () {
+      // Disqus expects a page object; guard to avoid undefined errors on load
+      this.page = this.page || {}
+      this.page.url = "{{ page.canonical_url | d(config.site_url ~ page.url, true) }}"
+      this.page.identifier = "{{ page.url }}"
+    };
+
+    (function() {
+      var shortname = "{{ disqus_shortname }}"
+      var d = document
+      var errorShown = false
+      var showError = function() {
+        if (errorShown) return
+        errorShown = true
+        var msg = d.getElementById("disqus_error")
+        if (msg) msg.style.display = "block"
+      }
+
+      if (window.DISQUS) {
+        window.DISQUS.reset({
+          reload: true,
+          config: disqus_config
+        })
+        return
+      }
+
+      var s = d.createElement("script")
+      s.src = "https://" + shortname + ".disqus.com/embed.js"
+      s.async = true
+      s.onerror = showError
+      s.setAttribute("data-timestamp", +new Date())
+      ;(d.head || d.body).appendChild(s)
+
+      setTimeout(function() {
+        if (!window.DISQUS) showError()
+      }, 5000)
+    })()
+  </script>
+{% endif %}

@@ -1,0 +1,1698 @@
+
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Wen-Chieh Lee life site">
+      
+      
+        <meta name="author" content="Wen-Chieh Lee">
+      
+      
+        <link rel="canonical" href="https://wenchiehlee.github.io/mkdocs-life/blog/category/%E5%BA%95%E5%B1%A4%E9%82%8F%E8%BC%AF/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../%E5%BF%83%E7%90%86%E5%AD%B8/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS 訂閱" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS 訂閱內容已更新" href="../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../assets/images/w.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>底層邏輯 - Wen-Chieh Lee的生活</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag.md-tag--featured{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2Z"/></svg>');}.md-tag.md-tag--3D{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 7h4a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5v-2h4v-2H6v-2h3V9H5V7m8 0h3a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-3V7m3 8a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-1v6h1Z"/></svg>');}.md-tag.md-tag--AI{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3c3.88 0 7 3.14 7 7 0 2.8-1.63 5.19-4 6.31V21H9v-3H8c-1.11 0-2-.89-2-2v-3H4.5c-.42 0-.66-.5-.42-.81L6 9.66A7.003 7.003 0 0 1 13 3m0-2C8.41 1 4.61 4.42 4.06 8.9L2.5 11h-.03l-.02.03c-.55.76-.62 1.76-.19 2.59.36.69 1 1.17 1.74 1.32V16c0 1.85 1.28 3.42 3 3.87V23h11v-5.5c2.5-1.67 4-4.44 4-7.5 0-4.97-4.04-9-9-9m4.33 8.3-1.96.51 1.44 1.46c.35.34.35.92 0 1.27s-.93.35-1.27 0l-1.45-1.44-.52 1.96c-.12.49-.61.76-1.07.64a.91.91 0 0 1-.66-1.11l.53-1.96-1.96.53a.91.91 0 0 1-1.11-.66c-.12-.45.16-.95.64-1.07l1.96-.52-1.44-1.45a.9.9 0 0 1 1.27-1.27l1.46 1.44.51-1.96c.12-.49.62-.77 1.09-.64.49.13.77.62.64 1.1L14.9 8.1l1.97-.53c.48-.13.97.15 1.1.64.13.47-.15.97-.64 1.09Z"/></svg>');}.md-tag.md-tag--Data{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4Z"/></svg>');}.md-tag.md-tag--DevOps{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.73 11.93c0 1.72-.02 1.83-.23 2.07-.19.17-.38.23-.76.23l-.51.01-.03-2.27-.02-2.27h.52c.35 0 .6.07.77.21.24.21.26.25.26 2.02M22 7.5v9c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2v-9c0-1.11.89-2 2-2h16c1.11 0 2 .89 2 2M8.93 11.73c-.03-1.84-.05-1.99-.29-2.39-.4-.68-.85-.84-2.36-.84H5v7h1.21c1.33 0 1.89-.17 2.29-.71.41-.53.5-.98.43-3.06m4.19-3.23h-1.48c-1.49 0-1.5 0-1.71.28S9.7 9.21 9.7 12v2.96l.27.27c.25.27.31.27 1.71.27h1.44v-1.19l-1.09-.04-1.1-.03V12.6l.68-.03.66-.04v-1.19h-1.39V9.7h2.24V8.5m5.88.06c0-.06-.3-.06-.66-.06l-.68.06-.59 2.35c-.38 1.48-.62 2.27-.67 2.13-.08-.27-1.14-4.44-1.14-4.49 0-.05-.31-.05-.68-.05h-.69l.41 1.55c.2.87.59 2.28.81 3.15.34 1.35.46 1.65.75 1.94.2.22.45.36.61.36.33 0 .76-.34.9-.73C17.5 14.5 19 8.69 19 8.56Z"/></svg>');}.md-tag.md-tag--IOT{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18V4H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v-2H3V6m10 6H9v1.78c-.61.55-1 1.33-1 2.22 0 .89.39 1.67 1 2.22V20h4v-1.78c.61-.55 1-1.34 1-2.22s-.39-1.67-1-2.22V12m-2 5.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M22 8h-6c-.5 0-1 .5-1 1v10c0 .5.5 1 1 1h6c.5 0 1-.5 1-1V9c0-.5-.5-1-1-1m-1 10h-4v-8h4v8Z"/></svg>');}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGW+WenKai+TC:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"LXGW WenKai TC";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/timeline.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/cards.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/link.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/customize.css">
+    
+      <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-913Z6DSVD2"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-913Z6DSVD2",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-913Z6DSVD2",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    <link rel="stylesheet" href="../../../assets/stylesheets/custom.00c04c01.min.css">
+  
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳轉到
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="../../.." title="Wen-Chieh Lee的生活" class="md-header__button md-logo" aria-label="Wen-Chieh Lee的生活" data-md-component="logo">
+      
+  <img src="../../../assets/images/w.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wen-Chieh Lee的生活
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              底層邏輯
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清除" aria-label="清除" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wenchiehlee/mkdocs-life" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Mkdocs-life
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="標籤" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  生活
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../planting/" class="md-tabs__link">
+        
+  
+    
+  
+  種植
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../breeding/" class="md-tabs__link">
+        
+  
+    
+  
+  養殖
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../winemaking/" class="md-tabs__link">
+        
+  
+    
+  
+  釀酒
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../travel-photo/" class="md-tabs__link">
+        
+  
+    
+  
+  旅遊攝影
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../travel/" class="md-tabs__link">
+        
+  
+    
+  
+  旅遊
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tag/" class="md-tabs__link">
+        
+  
+    
+  
+  標簽
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3v18h18V3H3m15 15H6v-1h12v1m0-2H6v-1h12v1m0-4H6V6h12v6Z"/></svg>
+    
+  
+  Blogger
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/link/" class="md-tabs__link">
+        
+  
+    
+  
+  友鏈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 11.75A1.25 1.25 0 0 0 7.75 13 1.25 1.25 0 0 0 9 14.25 1.25 1.25 0 0 0 10.25 13 1.25 1.25 0 0 0 9 11.75m6 0A1.25 1.25 0 0 0 13.75 13 1.25 1.25 0 0 0 15 14.25 1.25 1.25 0 0 0 16.25 13 1.25 1.25 0 0 0 15 11.75M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18c-4.41 0-8-3.59-8-8 0-.29 0-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37a9.974 9.974 0 0 0 10.41 3.97c.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8Z"/></svg>
+    
+  
+  關於
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="導覽列" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Wen-Chieh Lee的生活" class="md-nav__button md-logo" aria-label="Wen-Chieh Lee的生活" data-md-component="logo">
+      
+  <img src="../../../assets/images/w.png" alt="logo">
+
+    </a>
+    Wen-Chieh Lee的生活
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wenchiehlee/mkdocs-life" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Mkdocs-life
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    生活
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../planting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    種植
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../breeding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    養殖
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../winemaking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    釀酒
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../travel-photo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    旅遊攝影
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../travel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    旅遊
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tag/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    標簽
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3v18h18V3H3m15 15H6v-1h12v1m0-2H6v-1h12v1m0-4H6V6h12v6Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Blogger
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Blogger
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2025/12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025/12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2025/11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025/11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    分類
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            分類
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+      
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    底層邏輯
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    底層邏輯
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      人生遊戲的三層智慧：博奕、定力與選擇
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      快樂的來源：意義感、連結感與一致感
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      貪嗔痴的底層邏輯：我對事、我對人、我對我
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%BF%83%E7%90%86%E5%AD%B8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    心理學
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%94%9F%E6%B4%BB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    生活
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%99%BD%E5%8F%B0%E5%9C%92%E8%97%9D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    陽台園藝
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/link/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg>
+  
+  <span class="md-ellipsis">
+    友鏈
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 11.75A1.25 1.25 0 0 0 7.75 13 1.25 1.25 0 0 0 9 14.25 1.25 1.25 0 0 0 10.25 13 1.25 1.25 0 0 0 9 11.75m6 0A1.25 1.25 0 0 0 13.75 13 1.25 1.25 0 0 0 15 14.25 1.25 1.25 0 0 0 16.25 13 1.25 1.25 0 0 0 15 11.75M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18c-4.41 0-8-3.59-8-8 0-.29 0-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37a9.974 9.974 0 0 0 10.41 3.97c.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8Z"/></svg>
+  
+  <span class="md-ellipsis">
+    關於
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      人生遊戲的三層智慧：博奕、定力與選擇
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      快樂的來源：意義感、連結感與一致感
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      貪嗔痴的底層邏輯：我對事、我對人、我對我
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        <h1 id="_1">底層邏輯<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+      </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-12-11 00:00:00">2025年12月11日</time></li>
+        
+          <li class="md-meta__item">
+            於
+            
+              <a href="../%E7%94%9F%E6%B4%BB/" class="md-meta__link">生活</a>, 
+              <a href="./" class="md-meta__link">底層邏輯</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 1 分鐘閱讀時間
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="_1"><a class="toclink" href="../../2025/12/%E4%BA%BA%E7%94%9F%E9%81%8A%E6%88%B2%E7%9A%84%E4%B8%89%E5%B1%A4%E6%99%BA%E6%85%A7%E5%8D%9A%E5%A5%95%E5%AE%9A%E5%8A%9B%E8%88%87%E9%81%B8%E6%93%87/">人生遊戲的三層智慧：博奕、定力與選擇</a></h2>
+<p>人生就像一場充滿選擇和挑戰的冒險遊戲，每一步都在改變未來。<a href="https://www.books.com.tw/products/0010919211?sloc=main">劉潤</a>的《底層邏輯》用「博奕、定力、選擇」三層智慧，提供了晉級人生的攻略：懂得與他人互動、在風暴中穩住方向、並做出對自己最有意義的決定。</p>
+<p>劉潤把這三層智慧對應到三個方向：博奕是「我對人」，講的是如何互動、競爭、合作，是外部人際的生存法則；定力是「我對事」，面對環境變化、挑戰與誘惑，能否穩住專注在長期目標；選擇是「我對我」，在路口承認自己有選擇，也有勇氣放棄不合適的選項，釐清內在的對話與人生方向。</p>
+<div class="admonition abstract">
+<p class="admonition-title">速覽</p>
+<ul>
+<li>博奕：用共贏心態，必要時以對等回應守住邊界。</li>
+<li>定力：把決策對準長期價值，不被短期波動牽走。</li>
+<li>選擇：敢於取捨，放棄不合適的路才能走向更遠。</li>
+</ul>
+</div>
+<table>
+<thead>
+<tr>
+<th>三層智慧對照表（修正版）</th>
+<th>對應面向</th>
+<th>關鍵詞</th>
+<th>本質</th>
+<th>典型問題</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>博奕</td>
+<td>我對人</td>
+<td>共贏、感激、一報還一報</td>
+<td>懂得合作，但也能自保</td>
+<td>「我怎麼和別人互動，既不吃虧，也能建立長遠關係？」</td>
+</tr>
+<tr>
+<td>定力</td>
+<td>我對事</td>
+<td>長期價值、不動如山</td>
+<td>不被短期波動誘惑，專注長期</td>
+<td>「外界再亂，我能不能守住自己的方向與節奏？」</td>
+</tr>
+<tr>
+<td>選擇</td>
+<td>我對我</td>
+<td>有得選、放得下</td>
+<td>方向比努力重要，懂得取捨</td>
+<td>「面對分岔口，我要選哪條路？敢不敢放棄不合適的？」</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2"><a class="toclink" href="../../2025/12/%E4%BA%BA%E7%94%9F%E9%81%8A%E6%88%B2%E7%9A%84%E4%B8%89%E5%B1%A4%E6%99%BA%E6%85%A7%E5%8D%9A%E5%A5%95%E5%AE%9A%E5%8A%9B%E8%88%87%E9%81%B8%E6%93%87/#_2">第一層：博奕——策略與心態 (我對人)</a></h3>
+<ul>
+<li><strong>定義：</strong> 在複雜局勢中讀懂他人行為，做出最有利的決策，這是一場策略與心理戰。  </li>
+<li><strong>心態：共贏與感激。</strong> 把競爭視為合作平台，從每次交鋒中學習，累積長期信任。  </li>
+<li><strong>策略：一報還一報。</strong> 對不友善行為保持等量回應，避免被當作軟柿子，同時鼓勵理性互動。  </li>
+<li><strong>案例：</strong> 職場競爭時用共贏思維讓團隊受益；遇到不公平則適度回擊，建立彼此尊重的平衡。</li>
+</ul>
+<h3 id="_3"><a class="toclink" href="../../2025/12/%E4%BA%BA%E7%94%9F%E9%81%8A%E6%88%B2%E7%9A%84%E4%B8%89%E5%B1%A4%E6%99%BA%E6%85%A7%E5%8D%9A%E5%A5%95%E5%AE%9A%E5%8A%9B%E8%88%87%E9%81%B8%E6%93%87/#_3">第二層：定力——風暴中的穩定值 (我對事)</a></h3>
+<ul>
+<li><strong>定義：</strong> 在紛亂中保持冷靜與方向感，不被短期波動牽著走。  </li>
+<li><strong>關鍵：圍繞長期價值。</strong> 決策對準長期目標，而非眼前利益；像長線投資者專注價值增長。  </li>
+<li><strong>案例：</strong> 創業者寧願拒絕不符使命的投資，也要守住長期願景；定力讓他不被短期誘惑改道。</li>
+</ul>
+<h3 id="_4"><a class="toclink" href="../../2025/12/%E4%BA%BA%E7%94%9F%E9%81%8A%E6%88%B2%E7%9A%84%E4%B8%89%E5%B1%A4%E6%99%BA%E6%85%A7%E5%8D%9A%E5%A5%95%E5%AE%9A%E5%8A%9B%E8%88%87%E9%81%B8%E6%93%87/#_4">第三層：選擇——勇於取捨的決斷 (我對我)</a></h3>
+<ul>
+<li><strong>定義：</strong> 在多種可能中，挑出最合適的路徑；每個選擇都伴隨放棄。  </li>
+<li><strong>要點：</strong> 知道自己有得選，也要有勇氣放棄不合適的選項。選擇決定方向，放棄創造自由度。  </li>
+<li><strong>案例：</strong> 做得不錯的職場人，當發現工作不再契合熱情時，果斷離開舒適圈創業，換得更遠的成長。</li>
+</ul>
+<h3 id="_5"><a class="toclink" href="../../2025/12/%E4%BA%BA%E7%94%9F%E9%81%8A%E6%88%B2%E7%9A%84%E4%B8%89%E5%B1%A4%E6%99%BA%E6%85%A7%E5%8D%9A%E5%A5%95%E5%AE%9A%E5%8A%9B%E8%88%87%E9%81%B8%E6%93%87/#_5">共贏、堅持、取捨</a></h3>
+<ul>
+<li>博奕：選對遊戲，追求共贏，必要時「一報還一報」。  </li>
+<li>定力：用長期思維穿越波動，堅守真正想要的價值。  </li>
+<li>選擇：敢於取捨，把時間投入最值得走的路。</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">行動清單</p>
+<ul>
+<li>檢視當前競爭場：有哪些可以轉為合作的共贏機會？  </li>
+<li>為近期決策寫下「長期指標」：你最重視的 1-2 個長期價值是什麼？  </li>
+<li>清理選項清單：列出可放棄的事，騰出時間給真正重要的路。</li>
+</ul>
+</div>
+<details class="question">
+<summary>Q: 為什麼「博奕、定力、選擇」是寫在最前面？</summary>
+<p>這三層智慧是後續內容的基礎：先確立心態與策略，再鍛鍊定力，最後在路口做出取捨。掌握框架後，其他主題就有了清晰的判準。***</p>
+</details>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-12-11 00:00:00">2025年12月11日</time></li>
+        
+          <li class="md-meta__item">
+            於
+            
+              <a href="../%E7%94%9F%E6%B4%BB/" class="md-meta__link">生活</a>, 
+              <a href="./" class="md-meta__link">底層邏輯</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 1 分鐘閱讀時間
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="_1"><a class="toclink" href="../../2025/12/%E5%BF%AB%E6%A8%82%E7%9A%84%E4%BE%86%E6%BA%90%E6%84%8F%E7%BE%A9%E6%84%9F%E9%80%A3%E7%B5%90%E6%84%9F%E8%88%87%E4%B8%80%E8%87%B4%E6%84%9F/">快樂的來源：意義感、連結感與一致感</a></h2>
+<p>快樂的核心來自三段關係的品質：我對事的意義感、我對人的連結感、我對我的一致感。沿用「我對事／我對人／我對我」的架構，可以快速對齊判準，不再把快樂想成單一來源。</p>
+<div class="admonition abstract">
+<p class="admonition-title">速覽</p>
+<ul>
+<li>我對事＝意義感：做的事與內在價值對齊，重點是「值得」，而非做了多少。  </li>
+<li>我對人＝連結感：被理解、被接住、能做自己，高品質的少數關係比龐大的社交量更關鍵。  </li>
+<li>我對我＝一致感：看清並接納自己，內外不打架，帶來的是安定與自由而非興奮。  </li>
+<li>三者合起來，快樂不是追來的，而是關係順暢時自然出現的狀態。</li>
+</ul>
+</div>
+<h3 id="meaning"><a class="toclink" href="../../2025/12/%E5%BF%AB%E6%A8%82%E7%9A%84%E4%BE%86%E6%BA%90%E6%84%8F%E7%BE%A9%E6%84%9F%E9%80%A3%E7%B5%90%E6%84%9F%E8%88%87%E4%B8%80%E8%87%B4%E6%84%9F/#meaning">我對事：意義感（Meaning）</a></h3>
+<p>當行動和心裡在乎的價值一致，快樂就會出現。它不是「完成清單」的數量，而是「覺得這件事值得」。</p>
+<ul>
+<li>典型來源：完成重要工作、做到進步、解決問題、創造價值。  </li>
+<li>特性：穩定、持久，受外部波動影響較小。</li>
+</ul>
+<h3 id="connection"><a class="toclink" href="../../2025/12/%E5%BF%AB%E6%A8%82%E7%9A%84%E4%BE%86%E6%BA%90%E6%84%8F%E7%BE%A9%E6%84%9F%E9%80%A3%E7%B5%90%E6%84%9F%E8%88%87%E4%B8%80%E8%87%B4%E6%84%9F/#connection">我對人：連結感（Connection）</a></h3>
+<p>幸福感最強的預測因子是高品質的人際關係，不在於人多或熱鬧，而在於能否真實相處。</p>
+<ul>
+<li>典型來源：被在乎、被支持、不必偽裝、有安全感、有人能接住情緒。  </li>
+<li>特性：安全與歸屬的基底，讓情緒自然穩定。</li>
+</ul>
+<h3 id="alignment"><a class="toclink" href="../../2025/12/%E5%BF%AB%E6%A8%82%E7%9A%84%E4%BE%86%E6%BA%90%E6%84%8F%E7%BE%A9%E6%84%9F%E9%80%A3%E7%B5%90%E6%84%9F%E8%88%87%E4%B8%80%E8%87%B4%E6%84%9F/#alignment">我對我：一致感（Alignment）</a></h3>
+<p>最深的快樂來自內在不打架：看得清自己、接受自己，行為與內在一致。</p>
+<ul>
+<li>典型來源：知道自己要什麼、不因外界眼光否定自己、不自欺、對自己坦白而不羞愧。  </li>
+<li>特性：帶來自由與安定，而非短暫興奮。</li>
+</ul>
+<h3 id="_2"><a class="toclink" href="../../2025/12/%E5%BF%AB%E6%A8%82%E7%9A%84%E4%BE%86%E6%BA%90%E6%84%8F%E7%BE%A9%E6%84%9F%E9%80%A3%E7%B5%90%E6%84%9F%E8%88%87%E4%B8%80%E8%87%B4%E6%84%9F/#_2">快樂的底層結構</a></h3>
+<table>
+<thead>
+<tr>
+<th>快樂來源</th>
+<th>對象</th>
+<th>內涵</th>
+<th>為什麼讓人快樂</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>意義感</td>
+<td>我對事</td>
+<td>做值得的事</td>
+<td>感到成就、目的、方向</td>
+</tr>
+<tr>
+<td>連結感</td>
+<td>我對人</td>
+<td>被理解、被接住</td>
+<td>感到安全、歸屬</td>
+</tr>
+<tr>
+<td>一致感</td>
+<td>我對我</td>
+<td>不矛盾、接納自己</td>
+<td>感到自由、安定</td>
+</tr>
+</tbody>
+</table>
+<details class="question">
+<summary>Q: 為什麼說「快樂不是追來的」？</summary>
+<p>因為快樂不是單點事件，而是三段關係的健康狀態：對事有意義、對人有連結、對己不矛盾。缺一角都會讓快樂失衡，補足關係品質比追逐刺激更有效。</p>
+</details>
+<hr />
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-12-10 00:00:00">2025年12月10日</time></li>
+        
+          <li class="md-meta__item">
+            於
+            
+              <a href="../%E7%94%9F%E6%B4%BB/" class="md-meta__link">生活</a>, 
+              <a href="./" class="md-meta__link">底層邏輯</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 1 分鐘閱讀時間
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="_1"><a class="toclink" href="../../2025/12/%E8%B2%AA%E5%97%94%E7%97%B4%E7%9A%84%E5%BA%95%E5%B1%A4%E9%82%8F%E8%BC%AF%E6%88%91%E5%B0%8D%E4%BA%8B%E6%88%91%E5%B0%8D%E4%BA%BA%E6%88%91%E5%B0%8D%E6%88%91/">貪嗔痴的底層邏輯：我對事、我對人、我對我</a></h2>
+<p>三毒常被說得玄，但拆開就是三個很日常的執著：我怎麼看「事」、我怎麼對「人」、我怎麼理解「我」。把框架理清，三毒的運作就一目了然，也能對照前兩篇的「我對事／我對人／我對我」架構。</p>
+<div class="admonition abstract">
+<p class="admonition-title">速覽</p>
+<ul>
+<li>貪（我對事）：把慾望變成「必須」，快樂被外部事件綁架，期待—要求—焦慮的迴圈越轉越快。  </li>
+<li>嗔（我對人）：把他人視為威脅，用對抗來自保，指責—合理化—再對抗，關係只會更緊繃。  </li>
+<li>痴（我對我）：誤解自己與世界，錯誤認知—錯誤解讀—錯誤選擇，最後證實自己的誤判。  </li>
+<li>三者互為因果：對事不滿（貪）容易遷怒他人（嗔），而偏差的自我敘事（痴）又讓前兩者循環。</li>
+</ul>
+</div>
+<h3 id="_2"><a class="toclink" href="../../2025/12/%E8%B2%AA%E5%97%94%E7%97%B4%E7%9A%84%E5%BA%95%E5%B1%A4%E9%82%8F%E8%BC%AF%E6%88%91%E5%B0%8D%E4%BA%8B%E6%88%91%E5%B0%8D%E4%BA%BA%E6%88%91%E5%B0%8D%E6%88%91/#_2">貪：我對事的執著</a></h3>
+<p>貪不是慾望，而是把慾望升級成「非得到不可」。當「一定要成功」「一定要被認同」「一定要賺更多」成了唯一快樂來源，期待就會變成要求，要求帶來焦慮，焦慮又推高期待，形成自我綁架。</p>
+<ul>
+<li>焦點在「事」：事情怎樣才算快樂，快樂被外界條件扣押。  </li>
+<li>典型迴圈：期待 → 要求 → 焦慮 → 更高期待。</li>
+</ul>
+<h3 id="_3"><a class="toclink" href="../../2025/12/%E8%B2%AA%E5%97%94%E7%97%B4%E7%9A%84%E5%BA%95%E5%B1%A4%E9%82%8F%E8%BC%AF%E6%88%91%E5%B0%8D%E4%BA%8B%E6%88%91%E5%B0%8D%E4%BA%BA%E6%88%91%E5%B0%8D%E6%88%91/#_3">嗔：我對人的對抗</a></h3>
+<p>嗔不是單純發火，而是把「對抗人」當作處理不如意的唯一方案。當覺得某人破壞了秩序、面子或期待，就會啟動保護機制：先對抗，再指責，再自我合理化，於是更強化對抗。</p>
+<ul>
+<li>焦點在「人」：不是討厭事件本身，而是認定「那個人造成的」，因此執著於控制、改變或壓過他。  </li>
+<li>典型迴圈：對抗 → 指責 → 自身合理化 → 更強對抗。</li>
+</ul>
+<h3 id="_4"><a class="toclink" href="../../2025/12/%E8%B2%AA%E5%97%94%E7%97%B4%E7%9A%84%E5%BA%95%E5%B1%A4%E9%82%8F%E8%BC%AF%E6%88%91%E5%B0%8D%E4%BA%8B%E6%88%91%E5%B0%8D%E4%BA%BA%E6%88%91%E5%B0%8D%E6%88%91/#_4">痴：我對我的錯覺</a></h3>
+<p>痴不是愚笨，而是看不清真相，活在自我敘事裡。常見的錯覺包括：</p>
+<ul>
+<li>以為自己不能改變。  </li>
+<li>以為世界應該照自己的方式運作。  </li>
+<li>以為情緒就是事實，不安等於危險。  </li>
+<li>以為苦來自外界，而不是來自自己的判斷。</li>
+</ul>
+<p>這些偏差會形成「錯誤認知 → 錯誤解讀 → 錯誤選擇 → 再證實原本錯誤認知」的循環。焦點在「我以為我是誰」，不是對人，也不是對事。</p>
+<h3 id="_5"><a class="toclink" href="../../2025/12/%E8%B2%AA%E5%97%94%E7%97%B4%E7%9A%84%E5%BA%95%E5%B1%A4%E9%82%8F%E8%BC%AF%E6%88%91%E5%B0%8D%E4%BA%8B%E6%88%91%E5%B0%8D%E4%BA%BA%E6%88%91%E5%B0%8D%E6%88%91/#_5">三毒的因果結構</a></h3>
+<table>
+<thead>
+<tr>
+<th>三毒</th>
+<th>作用對象</th>
+<th>底層邏輯</th>
+<th>造成的問題</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>貪</td>
+<td>事</td>
+<td>快樂依賴取得</td>
+<td>焦慮、執著</td>
+</tr>
+<tr>
+<td>嗔</td>
+<td>人</td>
+<td>對抗不如意的人</td>
+<td>關係破裂、憤怒</td>
+</tr>
+<tr>
+<td>痴</td>
+<td>我</td>
+<td>認知偏差</td>
+<td>迷失、自我矛盾</td>
+</tr>
+</tbody>
+</table>
+<details class="question">
+<summary>Q: 為什麼佛法說「三毒為苦的根源」？</summary>
+<p>貪讓你覺得永遠不夠，嗔讓你覺得永遠不順，痴讓你永遠搞不清自己要什麼。只要對自我與世界的理解是偏的，就算全都得到也不會感到自由。</p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">行動清單</p>
+<ul>
+<li>寫下最近一件被你升級成「必須」的事，改成「最好如此」看看焦慮是否下降。  </li>
+<li>遇到不順時，先釐清「我生氣的是人，還是事？」，避免自動進入對抗模式。  </li>
+<li>列出三個對自己的敘事，找一件小事來驗證或修正它。***</li>
+</ul>
+</div>
+    
+  </div>
+</article>
+      
+      
+        
+          
+
+
+
+<nav class="md-pagination">
+  
+</nav>
+        
+      
+    </div>
+  </div>
+
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到頂端
+</button>
+        
+      </main>
+      
+        <!-- Footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+    
+      
+      <nav
+        class="md-footer__inner md-grid"
+        aria-label="頁腳"
+        
+      >
+
+        <!-- Link to previous page -->
+        
+          
+          <a
+            href="../../"
+            class="md-footer__link md-footer__link--prev"
+            aria-label="上一頁: Blog"
+          >
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一頁
+              </span>
+              <div class="md-ellipsis">
+                Blog
+              </div>
+            </div>
+            
+          </a>
+        
+
+        <!-- Link to next page -->
+        
+          
+          <a
+            href="../%E5%BF%83%E7%90%86%E5%AD%B8/"
+            class="md-footer__link md-footer__link--next"
+            aria-label="下一頁: 心理學"
+          >
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一頁
+              </span>
+              <div class="md-ellipsis">
+                心理學
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2024 Wen-Chieh Lee
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+   
+    <font color="#B9B9B9">
+      <div class="footer-visit-count" style="display: flex; justify-content: center; align-items: center;">
+    本站訪問量：<script async src="//finicounter.eu.org/finicounter.js"></script>
+    <span id="finicount_views"></span>
+  </div>
+      </font>
+
+      <style>
+        .footer-visit-count {
+            height: fit-content;
+            min-height: 55px; /* 根據實際情況調整此高度 */
+        }
+        </style>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/wenchiehlee" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/wen-chieh-lee-8a242b50/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://scholar.google.com/citations?user=YdrASjsAAAAJ" target="_blank" rel="noopener" title="scholar.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M390.9 298.5s0 .1.1.1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64 1.7-3.6 3.6-7.2 5.6-10.7 4.4-7.6 9.4-14.7 15-21.3 27.4-32.6 68.5-53.3 114.4-53.3 33.6 0 64.6 11.1 89.6 29.9 9.1 6.9 17.4 14.7 24.8 23.5 5.6 6.6 10.6 13.8 15 21.3 2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0l256 202.7-94.7 77.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.researchgate.net/profile/Wen-Chieh-Lee-4" target="_blank" rel="noopener" title="www.researchgate.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<wenchiehlee1020@gmail.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v22.1l172.5 141.6c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share", {"tabs": true}, "toc.follow"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u8907\u88fd", "clipboard.copy": "\u8907\u88fd", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u7b26\u5408\u7684\u9805\u76ee", "search.result.one": "\u627e\u5230 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.placeholder": "\u6253\u5b57\u9032\u884c\u641c\u5c0b", "search.result.term.missing": "\u7f3a\u5c11\u5b57\u8a5e", "select.version": "\u9078\u64c7\u7248\u672c"}}</script>
+    
+    
+    
+      <script src="../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../../js/timeago.min.js"></script>
+      
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill-fastly.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/compare-slider.js"></script>
+      
+    
+    <script src="../../../assets/javascripts/custom.9458f965.min.js"></script>
+  
+  </body>
+</html>
