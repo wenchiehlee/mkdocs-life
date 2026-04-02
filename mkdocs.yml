@@ -59,7 +59,7 @@ theme:
     - navigation.tracking #位址列中的 URL 將自動更新為在目錄中突出顯示的活動錨點
     - navigation.tabs #頂級部分將呈現在上面視口標題下方的選單層中，但在移動裝置上保持原樣
     # - navigation.prune
-    # - navigation.tabs.sticky  #啟用粘性選項卡後，導航選項卡將鎖定在標題下方，並在向下滾動時始終保持可見
+    # - navigation.tabs.sticky  #啟用粘性選項卡後，導航選項卡將鎖定在標題下方，並在向下滾動時視始終保持可見
     - navigation.sections #啟用部分後，頂級部分在邊欄中呈現為1220px以上視口的組，但在移動裝置上保持原樣
     - navigation.top # 返回頂部的按鈕 在上滑時出現
     - navigation.footer #頁尾將呈現在邊欄中，但在移動裝置上保持原樣
@@ -103,33 +103,18 @@ plugins:
   - search: #搜尋配置
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
 
-  - git-committers:
-      enabled: !ENV [CI, false]
-      repository: wenchiehlee/mkdocs-life
-      branch: main
-      exclude:
-        - index.md
-        - tag.md
   - git-revision-date-localized:
-      enabled: !ENV [CI, false]
-      type: timeago
-      custom_format: "%d. %B %Y"
+      enabled: !ENV [CI, false] # 本地開發預設關閉
+      type: date
       timezone: Asia/Taipei
-      locale: en
-      fallback_to_build_date: false
+      locale: zh_TW
+      fallback_to_build_date: true
       enable_creation_date: true
-#      exclude:
-#          - index.md
-      enabled: true
-      strict: true
-#  - minify:
-#      minify_html: true
   - rss:
       match_path: "blog/posts/.*"
       date_from_meta:
           as_creation: date
           as_update: git
-  - tags:
 # Customization
 
 extra:
@@ -255,27 +240,18 @@ markdown_extensions: #詳見https://squidfunk.github.io/mkdocs-material/setup/ex
   #     slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
   #     permalink: "\ue157"
 
-extra_javascript:
-  # - javascripts/extra.js #自定義javascript
-  - javascripts/mathjax.js #Latex支援
-  - https://polyfill-fastly.io/v3/polyfill.min.js?features=es6 #Latex支援；替換 polyfill.io 避免 DNS 解析失敗
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js #Latex支援
-  - javascripts/compare-slider.js
-  # - ckplayer/js/ckplayer.js #播放器配置
-  # - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js  #gitalk支援
+# extra_javascript:
+#   - javascripts/extra.js #自定義javascript
+#   - javascripts/mathjax.js #Latex支援
+#   - https://polyfill-fastly.io/v3/polyfill.min.js?features=es6 #Latex支援
+#   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js #Latex支援
+#   - javascripts/compare-slider.js
+#   - ckplayer/js/ckplayer.js #播放器配置
+#   - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js  #gitalk支援
 
 extra_css:
-  - stylesheets/timeline.css
-  - stylesheets/cards.css
   - stylesheets/extra.css # 自定義CSS
-  - stylesheets/link.css #友鏈配置
-  - stylesheets/customize.css # 搜尋圓角最佳化
-
-  # - stylesheets/video.css #播放器可選配置
-  # - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.css #gitalk支援
-  # - ckplayer/css/ckplayer.css   #播放器配置
-  - https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css # font-awesome表情支援
-  # - https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css  #分享支援
+  # - https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css # 移除外部CDN以防超時
 
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css #字型
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css #字型
