@@ -14,7 +14,7 @@ copyright: Copyright &copy; 2016 - 2024 Wen-Chieh Lee
 theme:
   name: 'material'
   custom_dir: docs/overrides #覆寫路徑
-  favicon: assets/images/w.png # 網頁icon
+  favicon: assets/images/deer-favicon.png # 網頁icon (靈鹿吉祥物)
   font: #谷歌字型，自行搜尋
     text: LXGW WenKai TC # Noto Serif TC #文字字型
     code: Roboto Mono  #程式碼字型

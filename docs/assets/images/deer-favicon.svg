@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="deer-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#115e59" />
+    </linearGradient>
+  </defs>
+  <!-- 森林翡翠綠圓角底座 -->
+  <rect width="32" height="32" rx="7" fill="url(#deer-grad)" />
+  <!-- 靈鹿向量線條 -->
+  <g transform="translate(4, 4)" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Antlers -->
+    <path d="M3 3c0 2 1 3 4 3c2 0 3 1 3 3" />
+    <path d="M21 3c0 2-1 3-4 3c-2 0-3 .3-3 3" />
+    <path d="M7 3c0 1.3.3 2.3 1 3" />
+    <path d="M17 3c0 1.3-.3 2.3-1 3" />
+    <!-- Deer Head Contour -->
+    <path d="M12 19c-1 0-4-3-4-6.5 0-2 1.3-3.5 4-3.5s4 1.5 4 3.5c0 3.5-3 6.5-4 6.5" />
+    <!-- Ears -->
+    <path d="M8 10.5l-2-1.5" />
+    <path d="M16 10.5l2-1.5" />
+    <!-- Eyes & Nose -->
+    <path d="M10 13v.01" />
+    <path d="M14 13v.01" />
+    <path d="M12 16.5h.01" />
+  </g>
+</svg>
