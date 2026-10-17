@@ -1,0 +1,149 @@
+/* ==========================================================================
+   mkdocs-life: Warm Editorial & Mindful Journal Theme
+   Identity: Scandinavian Forest Deer 🦌 (林鹿寧靜冥想日誌)
+   ========================================================================== */
+
+:root {
+  --life-primary:       #0d9488;       /* Teal 600 - Serene Forest Teal */
+  --life-primary-light: #ccfbf1;       /* Teal 100 */
+  --life-primary-dark:  #115e59;       /* Teal 800 */
+  --life-accent:        #e07a5f;       /* Terracotta - Warm Earth */
+  --life-accent-light:  #fdf2ed;       /* Terracotta 50 */
+  --life-bg:            #faf8f5;       /* Warm Editorial Paper */
+  --life-surface:       #ffffff;
+  --life-border:        #e7e5e4;       /* Stone 200 */
+  --life-text:          #292524;       /* Stone 800 */
+  --life-text-muted:    #78716c;       /* Stone 500 */
+}
+
+[data-md-color-scheme="slate"] {
+  --life-bg:            #1c1917;       /* Stone 900 */
+  --life-surface:       #292524;       /* Stone 800 */
+  --life-border:        #44403c;       /* Stone 700 */
+  --life-text:          #f5f5f4;       /* Stone 100 */
+  --life-text-muted:    #a8a29e;       /* Stone 400 */
+}
+
+/* 頂部跨專案浮動導航條 (UX-Deck Sibling Nav) */
+.life-top-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  padding: 0.4rem 1.25rem;
+  background: var(--life-bg);
+  border-bottom: 1px solid var(--life-border);
+  font-size: 0.82rem;
+}
+
+.life-nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.32rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--life-border);
+  background: var(--life-surface);
+  color: var(--life-text);
+  transition: all 0.18s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.life-nav-pill:hover {
+  border-color: var(--life-primary);
+  color: var(--life-primary);
+  background: var(--life-primary-light);
+  transform: translateY(-1px);
+  text-decoration: none !important;
+}
+
+.life-nav-pill-github {
+  background: #1c1917;
+  color: #ffffff !important;
+  border-color: #1c1917;
+}
+
+.life-nav-pill-github:hover {
+  background: #292524;
+  color: #ffffff !important;
+  border-color: #292524;
+}
+
+/* 靈鹿吉祥物徽章 (Deer Mascot Badge) */
+.life-mascot-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: var(--life-surface);
+  border: 1px solid var(--life-border);
+  border-radius: 9999px;
+  color: var(--life-primary);
+  font-weight: 700;
+  font-size: 0.84rem;
+  margin-right: auto;
+}
+
+.life-mascot-icon {
+  width: 18px;
+  height: 18px;
+  stroke: var(--life-primary);
+  stroke-width: 1.8;
+}
+
+/* 閱讀體驗優化 */
+.md-typeset {
+  line-height: 1.82;
+  letter-spacing: 0.015em;
+}
+
+.md-typeset blockquote {
+  border-left: 4px solid var(--life-accent);
+  background-color: var(--life-accent-light);
+  padding: 1rem 1.25rem;
+  border-radius: 0 10px 10px 0;
+  margin: 1.5rem 0;
+  color: var(--life-text);
+}
+
+/* 卡片排版 */
+.life-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+
+.life-card {
+  background: var(--life-surface);
+  border: 1px solid var(--life-border);
+  border-radius: 12px;
+  padding: 1.35rem;
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.life-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px -4px rgba(0, 0, 0, 0.08);
+  border-color: var(--life-primary);
+}
+
+.life-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  align-self: flex-start;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--life-primary);
+  background: var(--life-primary-light);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  margin-bottom: 0.65rem;
+}

@@ -251,6 +251,7 @@ markdown_extensions: #詳見https://squidfunk.github.io/mkdocs-material/setup/ex
 
 extra_css:
   - stylesheets/extra.css # 自定義CSS
+  - stylesheets/life-theme.css # UX-Deck 暖白日誌與靈鹿主題
   # - https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css # 移除外部CDN以防超時
 
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css #字型
