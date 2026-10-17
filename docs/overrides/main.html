@@ -3,9 +3,6 @@
 {% block extrahead %}
   {{ super() }}
   <link rel="stylesheet" href="{{ 'assets/stylesheets/custom.00c04c01.min.css' | url }}">
-{% endblock %}
-
-{% block announce %}
   <!-- 靈鹿 (Scandinavian Forest Deer) SVG Symbol 定義 -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="icon-deer-life" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -21,21 +18,6 @@
       <path d="M12 16.5h.01" />
     </symbol>
   </svg>
-
-  <div class="life-top-nav-bar">
-    <div class="life-mascot-badge">
-      <svg class="life-mascot-icon"><use href="#icon-deer-life"/></svg>
-      <span>mkdocs-life · 靈鹿生活日誌</span>
-    </div>
-    <div style="display: flex; gap: 0.5rem; align-items: center;">
-      <a href="https://wenchiehlee-money.github.io/UX-Deck/" class="life-nav-pill" title="回到主題首頁">
-        <span>🏠</span> 主題首頁
-      </a>
-      <a href="https://github.com/wenchiehlee/mkdocs-life" target="_blank" rel="noopener noreferrer" class="life-nav-pill life-nav-pill-github" title="前往 GitHub 儲存庫">
-        <span>📦</span> GitHub 儲存庫
-      </a>
-    </div>
-  </div>
 {% endblock %}
 
 {% block scripts %}
