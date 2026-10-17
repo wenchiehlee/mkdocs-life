@@ -6,25 +6,21 @@
 /* --------------------------------------------------------------------------
    1. Header 導航整合 (Seamless Header Integration)
    -------------------------------------------------------------------------- */
-.life-deer-badge {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 8px;
-  vertical-align: middle;
+/* 靈鹿吉祥物 Logo (Deer Mascot Logo replacing w.png) */
+.life-mascot-logo {
+  width: 26px !important;
+  height: 26px !important;
+  stroke: #2dd4bf !important;              /* Teal 400 - 清新林鹿青綠 */
+  stroke-width: 1.8 !important;
+  fill: none !important;
+  vertical-align: middle !important;
+  filter: drop-shadow(0 0 6px rgba(45, 212, 191, 0.45));
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), filter 0.2s ease !important;
 }
 
-.life-mascot-inline {
-  width: 22px;
-  height: 22px;
-  stroke: #2dd4bf;              /* Teal 400 - 清新林鹿青綠 */
-  stroke-width: 1.8;
-  fill: none;
-  filter: drop-shadow(0 0 6px rgba(45, 212, 191, 0.35));
-  transition: transform 0.2s ease;
-}
-
-.life-deer-badge:hover .life-mascot-inline {
-  transform: translateY(-1.5px) scale(1.1);
+.md-logo:hover .life-mascot-logo {
+  transform: scale(1.12) translateY(-1px);
+  filter: drop-shadow(0 0 10px rgba(45, 212, 191, 0.75));
 }
 
 /* 跨專案主題首頁藥丸按鈕 (UX-Deck Sibling Nav Pill) */
