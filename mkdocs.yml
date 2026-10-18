@@ -15,12 +15,12 @@ theme:
   name: 'material'
   custom_dir: docs/overrides #覆寫路徑
   favicon: assets/images/deer-favicon.png # 網頁icon (靈鹿吉祥物)
-  font: #谷歌字型，自行搜尋
-    text: LXGW WenKai TC # Noto Serif TC #文字字型
-    code: Roboto Mono  #程式碼字型
-  logo: assets/images/w.png #左上角logo，可插入圖片連結
+  font: # 谷歌字型：思源宋體 + 等寬字體
+    text: Noto Serif TC # 標題與人文內文字型
+    code: Roboto Mono   # 程式碼字型
+  logo: assets/images/w.png # 左上角logo
   icon:
-    repo: fontawesome/brands/github #右上角圖示
+    repo: fontawesome/brands/github # 右上角圖示
     logo:       material/library
     previous:   fontawesome/solid/angle-left
     next:       fontawesome/solid/angle-right
@@ -32,18 +32,20 @@ theme:
       DevOps:   material/dev-to
       IOT:      material/devices
   palette:
+    # 暖陽模式 (對齊 UX-Deck 暖陽紙質白底)
     - scheme: default
-      primary: black
-      accent:  lime
+      primary: teal
+      accent:  deep orange
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: 切換至夜間模式
+    # 深焙黑曜模式
     - scheme: slate
-      primary: black
-      accent: light green
+      primary: teal
+      accent: deep orange
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: 切換至暖白模式
   language: zh-TW # 一些提示性的文字會變成中文
   features:
     - announce.dismiss #呈現可標記為由使用者讀取的臨時公告，可以包含一個用於取消當前公告的按鈕

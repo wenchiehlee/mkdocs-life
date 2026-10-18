@@ -10,21 +10,18 @@
 }  */
 
 button.md-top {
-  font-family: LXGW WenKai TC; /* 修改字型 */
-  font-size: 16px; /* 修改字型大小 */
-  font-weight: lighter;/* 修改字型粗細 */
-  color: #518FC1; /* 修改字型顏色 */
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #518FC1;
 }
 
-:root {
---md-text-font: "LXGW WenKai TC"; 
-} /* 字型 */
-
+/* Base font is managed by Material for MkDocs font setting: Noto Serif TC */
 
 .ml3 {
 font-weight: 900;
 font-size: 30px;
-font-family: LXGW WenKai TC;
+font-family: inherit;
 }
 
 
