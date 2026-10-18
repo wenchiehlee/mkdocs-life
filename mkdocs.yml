@@ -15,9 +15,7 @@ theme:
   name: 'material'
   custom_dir: docs/overrides #覆寫路徑
   favicon: assets/images/deer-favicon.png # 網頁icon (靈鹿吉祥物)
-  font: # 谷歌字型：方案 A 溫潤隨筆文楷體 + 等寬程式碼
-    text: LXGW WenKai TC # 溫潤隨筆手帳字型
-    code: JetBrains Mono  # 程式碼字型
+  font: false # 由 docs/overrides/main.html 與 life-theme.css 統一載入 Google Fonts v2 (方案 A 溫潤文楷)
   logo: assets/images/w.png # 左上角logo
   icon:
     repo: fontawesome/brands/github # 右上角圖示
