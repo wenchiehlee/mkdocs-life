@@ -31,13 +31,13 @@
   display: inline-flex !important;
   align-items: center !important;
   gap: 5px !important;
-  padding: 4px 12px !important;
+  padding: 3px 10px !important;
   border-radius: 9999px !important;
-  font-size: 13px !important;
+  font-size: 11.84px !important; /* 精準對齊 UX-Deck 預覽規格: 0.74rem (11.84px) */
   font-weight: 600 !important;
   color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.15) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
   text-decoration: none !important;
   margin-left: 8px !important;
   margin-right: 6px !important;
@@ -55,12 +55,12 @@
 }
 
 .life-pill-icon {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1;
 }
 
 .life-pill-text {
-  font-size: 12.5px;
+  font-size: 11.84px;
   letter-spacing: 0.02em;
 }
 
@@ -114,38 +114,68 @@ input {
 .md-header__topic {
   font-family: "Quicksand", "LXGW WenKai TC", sans-serif !important;
   font-weight: 700 !important;
-  font-size: 1.02rem !important;
+  font-size: 15.36px !important; /* 精準對齊 UX-Deck 預覽規格: 0.96rem (15.36px) */
   letter-spacing: 0.02em !important;
 }
 
 .md-tabs__link {
   font-family: "Quicksand", "LXGW WenKai TC", sans-serif !important;
-  font-size: 0.88rem !important;
+  font-size: 13.12px !important; /* 精準對齊 UX-Deck 預覽規格: 0.82rem (13.12px) */
   font-weight: 600 !important;
   letter-spacing: 0.03em !important;
 }
 
-/* 閱讀內文長文採用霞鶩文楷手寫隨筆風 (LXGW WenKai TC + Quicksand) */
-.md-typeset,
+.md-nav__link {
+  font-size: 13.5px !important;
+}
+
+/* 閱讀內文長文採用霞鶩文楷手寫隨筆風 (LXGW WenKai TC + Quicksand)，精準對齊 UX-Deck 16px 舒適閱讀字級 */
+.md-typeset {
+  font-size: 16px !important;
+  line-height: 1.85;
+}
+
 .md-typeset p,
 .md-typeset li,
 .md-typeset article,
 .md-typeset table {
   font-family: "LXGW WenKai TC", "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-  font-size: 1.08rem;
-  line-height: 1.9;
+  font-size: 16px !important; /* 精準對齊 UX-Deck 預覽 16px 內文字級 (而非 Material 原生放大之 21.6px) */
+  line-height: 1.85 !important;
   letter-spacing: 0.015em;
 }
 
-/* 內文標題採用文楷粗體，自然親切有力 */
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset h4 {
+/* 內文標題採用文楷粗體，自然親切有力且層級比例協調 */
+.md-typeset h1 {
   font-family: "LXGW WenKai TC", -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 28px !important;
   font-weight: 700;
   color: var(--md-default-fg-color);
   letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.md-typeset h2 {
+  font-family: "LXGW WenKai TC", -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.md-typeset h3 {
+  font-family: "LXGW WenKai TC", -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h4 {
+  font-family: "LXGW WenKai TC", -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
 }
 
 .md-typeset blockquote {
@@ -157,22 +187,25 @@ input {
   font-style: normal;
   color: var(--md-default-fg-color);
   font-family: "LXGW WenKai TC", sans-serif !important;
+  font-size: 15.5px !important;
+  line-height: 1.8 !important;
 }
 
 /* --------------------------------------------------------------------------
-   3. 實體生活卡片元件 (Consistent with UX-Deck Live Preview)
+   3. 實體生活卡片元件 (100% 精準對齊 UX-Deck Live Preview 字級與間距規範)
    -------------------------------------------------------------------------- */
 .preview-life, .life-card {
   background: #faf8f5;
   color: #292524;
   border-radius: 20px;
-  padding: 2rem 2.25rem;
+  padding: 2.25rem;
   border: 1px solid #e7e5e4;
   box-shadow: 0 6px 24px -4px rgba(13, 148, 136, 0.06);
   margin: 1.5rem 0;
   transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.25s ease, border-color 0.25s ease;
   display: flex;
   flex-direction: column;
+  font-family: "LXGW WenKai TC", -apple-system, sans-serif !important;
 }
 
 .preview-life:hover, .life-card:hover {
@@ -191,14 +224,14 @@ input {
   padding: 4px 14px;
   border-radius: 9999px;
   font-weight: 700;
-  font-size: 0.82rem;
-  margin-bottom: 1rem;
+  font-size: 13.12px !important; /* 精準對齊 UX-Deck 預覽: 0.82rem (13.12px) */
+  margin-bottom: 1.15rem;
   font-family: "Quicksand", "Noto Sans TC", sans-serif;
   text-decoration: none;
 }
 
 .life-title {
-  font-size: 1.55rem;
+  font-size: 24.8px !important; /* 精準對齊 UX-Deck 預覽: 1.55rem (24.8px) */
   font-weight: 700;
   color: #1c1917;
   margin-bottom: 0.85rem;
@@ -208,6 +241,7 @@ input {
 
 .life-title a {
   color: #1c1917 !important;
+  font-size: 24.8px !important; /* 精準對齊 UX-Deck 預覽: 1.55rem (24.8px) */
   text-decoration: none !important;
   transition: color 0.2s ease;
 }
@@ -217,9 +251,9 @@ input {
 }
 
 .life-body {
-  font-size: 1.02rem;
-  color: #44403c;
-  line-height: 1.85;
+  font-size: 16px !important; /* 精準對齊 UX-Deck 預覽: 1.0rem (16px) */
+  color: #57534e;
+  line-height: 1.8;
   margin-bottom: 1.5rem;
   font-family: "LXGW WenKai TC", sans-serif;
 }
@@ -231,13 +265,14 @@ input {
   border-top: 1px solid #e7e5e4;
   padding-top: 1.15rem;
   font-family: "Quicksand", "Noto Sans TC", sans-serif;
-  font-size: 0.85rem;
+  font-size: 13.6px !important; /* 精準對齊 UX-Deck 預覽: 0.85rem (13.6px) */
   color: #78716c;
 }
 
 .life-btn, .life-card-link {
   color: #0d9488;
   font-weight: 700;
+  font-size: 13.6px !important; /* 精準對齊 UX-Deck 預覽: 0.85rem (13.6px) */
   text-decoration: none;
   display: inline-flex;
   align-items: center;
