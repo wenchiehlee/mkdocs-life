@@ -92,17 +92,37 @@ body, input {
   font-family: var(--md-text-font-family) !important;
 }
 
-/* 全站 UI 保持現代俐落思源黑體 (Header, Tabs, Sidebar, Footer, Search) */
+/* 頂部導航條 (Header)、分頁標籤列 (Tabs) 與導航選單：採用 Quicksand + LXGW WenKai TC 溫潤休閒手帳風格 */
 .md-header,
+.md-header__title,
+.md-header__topic,
 .md-tabs,
+.md-tabs__item,
+.md-tabs__link,
+.life-header-home-pill,
 .md-sidebar,
+.md-nav,
+.md-nav__link,
 .md-footer,
 .md-search,
-.md-nav,
 .md-top,
 button,
 input {
-  font-family: "Noto Sans TC", "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-family: "Quicksand", "LXGW WenKai TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+.md-header__topic {
+  font-family: "Quicksand", "LXGW WenKai TC", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.02rem !important;
+  letter-spacing: 0.02em !important;
+}
+
+.md-tabs__link {
+  font-family: "Quicksand", "LXGW WenKai TC", sans-serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em !important;
 }
 
 /* 閱讀內文長文採用霞鶩文楷手寫隨筆風 (LXGW WenKai TC + Quicksand) */
