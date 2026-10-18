@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 /* ==========================================================================
    mkdocs-life: Warm Editorial & Mindful Journal Design System
    Identity: Scandinavian Forest Deer 🦌 (林鹿寧靜冥想生活日誌)
@@ -80,13 +82,31 @@
   --life-quote-bg:       rgba(224, 122, 95, 0.15);
 }
 
-.md-typeset {
-  font-family: "Noto Serif TC", "Newsreader", "Songti TC", serif !important;
+/* 全站 UI 保持現代俐落思源黑體 (Header, Tabs, Sidebar, Footer, Search) */
+.md-header,
+.md-tabs,
+.md-sidebar,
+.md-footer,
+.md-search,
+.md-nav,
+.md-top,
+button,
+input {
+  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* 閱讀內文長文採用思源宋體與襯線英文 (Noto Serif TC + Newsreader) */
+.md-typeset,
+.md-typeset p,
+.md-typeset li,
+.md-typeset article {
+  font-family: "Noto Serif TC", "Newsreader", "Songti TC", Georgia, serif !important;
   font-size: 1.05rem;
   line-height: 1.85;
   letter-spacing: 0.012em;
 }
 
+/* 內文標題維持有力清晰之思源黑體 (Noto Sans TC Bold) */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3,
