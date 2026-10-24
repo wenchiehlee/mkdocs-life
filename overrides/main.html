@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&family=Quicksand:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/custom.00c04c01.min.css' | url }}">
+  <!-- 靈鹿 (Scandinavian Forest Deer) SVG Symbol 定義 -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="icon-deer-life" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 3c0 2 1 3 4 3c2 0 3 1 3 3" />
+      <path d="M21 3c0 2-1 3-4 3c-2 0-3 .3-3 3" />
+      <path d="M7 3c0 1.3.3 2.3 1 3" />
+      <path d="M17 3c0 1.3-.3 2.3-1 3" />
+      <path d="M12 19c-1 0-4-3-4-6.5 0-2 1.3-3.5 4-3.5s4 1.5 4 3.5c0 3.5-3 6.5-4 6.5" />
+      <path d="M8 10.5l-2-1.5" />
+      <path d="M16 10.5l2-1.5" />
+      <path d="M10 13v.01" />
+      <path d="M14 13v.01" />
+      <path d="M12 16.5h.01" />
+    </symbol>
+  </svg>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="{{ 'assets/javascripts/custom.9458f965.min.js' | url }}"></script>
+{% endblock %}
+  
+
+ 
